@@ -14,7 +14,11 @@
 #
 # TODO
 # * manually entering parse format, using regexps for different parts:
-#   :area_code => regexp, :country_code => regexp itd...problem je s "+" karakterom ili "00" recimo
+#   :area_code => regexp, :country_code => regexp itd...there is a problem with "+" character or with "00"
+# * remove activesupport
+# * make gem
+# * split_to_parts i detect -> private?
+# * maybe PhoneNumber.parse(385915125486)
 class PhoneNumber   
   FORMATS = {
     # 00385915125486, 0038513668734
