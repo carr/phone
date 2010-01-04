@@ -5,12 +5,9 @@
 # * area_code - e.g. '91', '47'
 # * number - e.g. '5125486', '451588'
 #
-# All parts are mandatoriy, but country code and area code can be set for all phone numbers using
-#   PhoneNumber.default_country_code
-#   PhoneNumber.default_area_code
-#
-# Dependencies
-# * ActiveSupport (present?, cattr_accessor)
+# All parts are mandatory, but country code and area code can be set for all phone numbers using
+#   Phone.default_country_code
+#   Phone.default_area_code
 #
 # TODO
 # * manually entering parse format, using regexps for different parts:
@@ -18,8 +15,9 @@
 # * remove activesupport
 # * make gem
 # * split_to_parts i detect -> private?
-# * maybe PhoneNumber.parse(385915125486)
-class PhoneNumber   
+# * maybe Phone.parse(385915125486)
+require 'active_support'
+class Phone   
   FORMATS = {
     # 00385915125486, 0038513668734
     :long_with_zeros => /^(00)([1-9]{1}[0-9]{2})([1]|[2-9][0-9])([0-9]+)$/,
@@ -69,7 +67,7 @@ class PhoneNumber
       
       parts = split_to_parts(string, options)
       if parts
-        pn = PhoneNumber.new(parts)
+        pn = Phone.new(parts)
       end
     end
   end
@@ -135,7 +133,7 @@ class PhoneNumber
   # %a - area_code (91)
   # %A - area_code with leading zero (091)
   # %n - number (5125486)
-  # %n1 - first @@n1_length characters of number (configured through PhoneNumber.n1_length), default is 3 (512)
+  # %n1 - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
   # %n2 - last characters of number (5486)
   def format(fmt)    
     fmt.gsub("%c", country_code || "").

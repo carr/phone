@@ -1,37 +1,37 @@
-= PhoneNumber
+= Phone
 Parsing, validating and creating croatian phone numbers
 
 = Usage
 
 == Initializing
-    PhoneNumber.new('5125486', '91', '385')
+    Phone.new('5125486', '91', '385')
 or
-    PhoneNumber.new(:number => '5125486', :area_code => '91', :country_code => '385')
+    Phone.new(:number => '5125486', :area_code => '91', :country_code => '385')
 
 == Parsing
-    PhoneNumber.parse '+385915125486'
-    PhoneNumber.parse '00385915125486'
+    Phone.parse '+385915125486'
+    Phone.parse '00385915125486'
 
 You must set the country code, otherwise it doesn't work:
-    PhoneNumber.parse '091/512-5486', :country_code => '385'
-    PhoneNumber.parse '(091) 512 5486', :country_code => '385'
+    Phone.parse '091/512-5486', :country_code => '385'
+    Phone.parse '(091) 512 5486', :country_code => '385'
     
 If you feel that it's tedious, set the default country code:
-    PhoneNumber.default_country_code = '385'    
-    PhoneNumber.parse '091/512-5486'
-    PhoneNumber.parse '(091) 512 5486'    
+    Phone.default_country_code = '385'    
+    Phone.parse '091/512-5486'
+    Phone.parse '(091) 512 5486'    
     
 Same goes for the area code:
-    PhoneNumber.parse '451-588', :country_code => '385', :area_code => '47'
+    Phone.parse '451-588', :country_code => '385', :area_code => '47'
 or
-    PhoneNumber.default_country_code = '385'  
-    PhoneNumber.default_area_code = '47'
+    Phone.default_country_code = '385'  
+    Phone.default_area_code = '47'
     
-    PhoneNumber.parse '451-588'
+    Phone.parse '451-588'
 
 == Validating
 Validating is very relaxed, basically it strips out everything that's not a number or '+'
-    PhoneNumber.parse 'blabla 091/512-5486 blabla'
+    Phone.parse 'blabla 091/512-5486 blabla'
     
 == Formatting
 Options for the format() method include
@@ -40,10 +40,10 @@ Options for the format() method include
 * %a - area_code (91)
 * %A - area_code with leading zero (091)
 * %n - number (5125486)
-* %n1 - first @@n1_length characters of number (configured through PhoneNumber.n1_length), default is 3 (512)
+* %n1 - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
 * %n2 - last characters of number (5486)
 
-    pn = PhoneNumber.parse('+385915125486')
+    pn = Phone.parse('+385915125486')
     pn.to_s # => "+385915125486"
     pn.format("%A/%f-%l") # => "091/512-5486"
     pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
