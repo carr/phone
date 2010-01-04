@@ -1,7 +1,13 @@
 = Phone
 Parsing, validating and creating croatian phone numbers
 
-= Usage
+== Install
+You can install the phone library as a gem
+    gem sources -a http://gemcutter.org
+    gem install phone
+
+Or as a Rails plugin
+    script/plugin install git://github.com/carr/phone.git
 
 == Initializing
     Phone.new('5125486', '91', '385')
@@ -16,7 +22,7 @@ You must set the country code, otherwise it doesn't work:
     Phone.parse '091/512-5486', :country_code => '385'
     Phone.parse '(091) 512 5486', :country_code => '385'
     
-If you feel that it's tedious, set the default country code:
+If you feel that it's tedious, set the default country code once (in your config/environment.rb):
     Phone.default_country_code = '385'    
     Phone.parse '091/512-5486'
     Phone.parse '(091) 512 5486'    
@@ -30,11 +36,11 @@ or
     Phone.parse '451-588'
 
 == Validating
-Validating is very relaxed, basically it strips out everything that's not a number or '+'
-    Phone.parse 'blabla 091/512-5486 blabla'
+Validating is very relaxed, basically it strips out everything that's not a number or '+' character:
+    Phone.valid? 'blabla 091/512-5486 blabla'
     
 == Formatting
-Options for the format() method include
+Options for the format() method include:
 
 * %c - country_code (385)
 * %a - area_code (91)
@@ -47,3 +53,14 @@ Options for the format() method include
     pn.to_s # => "+385915125486"
     pn.format("%A/%f-%l") # => "091/512-5486"
     pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
+    
+== TODO
+* support for other countries, detecting the country from the input string
+* manually entering parse format, using regexps for different phone parts:
+    :area_code => regexp, :country_code => regexp
+* output format names, like so:
+    pn.format(:short)
+    pn.format(:long)
+    
+= Author
+Copyright © 2010 Tomislav Car, Infinum

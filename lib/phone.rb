@@ -9,13 +9,6 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-# TODO
-# * manually entering parse format, using regexps for different parts:
-#   :area_code => regexp, :country_code => regexp itd...there is a problem with "+" character or with "00"
-# * remove activesupport
-# * make gem
-# * split_to_parts i detect -> private?
-# * maybe Phone.parse(385915125486)
 require 'active_support'
 class Phone   
   FORMATS = {

@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.rdoc_options = ['--main', 'Readme.rdoc']
   s.rdoc_options << '--inline-source' << '--charset=UTF-8'
-  s.extra_rdoc_files = ['Readme.rdoc']
+  s.extra_rdoc_files = ['Readme.rdoc', 'LICENSE']
 
   s.add_dependency('activesupport')    
   
-  s.files = %w(Readme.rdoc lib/phone.rb test/phone.rb)
+  s.files = %w(Readme.rdoc LICENSE lib/phone.rb test/phone.rb)
   s.test_files = %w(test/phone.rb)
 end
