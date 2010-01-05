@@ -12,8 +12,6 @@
 require 'active_support'
 class Phone   
   FORMATS = {
-    # 00385915125486, 0038513668734
-    :long_with_zeros => /^(00)([1-9]{1}[0-9]{2})([1]|[2-9][0-9])([0-9]+)$/,
     # +385915125486, +38513668734
     :long => /^([+])([1-9]{1}[0-9]{2})([1]|[2-9][0-9])([0-9]+)$/,
     # 047451588, 013668734
@@ -102,7 +100,7 @@ class Phone
   
   # fix string so it's easier to parse, remove extra characters etc.
   def self.normalize(string_with_number)
-    string_with_number.gsub /[^0-9+]/, ''
+    string_with_number.gsub(/[^0-9+]/, '').gsub(/^00/, '+')
   end
   
   # format area_code with trailing zero (e.g. 91 as 091)
