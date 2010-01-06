@@ -741,6 +741,7 @@
   :char_3_code: HU
   :name: Hungary
   :international_dialing_prefix: "0"
+  :area_code: "1|[2-9][0-9]"
 "263": 
   :country_code: "263"
   :national_dialing_prefix: "0"

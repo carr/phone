@@ -27,7 +27,9 @@ class Phone
   @@n1_length = 3
   
   @@named_formats = {
-    :europe => '+%c (0) %a %f %l'
+    :default => "+%c%a%n",
+    :europe => '+%c (0) %a %f %l',
+    :us => "(%a) %f-%l"
   }
   
   def initialize(*hash_or_args)    
@@ -161,18 +163,19 @@ class Phone
     number[-n2_length, n2_length]
   end
   
-  # formats phone number.
+  # Formats the phone number.
   # 
-  # if the method argument is a Symbol, it is used as a lookup key in Phone.named_formats
-  #   pn.format(:europe)
+  # if the method argument is a String, it is used as a format string, with the following fields being interpolated:  
   #
-  # if the method argument is a String, it is used as a format string, with the following fields being interpolated:
-  # %c - country_code (385)
-  # %a - area_code (91)
-  # %A - area_code with leading zero (091)
-  # %n - number (5125486)
-  # %n1 - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
-  # %n2 - last characters of number (5486)
+  # * %c - country_code (385)
+  # * %a - area_code (91)
+  # * %A - area_code with leading zero (091)
+  # * %n - number (5125486)
+  # * %n1 - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
+  # * %n2 - last characters of number (5486)
+  #
+  # if the method argument is a Symbol, it is used as a lookup key for a format String in Phone.named_formats
+  #   pn.format(:europe)
   def format(fmt)    
     if fmt.is_a?(Symbol)
       raise "The format #{fmt} doesn't exist'" unless named_formats.has_key?(fmt)
@@ -184,7 +187,7 @@ class Phone
   
   # the default format is "+%c%a%n"
   def to_s
-    format("+%c%a%n")
+    format(:default)
   end
   
   # does this number belong to the default country code?
