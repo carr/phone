@@ -73,12 +73,11 @@ When given a symbol it is used as a lookup for the format in the <tt>Phone.named
     pn.format(:europe)
 
 You can add your own custom named formats like so:
-    Phone.named_formats[:short] = '%A/%n1-%n2'
-    
+    Phone.named_formats[:short] = '%A/%n1-%n2'    
     pn.format(:short)
 
 = TODO
-Parse testing for different countries. Currently tested on: Croatia, Slovenia, Hungary, Serbia, Bosnia and Herzegovina, 
+Parse testing for different countries. Currently tested on: US, Croatia, Slovenia, Hungary, Serbia, Bosnia and Herzegovina, 
 Germany.
     
 = Author
