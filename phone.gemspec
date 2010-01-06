@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.version = '0.9.9'
   s.date    = '2010-01-04'
   
-  s.summary = "Croatian phone number parsing, validation and formatting"
-  s.description = "croatian phone number parsing, validation and formatting."
+  s.summary = "Phone number parsing, validation and formatting"
+  s.description = "Phone number parsing, validation and formatting."
   
   s.authors  = ['Tomislav Car']
   s.email    = 'tomislav@infinum.hr'
