@@ -78,4 +78,31 @@ class CountryTest < Test::Unit::TestCase
     assert_equal pn.area_code, '33'
     assert_equal pn.number, '250233'    
   end
+
+  def test_parse_south_africa_local
+    # Telkom
+    pn = Phone.parse('+27 11 555 5555')
+
+    assert_equal pn.country_code, '27'
+    assert_equal pn.area_code, '11'
+    assert_equal pn.number, '5555555'
+  end
+
+  def test_parse_south_africa_mobile
+    # Vodacom
+    pn = Phone.parse('+27 82 555 5555')
+
+    assert_equal pn.country_code, '27'
+    assert_equal pn.area_code, '82'
+    assert_equal pn.number, '5555555'
+  end
+
+  def test_parse_south_africa_tollfree
+    # Telkom
+    pn = Phone.parse('+27 800 123 321')
+
+    assert_equal pn.country_code, '27'
+    assert_equal pn.area_code, '800'
+    assert_equal pn.number, '123321'
+  end
 end

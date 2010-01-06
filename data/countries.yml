@@ -117,7 +117,8 @@
   :char_2_code: "0"
   :char_3_code: ZA
   :name: South Africa
-  :international_dialing_prefix: "9"
+  :international_dialing_prefix: "0"
+  :area_code: "800|860|861|[1-5,7-8][0-9]"
 "508": 
   :country_code: "508"
   :national_dialing_prefix: "0"
