@@ -40,7 +40,7 @@ or
 
 === Automatic country and area code detection
 Like it's stated above, Phone does it's best to automatically detect the country and area code while parsing. Do do this, 
-phone uses data stored in <tt>lib/data/countries.yml</tt>.
+phone uses data stored in <tt>data/countries.yml</tt>.
 
 Each country code can have a regular expression named <tt>area_code</tt> that describes how the area code for that 
 particular country looks like.
