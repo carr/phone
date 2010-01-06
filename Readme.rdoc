@@ -70,9 +70,12 @@ When given a string, it interpolates the string with the following fields:
     pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
 
 When given a symbol it is used as a lookup for the format in the <tt>Phone.named_formats</tt> hash.
+    pn.format(:europe)
 
 You can add your own custom named formats like so:
     Phone.named_formats[:short] = '%A/%n1-%n2'
+    
+    pn.format(:short)
 
 = TODO
 Parse testing for different countries. Currently tested on: Croatia, Slovenia, Hungary, Serbia, Bosnia and Herzegovina, 
