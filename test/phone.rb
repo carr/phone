@@ -128,6 +128,15 @@ class PhoneTest < Test::Unit::TestCase
     end
   end      
   
+  def test_parse_long_with_zero_in_brackets
+    Phone.default_country_code = nil
+    
+    pn = Phone.parse '+385 (0)1 366 8111'    
+    assert_equal pn.country_code, '385'
+    assert_equal pn.area_code, '1'
+    assert_equal pn.number, '3668111'
+  end
+  
   
   
   def test_to_s
@@ -154,21 +163,31 @@ class PhoneTest < Test::Unit::TestCase
     assert_equal pn.format("%A/%f-%l"), '091/512-5486'
   end  
   
-  def test_validates
+  def test_format_with_symbol_specifier
+    Phone.default_country_code = nil    
+    pn = Phone.new '5125486', '91', '385'
+    assert_equal pn.format(:europe), '+385 (0) 91 512 5486'
+  end    
+  
+  def test_doesnt_validate
     assert_equal Phone.valid?('asdas'), false
-    assert_equal Phone.valid?('385915125486'), false    
-    
+    assert_equal Phone.valid?('385915125486'), false
+  end
+  
+  def test_validates
+    Phone.default_country_code = nil
     assert_equal Phone.valid?('00385915125486'), true                    
     assert_equal Phone.valid?('+385915125486'), true
     assert_equal Phone.valid?('+385 (91) 512 5486'), true                  
+    assert_equal Phone.valid?('+38547451588'), true            
+
+    Phone.default_country_code = '385'    
     assert_equal Phone.valid?('0915125486'), true
     assert_equal Phone.valid?('091/512-5486'), true
     assert_equal Phone.valid?('091/512-5486'), true
     assert_equal Phone.valid?('091 512 54 86'), true    
-    assert_equal Phone.valid?('091-512-54-86'), true
-    
-    assert_equal Phone.valid?('047/451-588'), true
-    assert_equal Phone.valid?('+38547451588'), true            
+    assert_equal Phone.valid?('091-512-54-86'), true    
+    assert_equal Phone.valid?('047/451-588'), true    
   end
   
   def test_has_default_country_code

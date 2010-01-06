@@ -1,5 +1,5 @@
 = Phone
-Parsing, validating and creating croatian phone numbers
+Parsing, validating and creating phone numbers
 
 == Install
 You can install the phone library as a gem
@@ -10,15 +10,18 @@ Or as a Rails plugin
     script/plugin install git://github.com/carr/phone.git
 
 == Initializing
+You can initialize a new phone object with the number, area code and country code.
+
     Phone.new('5125486', '91', '385')
 or
     Phone.new(:number => '5125486', :area_code => '91', :country_code => '385')
 
 == Parsing
+You can create a new phone object by parsing from a string. Phone does it's best to detect the country and area codes:
     Phone.parse '+385915125486'
     Phone.parse '00385915125486'
 
-You must set the country code, otherwise it doesn't work:
+If the country or area code isn't given in the string, you must set it, otherwise it doesn't work:
     Phone.parse '091/512-5486', :country_code => '385'
     Phone.parse '(091) 512 5486', :country_code => '385'
     
@@ -35,12 +38,24 @@ or
     
     Phone.parse '451-588'
 
+=== Automatic country and area code detection
+Like it's stated above, Phone does it's best to automatically detect the country and area code while parsing. Do do this, 
+phone uses data stored in <tt>lib/data/countries.yml</tt>.
+
+Each country code can have a regular expression named <tt>area_code</tt> that describes how the area code for that 
+particular country looks like.
+
+If an <tt>area_code</tt> regular expression isn't specified, the default, <tt>Phone::DEFAULT_AREA_CODE</tt> (correct for
+the US) is used.
+
 == Validating
 Validating is very relaxed, basically it strips out everything that's not a number or '+' character:
     Phone.valid? 'blabla 091/512-5486 blabla'
     
 == Formatting
-Options for the format() method include:
+Formating is done via the <tt>format</tt> method. The method accepts a <tt>Symbol</tt> or a <tt>String</tt>.
+
+When given a string, it interpolates the string with the following fields:
 
 * %c - country_code (385)
 * %a - area_code (91)
@@ -53,14 +68,15 @@ Options for the format() method include:
     pn.to_s # => "+385915125486"
     pn.format("%A/%f-%l") # => "091/512-5486"
     pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
-    
-== TODO
-* support for other countries, detecting the country from the input string
-* manually entering parse format, using regexps for different phone parts:
-    :area_code => regexp, :country_code => regexp
-* output format names, like so:
-    pn.format(:short)
-    pn.format(:long)
+
+When given a symbol it is used as a lookup for the format in the <tt>Phone.named_formats</tt> hash.
+
+You can add your own custom named formats like so:
+    Phone.named_formats[:short] = '%A/%n1-%n2'
+
+= TODO
+Parse testing for different countries. Currently tested on: Croatia, Slovenia, Hungary, Serbia, Bosnia and Herzegovina, 
+Germany.
     
 = Author
 Copyright © 2010 Tomislav Car, Infinum
