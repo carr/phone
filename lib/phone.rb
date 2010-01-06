@@ -10,7 +10,7 @@
 #   Phone.default_area_code
 #
 require 'active_support'
-require 'lib/country'
+require File.join(File.dirname(__FILE__), 'country')
 class Phone    
   NUMBER = '([^0][0-9]{1,7})$'  
   DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA

@@ -5,7 +5,7 @@ class Country < Struct.new(:name, :country_code, :char_2_code, :area_code)
   def self.load
     return @@all if @@all.present?
     
-    data_file = File.join(File.dirname(__FILE__), 'data', 'countries.yml')
+    data_file = File.join(File.dirname(__FILE__), '..', 'data', 'countries.yml')
     
     @@all = {}
     YAML.load(File.read(data_file)).each_pair do |key, c|
