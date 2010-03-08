@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   
   s.require_paths = ["lib"]
   
-  s.files = %w(Readme.rdoc LICENSE data/phone_countries.yml lib/phone.rb lib/phone_country.rb test/phone.rb test/phone_country.rb test/test_helper.rb)
-  s.test_files = %w(test/phone.rb test/phone_country.rb test/test_helper.rb)
+  s.files = %w(Readme.rdoc LICENSE data/phone_countries.yml lib/phone.rb lib/phone_country.rb test/phone_test.rb test/phone_country_test.rb test/test_helper.rb)
+  s.test_files = %w(test/phone_test.rb test/phone_country_test.rb test/test_helper.rb)
 end
