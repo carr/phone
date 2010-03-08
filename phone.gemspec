@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'tfe-phone'
-  s.version = '0.9.9'
+  s.version = '0.9.9.1'
   s.date    = '2010-03-08'
   
   s.summary = "Phone number parsing, validation and formatting"
