@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
-  s.name    = 'phone'
+  s.name    = 'tfe-phone'
   s.version = '0.9.9'
-  s.date    = '2010-01-04'
+  s.date    = '2010-03-08'
   
   s.summary = "Phone number parsing, validation and formatting"
   s.description = "Phone number parsing, validation and formatting."
   
-  s.authors  = ['Tomislav Car']
-  s.email    = 'tomislav@infinum.hr'
-  s.homepage = 'http://github.com/carr/phone'
+  s.authors  = ['Tomislav Car', 'Todd Eichel']
+  s.email    = ['tomislav@infinum.hr', 'todd@toddeichel.com']
+  s.homepage = 'http://github.com/tfe/phone'
   
   s.has_rdoc = true
   s.rdoc_options = ['--main', 'Readme.rdoc']

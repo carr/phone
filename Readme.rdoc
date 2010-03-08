@@ -4,10 +4,10 @@ Parsing, validating and creating phone numbers
 == Install
 You can install the phone library as a gem
     gem sources -a http://gemcutter.org
-    gem install phone
+    gem install tfe-phone
 
 Or as a Rails plugin
-    script/plugin install git://github.com/carr/phone.git
+    script/plugin install git://github.com/tfe/phone.git
 
 == Initializing
 You can initialize a new phone object with the number, area code and country code.
@@ -83,3 +83,6 @@ Bosnia and Herzegovina, Germany.
     
 = Author
 Copyright © 2010 Tomislav Car, Infinum
+
+Modifications copyright © 2010 Todd Eichel for Fooala, Inc.
+
