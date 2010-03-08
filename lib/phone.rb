@@ -10,7 +10,7 @@
 #   Phone.default_area_code
 #
 require 'active_support'
-require File.join(File.dirname(__FILE__), 'country')
+require File.join(File.dirname(__FILE__), 'phone_country')
 class Phone    
   NUMBER = '([^0][0-9]{1,7})$'  
   DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
@@ -53,7 +53,7 @@ class Phone
   # the format of the string is detect automatically (from FORMATS)
   def self.parse(string, options={})       
     if string.present?    
-      Country.load
+      PhoneCountry.load
       string = normalize(string)
       
       options[:country_code] ||= self.default_country_code
@@ -83,7 +83,7 @@ class Phone
       string = string.gsub(country.country_code_regexp, '0')
     else
       if options[:country_code]
-        country = Country.find_by_country_code options[:country_code]
+        country = PhoneCountry.find_by_country_code options[:country_code]
       end
     end
     
@@ -113,7 +113,7 @@ class Phone
   def self.detect_country(string)
     detected_country = nil
     # find if the number has a country code
-    Country.all.each_pair do |country_code, country|
+    PhoneCountry.all.each_pair do |country_code, country|
       if string =~ country.country_code_regexp
         detected_country = country
       end

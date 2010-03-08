@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper'
 
-class CountryTest < Test::Unit::TestCase
+class PhoneCountryTest < Test::Unit::TestCase
   def test_parse_germany_local
     pn = Phone.parse('+49 714 1605832')    
 
