@@ -525,6 +525,7 @@
   :char_3_code: FR
   :name: France
   :international_dialing_prefix: "0"
+  :area_code: "[1-6,8-9]"
 "995": 
   :country_code: "995"
   :national_dialing_prefix: 8*
