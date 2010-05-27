@@ -107,7 +107,7 @@ class PhoneCountryTest < Test::Unit::TestCase
   end
   
   def test_parse_france_local
-    pn = PhoneNumbers::Phone.parse('+33 4 75 06 07 07')
+    pn = Phone.parse('+33 4 75 06 07 07')
     
     assert_equal pn.country_code, '33'
     assert_equal pn.area_code, '4'
@@ -115,7 +115,7 @@ class PhoneCountryTest < Test::Unit::TestCase
   end
   
   def test_parse_france_mobile
-    pn = PhoneNumbers::Phone.parse('+33 6 11 22 33 44')
+    pn = Phone.parse('+33 6 11 22 33 44')
     
     assert_equal pn.country_code, '33'
     assert_equal pn.area_code, '6'
