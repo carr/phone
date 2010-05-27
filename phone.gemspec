@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name    = 'tfe-phone'
+  s.name    = 'phone'
   s.version = '0.9.9.1'
   s.date    = '2010-03-08'
   
@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   
   s.authors  = ['Tomislav Car', 'Todd Eichel']
   s.email    = ['tomislav@infinum.hr', 'todd@toddeichel.com']
-  s.homepage = 'http://github.com/tfe/phone'
+  s.homepage = 'http://github.com/carr/phone'
   
   s.has_rdoc = true
   s.rdoc_options = ['--main', 'Readme.rdoc']
