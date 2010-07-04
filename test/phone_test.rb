@@ -204,4 +204,14 @@ class PhoneTest < Test::Unit::TestCase
     assert_equal Phone.parse('047/451-588').has_default_area_code?, true
     assert_equal Phone.parse('032/336-1456').has_default_area_code?, false
   end  
+
+  def test_parse_usa_long_with_default_country_code
+    Phone.default_country_code = '1'
+    pn = Phone.parse "2069735100"
+
+    assert_not_nil pn, %Q{parse should pass}
+    assert_equal pn.number, '9735100'
+    assert_equal pn.area_code, '206'
+  end
+
 end
