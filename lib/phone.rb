@@ -138,7 +138,11 @@ class Phone
       arr << format if string_with_number =~ regexp
     end
     
-    raise "Detected more than 1 format for #{string_with_number}" if arr.size > 1
+#    raise "Detected more than 1 format for #{string_with_number}" if arr.size > 1
+    if arr.length > 1
+#      puts %Q{detect_format: more than one format found - #{arr.inspect}}
+      return :really_short
+    end
     arr.first
   end
   

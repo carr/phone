@@ -210,8 +210,19 @@ class PhoneTest < Test::Unit::TestCase
     pn = Phone.parse "2069735100"
 
     assert_not_nil pn, %Q{parse should pass}
-    assert_equal pn.number, '9735100'
-    assert_equal pn.area_code, '206'
+    assert_equal '9735100', pn.number
+    assert_equal '206', pn.area_code
+    assert_equal '1', pn.country_code
   end
 
+  def test_parse_usa_short_with_default_country_code_and_area_code
+    Phone.default_country_code = '1'
+    Phone.default_area_code = '206'
+    pn = Phone.parse "9735100"
+
+    assert_not_nil pn, %Q{parse should pass}
+    assert_equal '9735100', pn.number
+    assert_equal '206', pn.area_code
+    assert_equal '1', pn.country_code
+  end
 end
