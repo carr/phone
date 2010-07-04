@@ -14,8 +14,6 @@ Gem::Specification.new do |s|
   s.rdoc_options = ['--main', 'Readme.rdoc']
   s.rdoc_options << '--inline-source' << '--charset=UTF-8'
   s.extra_rdoc_files = ['Readme.rdoc', 'LICENSE']
-
-  s.add_dependency('activesupport')          
   
   s.require_paths = ["lib"]
   

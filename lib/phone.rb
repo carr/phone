@@ -9,9 +9,9 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-require 'active_support/core_ext' # for Class#cattr_accessor, String#present?
+require File.join(File.dirname(__FILE__), 'support')
 require File.join(File.dirname(__FILE__), 'phone_country')
-class Phone    
+class Phone
   NUMBER = '([^0][0-9]{1,7})$'  
   DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
   

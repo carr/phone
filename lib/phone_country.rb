@@ -1,5 +1,3 @@
-require 'active_support/core_ext' # for Class#cattr_accessor
-
 class PhoneCountry < Struct.new(:name, :country_code, :char_2_code, :area_code)
   cattr_accessor :all
   
