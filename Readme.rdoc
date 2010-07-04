@@ -10,11 +10,11 @@ Or as a Rails plugin
     script/plugin install git://github.com/carr/phone.git
 
 == Initializing
-You can initialize a new phone object with the number, area code and country code.
+You can initialize a new phone object with the number, area code, country code and extension number
 
     Phone.new('5125486', '91', '385')
 or
-    Phone.new(:number => '5125486', :area_code => '91', :country_code => '385')
+    Phone.new(:number => '5125486', :area_code => '91', :country_code => '385', :extension => '143')
 
 == Parsing
 You can create a new phone object by parsing from a string. Phone does it's best to detect the country and area codes:
@@ -61,8 +61,9 @@ When given a string, it interpolates the string with the following fields:
 * %a - area_code (91)
 * %A - area_code with leading zero (091)
 * %n - number (5125486)
-* %n1 - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
-* %n2 - last characters of number (5486)
+* %f - first @@n1_length characters of number (configured through Phone.n1_length), default is 3 (512)
+* %l - last characters of number (5486)
+* %x - the extension number
 
     pn = Phone.parse('+385915125486')
     pn.to_s # => "+385915125486"
@@ -72,6 +73,7 @@ When given a string, it interpolates the string with the following fields:
 When given a symbol it is used as a lookup for the format in the <tt>Phone.named_formats</tt> hash.
     pn.format(:europe) # => "+385 (0) 91 512 5486"
     pn.format(:us) # => "(234) 123 4567"    
+    pn.format(:default_with_extension) # => "+3851234567x143"    
 
 You can add your own custom named formats like so:
     Phone.named_formats[:short] = '%A/%n1-%n2'    
