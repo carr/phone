@@ -122,6 +122,14 @@ class PhoneCountryTest < Test::Unit::TestCase
     assert_equal pn.number, '11223344'
   end
 
+  def test_parse_france_voip
+    pn = Phone.parse('+33 9 11 22 33 44')
+    
+    assert_equal pn.country_code, '33'
+    assert_equal pn.area_code, '9'
+    assert_equal pn.number, '11223344'
+  end
+
   def test_parse_ukraine_local
     pn = Phone.parse('+380 57 711 22 33')
     
