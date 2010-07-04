@@ -86,5 +86,6 @@ Bosnia and Herzegovina, Germany, France, Ukraine.
 = Author
 Copyright © 2010 Tomislav Car, Infinum
 
-Modifications copyright © 2010 Todd Eichel for Fooala, Inc.
+= Contributors
+Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
 
