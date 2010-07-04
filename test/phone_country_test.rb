@@ -121,4 +121,20 @@ class PhoneCountryTest < Test::Unit::TestCase
     assert_equal pn.area_code, '6'
     assert_equal pn.number, '11223344'
   end
+
+  def test_parse_ukraine_local
+    pn = Phone.parse('+380 57 711 22 33')
+    
+    assert_equal pn.country_code, '380'
+    assert_equal pn.area_code, '57'
+    assert_equal pn.number, '7112233'
+  end
+  
+  def test_parse_ukraine_mobile
+    pn = Phone.parse('+380-50-111-22-33')
+    
+    assert_equal pn.country_code, '380'
+    assert_equal pn.area_code, '50'
+    assert_equal pn.number, '1112233'
+  end
 end
