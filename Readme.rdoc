@@ -79,7 +79,7 @@ You can add your own custom named formats like so:
 
 = TODO
 Parse testing for different countries. Currently tested on: US, South Africa, Croatia, Slovenia, Hungary, Serbia, 
-Bosnia and Herzegovina, Germany, France.
+Bosnia and Herzegovina, Germany, France, Ukraine.
     
 = Author
 Copyright © 2010 Tomislav Car, Infinum
