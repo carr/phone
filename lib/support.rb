@@ -1,3 +1,4 @@
+require 'yaml'
 # support methods to remove dependencies on ActiveSupport
 class String
   def present?
