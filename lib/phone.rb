@@ -9,7 +9,7 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-require File.join(File.dirname(__FILE__), 'support')
+require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
 require File.join(File.dirname(__FILE__), 'phone_country')
 class Phone
   NUMBER = '([^0][0-9]{1,7})$'  
