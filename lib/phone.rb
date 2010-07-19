@@ -12,7 +12,7 @@
 require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
 require File.join(File.dirname(__FILE__), 'phone_country')
 class Phone
-  NUMBER = '([^0][0-9]{1,7})$'  
+  NUMBER = '([0-9]{1,8})$'  
   DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
   
   attr_accessor :country_code, :area_code, :number, :extension
