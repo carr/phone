@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 # http://stakeholders.ofcom.org.uk/telecoms/numbering/guidance-tele-no/numbers-for-drama
+#
 # Geographic Area     Geographic Area Code  Telephone Number Range 
 # (1000 numbers in each range)
 # Leeds               0113                  496 0000 to 496 0999
@@ -30,7 +31,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 # Premium Rate Services   0909 8790000 to 8790999
 # UK Wide                 03069 990000 to 990999
 
-class GbTest < Test::Unit::TestCase
+class GBTest < Test::Unit::TestCase
   
   ## SHORT CODES
   # London              020                   7946 0000 to 7946 0999
