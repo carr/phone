@@ -4,3 +4,10 @@ require 'rubygems'
 
 require 'test/unit'
 require 'phone'
+
+def parse_test(raw, country_code, area_code, number)
+  pn = Phone.parse(raw)
+  assert_equal pn.country_code, country_code
+  assert_equal pn.area_code, area_code
+  assert_equal pn.number, number
+end
