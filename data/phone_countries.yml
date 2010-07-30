@@ -414,6 +414,7 @@
   :char_3_code: BE
   :name: Belgium
   :international_dialing_prefix: "0"
+  :area_code: "800|90[0-9]|2|3|4|9|1[0-69]|5[0-9]|6[013-9]|7[01]|8[1-9]"
 "965": 
   :country_code: "965"
   :national_dialing_prefix: None

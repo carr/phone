@@ -84,6 +84,7 @@ Parse testing for different countries.
 
 Currently tested on: 
 [BA] Bosnia and Herzegovina
+[BE] Belgium
 [DE] Germany
 [FR] France
 [GB] United Kingdom
