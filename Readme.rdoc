@@ -80,9 +80,22 @@ You can add your own custom named formats like so:
     pn.format(:short) # => 091/512-5486
 
 = TODO
-Parse testing for different countries. Currently tested on: US, South Africa, Croatia, Slovenia, Hungary, Serbia, 
-Bosnia and Herzegovina, Germany, France, Ukraine.
-    
+Parse testing for different countries. 
+
+Currently tested on: 
+[BA] Bosnia and Herzegovina
+[DE] Germany
+[FR] France
+[GB] United Kingdom
+[HR] Croatia
+[HU] Hungary
+[RS] Serbia
+[SE] Sweden
+[SI] Slovenia
+[UA] Ukraine
+[US] United States
+[ZA] South Africa
+
 = Author
 Copyright © 2010 Tomislav Car, Infinum
 
