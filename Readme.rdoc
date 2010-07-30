@@ -89,6 +89,7 @@ Currently tested on:
 [GB] United Kingdom
 [HR] Croatia
 [HU] Hungary
+[NL] Netherlands
 [RS] Serbia
 [SE] Sweden
 [SI] Slovenia
