@@ -489,9 +489,10 @@
   :country_code: "61"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
-  :char_3_code: CC
-  :name: Cocos (Keeling) Islands
+  :char_3_code: AU
+  :name: Australia
   :international_dialing_prefix: "11"
+  :area_code: "[234578]"
 "880": 
   :country_code: "880"
   :national_dialing_prefix: "0"
@@ -1384,13 +1385,6 @@
   :char_3_code: HN
   :name: Honduras
   :international_dialing_prefix: "0"
-"618": 
-  :country_code: "618"
-  :national_dialing_prefix: "0"
-  :char_2_code: "0"
-  :char_3_code: CX
-  :name: Christmas Island
-  :international_dialing_prefix: "11"
 "250": 
   :country_code: "250"
   :national_dialing_prefix: "0"

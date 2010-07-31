@@ -83,6 +83,7 @@ You can add your own custom named formats like so:
 Parse testing for different countries. 
 
 Currently tested on: 
+[AU] Australia
 [BA] Bosnia and Herzegovina
 [BE] Belgium
 [DE] Germany
