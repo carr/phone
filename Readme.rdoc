@@ -103,5 +103,5 @@ Currently tested on:
 Copyright © 2010 Tomislav Car, Infinum
 
 = Contributors
-Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
+Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
 
