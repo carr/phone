@@ -957,6 +957,7 @@
   :char_3_code: PT
   :name: Portugal
   :international_dialing_prefix: "0"
+  :area_code: "21|22|2[3-9][1-9]|70[78]|80[089]|9[136]|92[1-9]"
 "973": 
   :country_code: "973"
   :national_dialing_prefix: None
