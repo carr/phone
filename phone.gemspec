@@ -35,7 +35,8 @@ Gem::Specification.new do |s|
       test/countries/gb_test.rb 
       test/countries/hr_test.rb 
       test/countries/hu_test.rb 
-      test/countries/nl_test.rb 
+      test/countries/nl_test.rb
+      test/countries/pt_test.rb 
       test/countries/rs_test.rb 
       test/countries/se_test.rb 
       test/countries/si_test.rb 
@@ -56,7 +57,8 @@ Gem::Specification.new do |s|
       test/countries/gb_test.rb 
       test/countries/hr_test.rb 
       test/countries/hu_test.rb 
-      test/countries/nl_test.rb 
+      test/countries/nl_test.rb
+      test/countries/pt_test.rb 
       test/countries/rs_test.rb 
       test/countries/se_test.rb 
       test/countries/si_test.rb 
