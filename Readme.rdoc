@@ -11,7 +11,7 @@ Or as a Rails plugin
 
 == Updates in v 1.0
 
-    The biggest updating is the namespacing problem fixed that a lot of people were having. You now use phone by refering to 
+The biggest updating is the namespacing problem fixed that a lot of people were having. You now use phone by refering to 
     
     Phoner::Phone
 
