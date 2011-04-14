@@ -103,4 +103,11 @@ class PhoneTest < Test::Unit::TestCase
     assert_equal Phoner::Phone.valid?('385915125486'), false
   end
   
+  def test_find_by_country_isocode
+    Phoner::Country.load
+    assert_equal Phoner::Country.find_by_country_isocode('de').country_code, "49"
+    assert_equal Phoner::Country.find_by_country_isocode('xx'), nil
+    assert_equal Phoner::Country.find_by_country_isocode('bla'), nil
+  end
+  
 end
