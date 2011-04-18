@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.email    = ['tomislav@infinum.hr', 'todd@toddeichel.com', 'elskwid@gmail.com']
   s.homepage = 'http://github.com/carr/phone'
   
-  s.has_rdoc = true
   s.rdoc_options = ['--main', 'Readme.rdoc']
   s.rdoc_options << '--inline-source' << '--charset=UTF-8'
   s.extra_rdoc_files = ['Readme.rdoc', 'LICENSE']
