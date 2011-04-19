@@ -15,7 +15,7 @@ require File.join(File.dirname(__FILE__), 'country')
 module Phoner
   class Phone
     NUMBER = '([0-9]{1,8})$'  
-    DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
+    DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
