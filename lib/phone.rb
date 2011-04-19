@@ -157,7 +157,7 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+')
+      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+').gsub(/^\+00/, '+').gsub(/^\+0/, '+')
     end
 
     # pull off anything that look like an extension
