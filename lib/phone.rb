@@ -235,6 +235,12 @@ module Phoner
     def has_default_area_code?
       area_code == self.class.default_area_code
     end
+    
+    # comparison of 2 phone objects
+    def ==(other)
+      methods = [:country_code, :area_code, :number, :extension]
+      methods.all? { |method| other.respond_to?(method) && send(method) == other.send(method) }
+    end    
 
     private
 
