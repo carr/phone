@@ -357,6 +357,7 @@
   :char_3_code: UY
   :name: Uruguay
   :international_dialing_prefix: "0"
+  :area_code: "2|42|43[34567]|4364|44[3457]|4452|4542|4544|456[7]?|4586|46[234]|4675|47[237]|4779|9[13456789]"
 "992": 
   :country_code: "992"
   :national_dialing_prefix: "8"
