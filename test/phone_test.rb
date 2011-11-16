@@ -103,6 +103,13 @@ class PhoneTest < Test::Unit::TestCase
     assert_equal Phoner::Phone.valid?('385915125486'), false
   end
   
+  def test_find_by_country_isocode
+    Phoner::Country.load
+    assert_equal Phoner::Country.find_by_country_isocode('de').country_code, "49"
+    assert_equal Phoner::Country.find_by_country_isocode('xx'), nil
+    assert_equal Phoner::Country.find_by_country_isocode('bla'), nil
+  end
+  
   def test_comparison_true
     pn1 = Phoner::Phone.new '5125486', '91', '385'    
     pn2 = Phoner::Phone.new '5125486', '91', '385'    
@@ -113,5 +120,5 @@ class PhoneTest < Test::Unit::TestCase
     pn1 = Phoner::Phone.new '5125486', '91', '385'    
     pn2 = Phoner::Phone.new '1234567', '91', '385'    
     assert pn1 != pn2
-  end  
+  end
 end
