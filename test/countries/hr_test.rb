@@ -1,37 +1,37 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Croatia
-class HRTest < Test::Unit::TestCase
-  
+class HRTest < Phoner::TestCase
+
   def test_zagreb
     parse_test('+38513668734', '385', '1', '3668734')
   end
-  
+
   def test_mobile
     parse_test('+385915125486', '385', '91', '5125486')
   end
-  
+
   def test_long_without_special_characters
     parse_test('+385915125486', '385', '91', '5125486')
   end
-  
+
   def test_long_with_special_characters
     parse_test('+ 385 (91) 512 / 5486 ', '385', '91', '5125486')
   end
-  
+
   def test_long_with_leading_zeros
     parse_test('00385915125486', '385', '91', '5125486')
   end
-  
+
   def test_zagreb_long_with_leading_zeros
     parse_test('0038513668734', '385', '1', '3668734')
   end
-  
+
   def test_short_without_special_characters_with_country
     Phoner::Phone.default_country_code = '385'
     parse_test('044885047', '385', '44', '885047')
   end
-  
+
   def test_zagreb_short_without_special_characters_with_country
     Phoner::Phone.default_country_code = '385'
     parse_test('013668734', '385', '1', '3668734')

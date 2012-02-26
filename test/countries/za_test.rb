@@ -1,8 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## South Africa
-class ZATest < Test::Unit::TestCase
-  
+class ZATest < Phoner::TestCase
   def test_local
     # Telkom
     parse_test('+27 11 555 5555', '27', '11', '5555555')
@@ -17,5 +16,4 @@ class ZATest < Test::Unit::TestCase
     # Telkom
     parse_test('+27 800 123 321', '27', '800', '123321')
   end
-  
 end
