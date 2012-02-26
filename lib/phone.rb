@@ -37,13 +37,14 @@ module Phoner
         hash_or_args = hash_or_args.first
         keys = {:country => :country, :number => :number, :area_code => :area_code, :country_code => :country_code, :extension => :extension}
       else
-        keys = {:number => 0, :area_code => 1, :country_code => 2, :extension => 3}
+        keys = {:number => 0, :area_code => 1, :country_code => 2, :extension => 3, :country => 4}
       end
 
       self.number = hash_or_args[ keys[:number] ]
       self.area_code = hash_or_args[ keys[:area_code] ] || self.default_area_code
       self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code
       self.extension = hash_or_args[ keys[:extension] ]
+      self.country = hash_or_args[ keys[:country] ]
 
       raise "Must enter number" if self.number.blank?
       raise "Must enter area code or set default area code" if self.area_code.blank?
@@ -82,26 +83,11 @@ module Phoner
 
     # split string into hash with keys :country_code, :area_code and :number
     def self.split_to_parts(string, options = {})
-      country = detect_country(string, options[:country_code], options[:area_code])
+      country = Country.detect(string, options[:country_code], options[:area_code])
 
       raise "Could not determine country" if country.nil?
 
       country.number_parts(string, options[:area_code])
-    end
-
-    # detect country from the string entered
-    def self.detect_country(string, country_code, default_area_code)
-      Country.find_all_by_country_code(country_code).each do |country|
-        return country if string =~ country.full_number_regexp ||
-                          string =~ country.area_code_regexp ||
-                          string =~ country.number_regex
-      end
-
-      # find if the number has a country code
-      Country.all.each do |country|
-        return country if string =~ country.full_number_regexp
-      end
-      return nil
     end
 
     # fix string so it's easier to parse, remove extra characters etc.
