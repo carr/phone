@@ -7,10 +7,10 @@ module Phoner
 
       data_file = File.join(File.dirname(__FILE__), '..', 'data', 'phone_countries.yml')
 
-      @@all = {}
+      @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|
         next unless c[:area_code] && c[:number_format]
-        @@all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:area_code], c[:number_format])
+        @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:area_code], c[:number_format])
       end
       @@all
     end
@@ -19,8 +19,8 @@ module Phoner
       name
     end
 
-    def self.find_by_country_code(code)
-      @@all[code]
+    def self.find_all_by_country_code(code)
+      @@all.select {|c| c.country_code == code }
     end
 
     def country_code_regexp

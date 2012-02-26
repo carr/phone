@@ -44,15 +44,15 @@ class HRTest < Phoner::TestCase
 
   def test_has_default_country_code
     Phoner::Phone.default_country_code = '385'
-    
+
     assert_equal Phoner::Phone.parse('+38547451588').has_default_country_code?, true
     assert_equal Phoner::Phone.parse('+38647451588').has_default_country_code?, false
   end
-  
+
   def test_has_default_area_code
     Phoner::Phone.default_country_code = '385'
     Phoner::Phone.default_area_code = '47'
-    
+
     assert_equal Phoner::Phone.parse('047/451-588').has_default_area_code?, true
     assert_equal Phoner::Phone.parse('032/336-1456').has_default_area_code?, false
   end

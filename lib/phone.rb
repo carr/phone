@@ -82,29 +82,26 @@ module Phoner
 
     # split string into hash with keys :country_code, :area_code and :number
     def self.split_to_parts(string, options = {})
-      default_country = Country.find_by_country_code(options[:country_code])
-      country = detect_country(string, default_country, options[:area_code])
+      country = detect_country(string, options[:country_code], options[:area_code])
 
-      country ||= Country.find_by_country_code(options[:country_code])
       raise "Could not determine country" if country.nil?
 
       country.number_parts(string, options[:area_code])
     end
 
     # detect country from the string entered
-    def self.detect_country(string, default_country, default_area_code)
-      return default_country if default_country && (string =~ default_country.full_number_regexp ||
-                                string =~ default_country.area_code_regexp(default_area_code))
-
-      detected_country = nil
+    def self.detect_country(string, country_code, default_area_code)
+      Country.find_all_by_country_code(country_code).each do |country|
+        return country if string =~ country.full_number_regexp ||
+                          string =~ country.area_code_regexp ||
+                          string =~ country.number_regex
+      end
 
       # find if the number has a country code
-      Country.all.each_pair do |country_code, country|
-        if string =~ country.full_number_regexp
-          detected_country = country
-        end
+      Country.all.each do |country|
+        return country if string =~ country.full_number_regexp
       end
-      detected_country
+      return nil
     end
 
     # fix string so it's easier to parse, remove extra characters etc.
