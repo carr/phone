@@ -12,7 +12,7 @@ Or as a Rails plugin
 == Updates in v 1.0
 
 The biggest updating is the namespacing problem fixed that a lot of people were having. You now use phone by refering to 
-    
+
     Phoner::Phone
 
 == Initializing
@@ -30,18 +30,18 @@ You can create a new phone object by parsing from a string. Phoner::Phone does i
 If the country or area code isn't given in the string, you must set it, otherwise it doesn't work:
     Phoner::Phone.parse '091/512-5486', :country_code => '385'
     Phoner::Phone.parse '(091) 512 5486', :country_code => '385'
-    
+
 If you feel that it's tedious, set the default country code once (in your config/environment.rb):
-    Phoner::Phone.default_country_code = '385'    
+    Phoner::Phone.default_country_code = '385'
     Phoner::Phone.parse '091/512-5486'
-    Phoner::Phone.parse '(091) 512 5486'    
-    
+    Phoner::Phone.parse '(091) 512 5486'
+
 Same goes for the area code:
     Phoner::Phone.parse '451-588', :country_code => '385', :area_code => '47'
 or
-    Phoner::Phone.default_country_code = '385'  
+    Phoner::Phone.default_country_code = '385'
     Phoner::Phone.default_area_code = '47'
-    
+
     Phoner::Phone.parse '451-588'
 
 === Automatic country and area code detection
@@ -57,7 +57,7 @@ the US) is used.
 == Validating
 Validating is very relaxed, basically it strips out everything that's not a number or '+' character:
     Phoner::Phone.valid? 'blabla 091/512-5486 blabla'
-    
+
 == Formatting
 Formating is done via the <tt>format</tt> method. The method accepts a <tt>Symbol</tt> or a <tt>String</tt>.
 
@@ -79,10 +79,10 @@ When given a string, it interpolates the string with the following fields:
 When given a symbol it is used as a lookup for the format in the <tt>Phoner::Phone.named_formats</tt> hash.
     pn.format(:europe) # => "+385 (0) 91 512 5486"
     pn.format(:us) # => "(234) 123 4567"    
-    pn.format(:default_with_extension) # => "+3851234567x143"    
+    pn.format(:default_with_extension) # => "+3851234567x143"
 
 You can add your own custom named formats like so:
-    Phoner::Phone.named_formats[:short] = '%A/%n1-%n2'    
+    Phoner::Phone.named_formats[:short] = '%A/%n1-%n2'
     pn.format(:short) # => 091/512-5486
 
 = TODO
@@ -92,11 +92,13 @@ Currently tested on:
 [AU] Australia
 [BA] Bosnia and Herzegovina
 [BE] Belgium
+[CA] Canada
 [DE] Germany
 [FR] France
 [GB] United Kingdom
 [HR] Croatia
 [HU] Hungary
+[IN] India
 [NL] Netherlands
 [RS] Serbia
 [SE] Sweden
@@ -105,12 +107,9 @@ Currently tested on:
 [US] United States
 [ZA] South Africa
 
-= Known issues
-There's an issue with Germany and area codes.
-
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
 
 = Contributors
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
+Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Wesley Moxam
 
