@@ -148,6 +148,8 @@
   :char_3_code: GY
   :name: Guyana
   :international_dialing_prefix: "0"
+  :area_code: "218|219|223|225|226|227|231|260|262|263|328|333|334|441|444|455|777|6[0-9]{2}"
+  :number_format: "\\d{4}"
 "225": 
   :country_code: "225"
   :national_dialing_prefix: "0"

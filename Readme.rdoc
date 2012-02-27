@@ -96,6 +96,7 @@ Currently tested on:
 [DE] Germany
 [FR] France
 [GB] United Kingdom
+[GY] Guyana
 [HR] Croatia
 [HU] Hungary
 [IN] India
