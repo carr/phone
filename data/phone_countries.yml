@@ -1295,7 +1295,7 @@
   :char_3_code: DE
   :name: Germany
   :international_dialing_prefix: "0"
-  :area_code: "[0-9]{3}"
+  :area_code: "[0-9]{2,5}"
   :number_format: "\\d{7}"
 "389": 
   :country_code: "389"
