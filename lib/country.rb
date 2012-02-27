@@ -23,6 +23,11 @@ module Phoner
       @@all.select {|c| c.country_code == code }
     end
 
+    def self.find_by_name(name)
+      @@all.each {|c| return c if c.name.downcase == name }
+      nil
+    end
+
     # detect country from the string entered
     def self.detect(string, default_country_code, default_area_code)
       Country.find_all_by_country_code(default_country_code).each do |country|
