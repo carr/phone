@@ -185,13 +185,15 @@
   :char_3_code: EC
   :name: Ecuador
   :international_dialing_prefix: "0"
-"254": 
+"254":
   :country_code: "254"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: KE
   :name: Kenya
   :international_dialing_prefix: "0"
+  :area_code: "[2-9]\\d"
+  :number_format: "\\d{5,7}"
 "226": 
   :country_code: "226"
   :national_dialing_prefix: None
@@ -457,6 +459,8 @@
   :char_3_code: SA
   :name: Saudi Arabia
   :international_dialing_prefix: "0"
+  :area_code: "[1-7]"
+  :number_format: "\\d{7}"
 "683": 
   :country_code: "683"
   :national_dialing_prefix: None
@@ -501,13 +505,15 @@
   :international_dialing_prefix: "11"
   :area_code: "[234578]"
   :number_format: "\\d{8}"
-"880": 
+"880":
   :country_code: "880"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: BD
   :name: Bangladesh
   :international_dialing_prefix: "0"
+  :area_code: "1\\d\\d|2|[345789]1|3[2345678]1|40[12]|42[13]|4[3456789]1|446|488|49[68]|5[23456789]1|5[56]2|6[012345689]1|628|672|7[23456789]1|732|8[234567]1|9[23458]1|3028|303[56]|322[34]|342[47]|3529|3823|4027|4031|422[258]|4326|442[24]|4623|4724|5222|5327|5334|625[14]|702[23]|7622|8023|8032|8424|852[58]|8626|8723|9028|9225|942[34]"
+  :number_format: "\\d{3,7}"
 "967": 
   :country_code: "967"
   :national_dialing_prefix: "0"
@@ -594,13 +600,15 @@
   :char_3_code: WS
   :name: Samoa
   :international_dialing_prefix: "0"
-"63": 
+"63":
   :country_code: "63"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: PH
   :name: Philippines
   :international_dialing_prefix: "0"
+  :area_code: "9\\d\\d|[3-8]\\d|2"
+  :number_format: "\\d{7}"
 "968": 
   :country_code: "968"
   :national_dialing_prefix: None
@@ -631,13 +639,15 @@
   :international_dialing_prefix: "0"
   :area_code: "[7-9]?\\d\\d\\d"
   :number_format: "\\d{6,7}"
-"92": 
+"92":
   :country_code: "92"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: PK
   :name: Pakistan
   :international_dialing_prefix: "0"
+  :area_code: "2[125]|4[01246789]|5[123567]|6[12345678]|7[14]|8[16]|91|2[349]\\d|45\\d|54\\d|60\\d|72\\d|8[2345]\\d|9[23469]\\d"
+  :number_format: "\\d{6,7}"
 "64": 
   :country_code: "64"
   :national_dialing_prefix: 0 (None fo
@@ -691,6 +701,8 @@
   :char_3_code: GH
   :name: Ghana
   :international_dialing_prefix: "0"
+  :area_code: "[23]\\d|54"
+  :number_format: "\\d{7}"
 "686":
   :country_code: "686"
   :national_dialing_prefix: None
@@ -726,13 +738,15 @@
   :char_3_code: RE
   :name: "R\xC3\xA9union"
   :international_dialing_prefix: "0"
-"234": 
+"234":
   :country_code: "234"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: NG
   :name: Nigeria
   :international_dialing_prefix: "9"
+  :area_code: "1|9|[2-8]\\d"
+  :number_format: "\\d{5,7}"
 "687": 
   :country_code: "687"
   :national_dialing_prefix: None
@@ -784,13 +798,15 @@
   :char_3_code: TV
   :name: Tuvalu
   :international_dialing_prefix: "0"
-"94": 
+"94":
   :country_code: "94"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: LK
   :name: Sri Lanka
   :international_dialing_prefix: "0"
+  :area_code: "[12345689]\\d|7"
+  :number_format: "\\d{7,8}"
 "377": 
   :country_code: "377"
   :national_dialing_prefix: "0"
@@ -924,13 +940,15 @@
   :char_3_code: RU
   :name: Russian Federation
   :international_dialing_prefix: "810"
-"98": 
+"98":
   :country_code: "98"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: IR
   :name: Iran, Islamic Republic Of
   :international_dialing_prefix: "0"
+  :area_code: "[2]\\d|[3-9]\\d\\d"
+  :number_format: "\\d{7,8}"
 "972": 
   :country_code: "972"
   :national_dialing_prefix: "0"
@@ -1040,7 +1058,7 @@
   :char_3_code: YT
   :name: Mayotte
   :international_dialing_prefix: "0"
-"381": 
+"381":
   :country_code: "381"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
@@ -1049,13 +1067,15 @@
   :international_dialing_prefix: "99"
   :area_code: "[1-9][0-9]"
   :number_format: "\\d{7}"
-"975": 
+"975":
   :country_code: "975"
   :national_dialing_prefix: None
   :char_2_code: None
   :char_3_code: BT
   :name: Bhutan
   :international_dialing_prefix: "0"
+  :area_code: "17|[2-9]"
+  :number_format: "\\d{6}"
 "298": 
   :country_code: "298"
   :national_dialing_prefix: None
@@ -1133,6 +1153,8 @@
   :char_3_code: NP
   :name: Nepal
   :international_dialing_prefix: "0"
+  :area_code: "1|21|41|51|56|61|64|65|71"
+  :number_format: "\\d{6,7}"
 "241": 
   :country_code: "241"
   :national_dialing_prefix: None
@@ -1320,13 +1342,15 @@
   :char_3_code: SC
   :name: Seychelles
   :international_dialing_prefix: "0"
-"20": 
+"20":
   :country_code: "20"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: EG
   :name: Egypt
   :international_dialing_prefix: "0"
+  :area_code: "[1-3]|[4-9]\\d"
+  :number_format: "\\d{7,8}"
 "500": 
   :country_code: "500"
   :national_dialing_prefix: None

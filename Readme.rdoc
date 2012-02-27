@@ -91,22 +91,38 @@ Parse testing for different countries.
 Currently tested on: 
 [AU] Australia
 [BA] Bosnia and Herzegovina
+[BD] Bangladesh
 [BE] Belgium
+[BT] Bhutan
 [CA] Canada
 [DE] Germany
+[EG] Egypt
 [FR] France
 [GB] United Kingdom
+[GH] Ghana
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
 [IN] India
+[IR] Iran
+[KE] Kenya
+[LK] Sri Lanka
+[NG] Nigeria
 [NL] Netherlands
+[NP] Nepal
+[PH] Philippines
+[PK] Pakistan
 [RS] Serbia
+[SA] Saudi Arabia
 [SE] Sweden
 [SI] Slovenia
 [UA] Ukraine
 [US] United States
 [ZA] South Africa
+
+= Known Issues
+Countries that have variable length area codes and number formats can allow invalid numbers that are too long or too short.
+A total length check needs to be added to fix this problem. See the Nepal test for an example
 
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
