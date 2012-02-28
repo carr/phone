@@ -1,5 +1,5 @@
 module Phoner
-  class Country < Struct.new(:name, :country_code, :char_2_code, :area_code, :number_format)
+  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :number_format)
     cattr_accessor :all
 
     def self.load
@@ -10,7 +10,7 @@ module Phoner
       @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|
         next unless c[:area_code] && c[:number_format]
-        @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:area_code], c[:number_format])
+        @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:number_format])
       end
       @@all
     end
@@ -19,18 +19,23 @@ module Phoner
       name
     end
 
-    def self.find_all_by_country_code(code)
+    def self.find_all_by_phone_code(code)
       @@all.select {|c| c.country_code == code }
     end
 
+    def self.find_by_country_code(code)
+      @@all.each {|c| return c if c.char_3_code.downcase == code.downcase }
+      nil
+    end
+
     def self.find_by_name(name)
-      @@all.each {|c| return c if c.name.downcase == name }
+      @@all.each {|c| return c if c.name.downcase == name.downcase }
       nil
     end
 
     # detect country from the string entered
     def self.detect(string, default_country_code, default_area_code)
-      Country.find_all_by_country_code(default_country_code).each do |country|
+      Country.find_all_by_phone_code(default_country_code).each do |country|
         return country if string =~ country.full_number_regexp ||
                           string =~ country.area_code_number_regexp ||
                           ((string =~ country.number_regex) && (default_area_code =~ country.area_code_regex))
