@@ -98,6 +98,11 @@ class PhoneTest < Phoner::TestCase
     assert_equal pn.format(:europe), '+385 (0) 91 512 5486'
   end
 
+  def test_valid
+    assert_equal Phoner::Phone.valid?('915125486', :country_code => '385'), true
+    assert_equal Phoner::Phone.valid?('385915125486'), true
+  end
+
   def test_doesnt_validate
     assert_equal Phoner::Phone.valid?('asdas'), false
     assert_equal Phoner::Phone.valid?('38591512548678'), false

@@ -73,9 +73,9 @@ module Phoner
     end
 
     # is this string a valid phone number?
-    def self.valid?(string)
+    def self.valid?(string, options = {})
       begin
-        parse(string).present?
+        parse(string, options).present?
       rescue RuntimeError # if we encountered exceptions (missing country code, missing area code etc)
         return false
       end
