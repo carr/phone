@@ -1,5 +1,5 @@
 # An object representing a phone number.
-# 
+#
 # The phone number is recorded in 3 separate parts:
 # * country_code - e.g. '385', '386'
 # * area_code - e.g. '91', '47'
@@ -46,9 +46,14 @@ module Phoner
       self.extension = hash_or_args[ keys[:extension] ]
       self.country = hash_or_args[ keys[:country] ]
 
+      # Santity checks
       raise "Must enter number" if self.number.blank?
       raise "Must enter area code or set default area code" if self.area_code.blank?
       raise "Must enter country code or set default country code" if self.country_code.blank?
+    end
+
+    def self.parse!(string, options={})
+        parse(string, options.merge(:raise_exception_on_error => true))
     end
 
     # create a new phone number by parsing a string
@@ -85,7 +90,10 @@ module Phoner
     def self.split_to_parts(string, options = {})
       country = Country.detect(string, options[:country_code], options[:area_code])
 
-      raise "Could not determine country" if country.nil?
+      if country.nil?
+        raise "Could not determine country" if options[:raise_exception_on_error]
+        return nil
+      end
 
       country.number_parts(string, options[:area_code])
     end

@@ -55,16 +55,20 @@ class PhoneTest < Phoner::TestCase
   def test_parse_short_without_special_characters_without_country
     Phoner::Phone.default_country_code = nil
 
+    assert_nil Phoner::Phone.parse "0915125486"
+
     assert_raise RuntimeError do
-      pn = Phoner::Phone.parse "0915125486"
+      Phoner::Phone.parse! "0915125486"
     end
   end
 
   def test_parse_short_with_special_characters_without_country
     Phoner::Phone.default_country_code = nil
 
+    assert_nil Phoner::Phone.parse "091/512-5486"
+
     assert_raise RuntimeError do
-      pn = Phoner::Phone.parse "091/512-5486"
+      Phoner::Phone.parse! "091/512-5486"
     end
   end
 
