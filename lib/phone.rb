@@ -82,6 +82,12 @@ module Phoner
       parse(string, options).present?
     end
 
+    def self.is_mobile?(string, options = {})
+      pn = parse(string, options)
+      return false if pn.nil?
+      pn.is_mobile?
+    end
+
     # split string into hash with keys :country_code, :area_code and :number
     def self.split_to_parts(string, options = {})
       country = Country.detect(string, options[:country_code], options[:area_code])
@@ -124,6 +130,13 @@ module Phoner
     # format area_code with trailing zero (e.g. 91 as 091)
     def area_code_long
       "0" + area_code if area_code
+    end
+
+    # For many countries it's not apparent from the number
+    # Will return false positives rather than false negatives.
+    def is_mobile?
+      return true if country.mobile_format.nil?
+      "#{area_code}#{number}" =~ country.mobile_number_regex ? true : false
     end
 
     # first n characters of :number

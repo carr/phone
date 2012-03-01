@@ -4,11 +4,11 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 class HRTest < Phoner::TestCase
 
   def test_zagreb
-    parse_test('+38513668734', '385', '1', '3668734')
+    parse_test('+38513668734', '385', '1', '3668734', 'Croatia', false)
   end
 
   def test_mobile
-    parse_test('+385915125486', '385', '91', '5125486')
+    parse_test('+385915125486', '385', '91', '5125486', 'Croatia', true)
   end
 
   def test_long_without_special_characters

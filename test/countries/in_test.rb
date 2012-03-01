@@ -6,9 +6,12 @@ class INTest < Phoner::TestCase
     parse_test('+91.124.4529000', '91', '124', '4529000')
     parse_test('+91 124 4529000', '91', '124', '4529000')
     parse_test('+911244529000', '91', '124', '4529000')
-    parse_test('911244529000', '91', '124', '4529000')
+    parse_test('911244529000', '91', '124', '4529000', "India", false)
   end
 
+  def test_mobile
+    parse_test('918124452900', '91', '8124', '452900', "India", true)
+  end
 
   def test_long_with_default_country_code
     Phoner::Phone.default_country_code = '91'

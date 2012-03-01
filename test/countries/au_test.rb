@@ -25,12 +25,12 @@ class AUTest < Phoner::TestCase
 
   # 04 Mobile services (Digital - GSM, CDMA, 3G)
   def test_mobile
-    parse_test('+61 4 5551 1234', '61', '4', '55511234')
+    parse_test('+61 4 5551 1234', '61', '4', '55511234', 'Australia', true)
   end
 
   # 05 Universal/Personal numberings (uncommon)
   def test_personal
-    parse_test('+61 5 5551 1234', '61', '5', '55511234')
+    parse_test('+61 5 5551 1234', '61', '5', '55511234', 'Australia', false)
   end
 
   # 07 North-east region (QLD)

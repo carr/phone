@@ -70,7 +70,7 @@ class PTTest < Phoner::TestCase
   # 809: Custo partilhado ("Shared cost")
   def test_809
     Phoner::Phone.default_country_code = '351'
-    parse_test('809 123 456', '351', '809', '123456')
+    parse_test('809 123 456', '351', '809', '123456', 'Portugal', false)
   end
 
   ## 9: Mobile networks
@@ -78,7 +78,7 @@ class PTTest < Phoner::TestCase
   ## two-digits mobile networks
   # 91: Vodafone
   def test_vodafone
-    parse_test('+351 91 1234567', '351', '91', '1234567')
+    parse_test('+351 91 1234567', '351', '91', '1234567', 'Portugal', true)
   end
   # 93: Optimus
   def test_optimus

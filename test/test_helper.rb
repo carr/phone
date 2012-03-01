@@ -5,7 +5,7 @@ require 'rubygems'
 require 'test/unit'
 require 'phone'
 
-def parse_test(raw, country_code, area_code, number, country_name = nil)
+def parse_test(raw, country_code, area_code, number, country_name = nil, is_mobile = nil)
   pn = Phoner::Phone.parse(raw)
 
   assert_not_nil pn, %Q{parse should pass}
@@ -14,6 +14,10 @@ def parse_test(raw, country_code, area_code, number, country_name = nil)
   assert_equal pn.number, number
   if country_name
     assert_equal pn.country.name, country_name
+  end
+
+  unless is_mobile.nil?
+    assert_equal is_mobile, pn.is_mobile?
   end
 end
 

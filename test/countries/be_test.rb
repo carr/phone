@@ -3,10 +3,14 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 ## Belgium
 class BETest < Phoner::TestCase
 
+  def test_mobile
+    parse_test('+32 4 12345678', '32', '4', '12345678', 'Belgium', true)
+  end
+
   ## single digit
   # 02:   Brussels (Bruxelles/Brussel)
   def test_brussels
-    parse_test('+32 2 1234567', '32', '2', '1234567')
+    parse_test('+32 2 1234567', '32', '2', '1234567', 'Belgium', false)
   end
   # 03:   Antwerpen (Antwerp), Sint-Niklaas
   def test_antwerpen
@@ -14,7 +18,7 @@ class BETest < Phoner::TestCase
   end
   # 04:   Liège (Luik), Voeren (Fourons)
   def test_liege
-    parse_test('+32 4 1234567', '32', '4', '1234567')
+    parse_test('+32 4 1234567', '32', '4', '1234567', 'Belgium', false)
   end
   # 09:   Gent (Ghent/Gand)
   def test_gent

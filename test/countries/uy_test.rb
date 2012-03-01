@@ -10,11 +10,11 @@ class UYTest < Phoner::TestCase
 
   # 042 Maldonado
   def test_maldonado
-    parse_test('+598 42 123456', '598', '42', '123456')
+    parse_test('+598 42 123456', '598', '42', '123456', "Uruguay", false)
   end
 
   # 09 Mobile phones
   def test_mobile_phones
-    parse_test('+598 99 570110', '598', '99', '570110')
+    parse_test('+598 99 570110', '598', '99', '570110', "Uruguay", true)
   end
 end

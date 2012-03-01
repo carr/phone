@@ -5,7 +5,7 @@ class NETest < Phoner::TestCase
 
   # 06:   mobile phone number
   def test_mobile
-    parse_test('+31 6 12345678', '31', '6', '12345678')
+    parse_test('+31 6 12345678', '31', '6', '12345678', "Netherlands", true)
   end
 
   # 066:  mobile pagers
@@ -20,7 +20,7 @@ class NETest < Phoner::TestCase
 
   # 0800: toll free number
   def test_toll_free
-    parse_test('+31 800 123456', '31', '800', '123456')
+    parse_test('+31 800 123456', '31', '800', '123456', "Netherlands", false)
   end
 
   # 084:  location independent (used mostly for fax-to-email and voicemail services)

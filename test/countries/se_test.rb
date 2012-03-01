@@ -112,12 +112,12 @@ class SETest < Phoner::TestCase
 
   # 063 Östersund
   def test_ostersund
-    parse_test('+46635555555', '46', '63', '5555555')
+    parse_test('+46635555555', '46', '63', '5555555', "Sweden", false)
   end
 
   # 070, 
   def test_mobile_70
-    parse_test('+46705555555', '46', '70', '5555555')
+    parse_test('+46705555555', '46', '70', '5555555', "Sweden", true)
   end
 
   # 071 Telematics in Mobile Networks (used to be Premium rate numbers)

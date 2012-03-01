@@ -2,6 +2,10 @@ require File.expand_path(File.dirname(__FILE__) + '/test_helper')
 
 class PhoneTest < Phoner::TestCase
 
+  def test_is_mobile
+    assert Phoner::Phone.is_mobile?("918124452900")
+  end
+
   def test_number_without_country_code_initialize
     Phoner::Phone.default_country_code = nil
 

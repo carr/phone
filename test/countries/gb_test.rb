@@ -159,7 +159,7 @@ class GBTest < Phoner::TestCase
 
   # Mobile                  07700 900000 to 900999
   def test_mobile
-    parse_test('+44 7700 900345', '44', '7700', '900345')
+    parse_test('+44 7700 900345', '44', '7700', '900345', "United Kingdom", true)
   end
 
   def test_mobile_2
@@ -168,7 +168,7 @@ class GBTest < Phoner::TestCase
 
   # Freephone               08081 570000 to 570999
   def test_freephone
-    parse_test('+44 808 1570123', '44', '808', '1570123')
+    parse_test('+44 808 1570123', '44', '808', '1570123', "United Kingdom", false)
   end
 
   def test_freephone_2

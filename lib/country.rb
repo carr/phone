@@ -1,5 +1,5 @@
 module Phoner
-  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :number_format)
+  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :number_format, :mobile_format)
     cattr_accessor :all
 
     def self.load
@@ -10,7 +10,7 @@ module Phoner
       @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|
         next unless c[:area_code] && c[:number_format]
-        @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:number_format])
+        @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:number_format], c[:mobile_format])
       end
       @@all
     end
@@ -65,6 +65,10 @@ module Phoner
 
     def area_code_regex
       Regexp.new("^0?(#{area_code})$")
+    end
+
+    def mobile_number_regex
+      Regexp.new("^0?(#{mobile_format})$")
     end
 
     def number_regex
