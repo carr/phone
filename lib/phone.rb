@@ -79,11 +79,7 @@ module Phoner
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
-      begin
-        parse(string, options).present?
-      rescue RuntimeError # if we encountered exceptions (missing country code, missing area code etc)
-        return false
-      end
+      parse(string, options).present?
     end
 
     # split string into hash with keys :country_code, :area_code and :number
