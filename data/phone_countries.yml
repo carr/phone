@@ -1050,6 +1050,9 @@
   :char_3_code: QA
   :name: Qatar
   :international_dialing_prefix: "0"
+  :area_code: "33|44|55|66|77"
+  :number_format: "\\d{6}"
+  :mobile_format: "(33|55|66|77)\\d{6}"
 "691": 
   :country_code: "691"
   :national_dialing_prefix: "1"

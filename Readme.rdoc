@@ -112,6 +112,7 @@ Currently tested on:
 [NP] Nepal
 [PH] Philippines
 [PK] Pakistan
+[QA] Qatar
 [RS] Serbia
 [SA] Saudi Arabia
 [SE] Sweden
