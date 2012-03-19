@@ -121,7 +121,6 @@
   :area_code: "800|860|861|[1-5,7-8][0-9]"
   :local_number_format: "\\d{6,7}"
   :mobile_format: "7\\d{8}|8[1-9]\\d{7}"
-  :number_format: ""
 "508": 
   :country_code: "508"
   :national_dialing_prefix: "0"

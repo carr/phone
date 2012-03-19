@@ -93,7 +93,7 @@ module Phoner
 
     private
     def number_format_regex
-      return full_number_regexp if number_format.nil? # only until we have number formats for everything
+      return /.*/ if number_format.nil? # only until we have number formats for everything
       Regexp.new("^[+0]?(#{country_code})?(#{number_format})$")
     end
 
