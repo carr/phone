@@ -121,13 +121,10 @@ Currently tested on:
 [US] United States
 [ZA] South Africa
 
-= Known Issues
-Countries that have variable length area codes and number formats can allow invalid numbers that are too long or too short.
-A total length check needs to be added to fix this problem. See the Nepal test for an example
-
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
+            2012 Wesley Moxam
 
 = Contributors
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Wesley Moxam
+Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
 
