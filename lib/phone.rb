@@ -135,8 +135,7 @@ module Phoner
     # For many countries it's not apparent from the number
     # Will return false positives rather than false negatives.
     def is_mobile?
-      return true if country.mobile_format.nil?
-      "#{area_code}#{number}" =~ country.mobile_number_regex ? true : false
+      country.is_mobile? "#{area_code}#{number}"
     end
 
     # first n characters of :number

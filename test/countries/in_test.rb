@@ -15,12 +15,31 @@ class INTest < Phoner::TestCase
 
   def test_long_with_default_country_code
     Phoner::Phone.default_country_code = '91'
-    parse_test('91244529000', '91', '9124', '4529000')
+    parse_test('9124459000', '91', '9124', '459000')
   end
 
   def test_short_with_default_country_code_and_area_code
     Phoner::Phone.default_country_code = '91'
     Phoner::Phone.default_area_code = '9124'
     parse_test('4529000', '91', '9124', '4529000')
+  end
+
+  def test_lengths
+    Phoner::Phone.default_country_code = '91'
+
+    phone = Phoner::Phone.parse("919812344")
+    assert_nil phone
+
+    phone = Phoner::Phone.parse("9818147874")
+    assert phone
+
+    phone = Phoner::Phone.parse("91111111111")
+    assert_nil phone
+
+    phone = Phoner::Phone.parse("98111111111")
+    assert_nil phone
+
+    phone = Phoner::Phone.parse("98111111119")
+    assert_nil phone
   end
 end
