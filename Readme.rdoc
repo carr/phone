@@ -89,14 +89,17 @@ You can add your own custom named formats like so:
 Parse testing for different countries. 
 
 Currently tested on: 
+[AR] Argentina
 [AU] Australia
 [BA] Bosnia and Herzegovina
 [BD] Bangladesh
 [BE] Belgium
 [BT] Bhutan
 [CA] Canada
+[CR] Costa Rica
 [DE] Germany
 [EG] Egypt
+[ET] Ethiopia
 [FR] France
 [GB] United Kingdom
 [GH] Ghana
@@ -117,6 +120,7 @@ Currently tested on:
 [SA] Saudi Arabia
 [SE] Sweden
 [SI] Slovenia
+[TO] Tonga
 [UA] Ukraine
 [US] United States
 [ZA] South Africa

@@ -6,6 +6,10 @@
   :char_3_code: TO
   :name: Tonga
   :international_dialing_prefix: "0"
+  :area_code: "[2-8]\\d"
+  :local_number_format: "\\d{3}"
+  :mobile_format: "8[789]\\d{3}"
+  :number_format: "\\d{5}"
 "54": 
   :country_code: "54"
   :national_dialing_prefix: "0"
@@ -13,6 +17,10 @@
   :char_3_code: AR
   :name: Argentina
   :international_dialing_prefix: "0"
+  :area_code: "11|291|3833|297|345|351|3783|3717|3525|221|3822|223|261|2324|299|343|3752|3722|258|241|287|264|2652|2461|2627|342|285|2756|2293|2965|\\d{2,4}"
+  :local_number_format: "\\d{6,8}"
+  :mobile_format: "9\\d{10}"
+  :number_format: "[1-8]\\d{9}|9\\d{10}"
 "506": 
   :country_code: "506"
   :national_dialing_prefix: None
@@ -20,6 +28,10 @@
   :char_3_code: CR
   :name: Costa Rica
   :international_dialing_prefix: "0"
+  :area_code: "[28]"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "8\\d{7}"
+  :number_format: "\\d{8}"
 "251": 
   :country_code: "251"
   :national_dialing_prefix: "0"
@@ -27,6 +39,10 @@
   :char_3_code: ET
   :name: Ethiopia
   :international_dialing_prefix: "0"
+  :area_code: "11|46|33|25|57|58|47|34|22|46|91"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "91\\d{7}"
+  :number_format: "\\d{9}"
 "590": 
   :country_code: "590"
   :national_dialing_prefix: None
