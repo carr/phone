@@ -9,7 +9,10 @@ module Phoner
 
       @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|
-        next unless c[:area_code] && c[:local_number_format]
+        c[:area_code] ||= '\\d{2,3}'
+        c[:local_number_format] ||= '\\d{5,8}'
+        c[:number_format] ||= '\\d{7,10}'
+        #next unless c[:area_code] && c[:local_number_format]
         @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:local_number_format], c[:mobile_format], c[:full_number_length], c[:number_format])
       end
       @@all
@@ -20,8 +23,7 @@ module Phoner
     end
 
     def self.find_all_by_phone_code(code)
-      return [] if code.nil?
-      @@all.select {|c| c.country_code == code }
+      @@all.select {|c| code.start_with?(c.country_code) }
     end
 
     def self.find_by_country_code(code)
@@ -38,8 +40,8 @@ module Phoner
 
     # detect country from the string entered
     def self.detect(string, default_country_code, default_area_code)
-      Country.find_all_by_phone_code(default_country_code).each do |country|
-        return country if country.matches_local_number?(string, default_area_code)
+      Country.find_all_by_phone_code(default_country_code || string).each do |country|
+        return country if country.matches_local_number?(string, default_area_code || country.area_code)
       end
 
       # find if the number has a country code

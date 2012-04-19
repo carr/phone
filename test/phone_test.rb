@@ -109,11 +109,14 @@ class PhoneTest < Phoner::TestCase
   def test_valid
     assert_equal Phoner::Phone.valid?('915125486', :country_code => '385'), true
     assert_equal Phoner::Phone.valid?('385915125486'), true
+    assert_equal true, Phoner::Phone.valid?('972541234567')
   end
 
   def test_doesnt_validate
     assert_equal Phoner::Phone.valid?('asdas'), false
     assert_equal Phoner::Phone.valid?('38591512548678'), false
+    assert_equal false, Phoner::Phone.valid?('97254123456789')
+    assert_equal false, Phoner::Phone.valid?('567567')
   end
 
   def test_comparison_true
