@@ -10,7 +10,7 @@ module Phoner
       @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|
         c[:area_code] ||= '\\d{2,3}'
-        c[:local_number_format] ||= '\\d{5,8}'
+        c[:local_number_format] ||= '\\d{7,9}'
         c[:number_format] ||= '\\d{7,10}'
         #next unless c[:area_code] && c[:local_number_format]
         @@all << Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:local_number_format], c[:mobile_format], c[:full_number_length], c[:number_format])
