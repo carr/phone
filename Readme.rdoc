@@ -124,6 +124,7 @@ Currently tested on:
 [UA] Ukraine
 [US] United States
 [ZA] South Africa
+[ZW] Zimbabwe
 
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]

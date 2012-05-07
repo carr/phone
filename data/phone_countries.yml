@@ -834,13 +834,17 @@
   :local_number_format: "\\d{6,7}"
   :mobile_format: "[237]0\\d{7}"
   :number_format: "[237]0\\d{7}|[145689]\\d{7}|[237][1-9]\\d{6}"
-"263": 
+"263":
   :country_code: "263"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: ZW
   :name: Zimbabwe
   :international_dialing_prefix: "0"
+  :area_code: "9|4|20|54|68|667|71|73|77"
+  :local_number_format: "\\d{3,8}"
+  :mobile_format: "(71|73|77)\\d{7}"
+  :number_format: "\\d{9}"
 "688": 
   :country_code: "688"
   :national_dialing_prefix: None
