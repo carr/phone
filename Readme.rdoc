@@ -106,6 +106,7 @@ Currently tested on:
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
+[IL] Israel
 [IN] India
 [IR] Iran
 [KE] Kenya

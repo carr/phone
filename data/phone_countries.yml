@@ -1014,6 +1014,10 @@
   :char_3_code: IL
   :name: Israel
   :international_dialing_prefix: "0"
+  :area_code: "[2-46-9]|5\\d"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "5\\d{8}"
+  :number_format: "\\d{8,9}"
 "350": 
   :country_code: "350"
   :national_dialing_prefix: None
