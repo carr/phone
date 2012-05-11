@@ -1224,6 +1224,10 @@
   :char_3_code: AT
   :name: Austria
   :international_dialing_prefix: "0"
+  :area_code: "6|\\d{1,4}"
+  :local_number_format: "\\d{1,12}"
+  :mobile_format: "6\\d{8}"
+  :number_format: "\\d{5,13}"
 "977": 
   :country_code: "977"
   :national_dialing_prefix: "0"
