@@ -100,6 +100,7 @@ Currently tested on:
 [CA] Canada
 [CR] Costa Rica
 [DE] Germany
+[DZ] Algeria
 [EG] Egypt
 [ET] Ethiopia
 [FR] France

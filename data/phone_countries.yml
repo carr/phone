@@ -1260,6 +1260,10 @@
   :char_3_code: DZ
   :name: Algeria
   :international_dialing_prefix: "0"
+  :area_code: "[2-8]\\d"
+  :local_number_format: "\\d{6,7}"
+  :mobile_format: "(55|66|69|77|79)\\d{7}"
+  :number_format: "(55|66|69|77|79)\\d{7}|\\d{8}"
 "44": 
   :country_code: "44"
   :national_dialing_prefix: "0"
