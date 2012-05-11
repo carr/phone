@@ -816,6 +816,10 @@
   :char_3_code: AF
   :name: Afghanistan
   :international_dialing_prefix: "0"
+  :area_code: "7|[2-9][0-9]"
+  :local_number_format: "\\d{7,8}"
+  :mobile_format: "7\\d{8}"
+  :number_format: "\\d{9}"
 "376": 
   :country_code: "376"
   :national_dialing_prefix: None
