@@ -89,7 +89,8 @@ You can add your own custom named formats like so:
 Parse testing for different countries. 
 
 Currently tested on:
-[AF] Afghanistan 
+[AF] Afghanistan
+[AL] Albania 
 [AR] Argentina
 [AU] Australia
 [BA] Bosnia and Herzegovina

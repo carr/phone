@@ -1249,6 +1249,10 @@
   :char_3_code: AL
   :name: Albania
   :international_dialing_prefix: "0"
+  :area_code: "6|4|[235789]\\d\\d?"
+  :local_number_format: "\\d{5,8}"
+  :mobile_format: "6\\d{8}"
+  :number_format: "6\\d{8}|[2-5789]\\d{7}"
 "213": 
   :country_code: "213"
   :national_dialing_prefix: "7"
