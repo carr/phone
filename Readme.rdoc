@@ -88,7 +88,9 @@ You can add your own custom named formats like so:
 = TODO
 Parse testing for different countries. 
 
-Currently tested on: 
+Currently tested on:
+[AF] Afghanistan
+[AL] Albania 
 [AR] Argentina
 [AU] Australia
 [BA] Bosnia and Herzegovina
@@ -98,6 +100,7 @@ Currently tested on:
 [CA] Canada
 [CR] Costa Rica
 [DE] Germany
+[DZ] Algeria
 [EG] Egypt
 [ET] Ethiopia
 [FR] France
@@ -106,6 +109,7 @@ Currently tested on:
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
+[IL] Israel
 [IN] India
 [IR] Iran
 [KE] Kenya
@@ -124,6 +128,7 @@ Currently tested on:
 [UA] Ukraine
 [US] United States
 [ZA] South Africa
+[ZW] Zimbabwe
 
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
