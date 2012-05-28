@@ -106,6 +106,10 @@
   :char_3_code: BO
   :name: Bolivia
   :international_dialing_prefix: "10"
+  :area_code: "[1-9]"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "7\\d{7}"
+  :number_format: "\\d{8}"
 "224": 
   :country_code: "224"
   :national_dialing_prefix: None
@@ -152,6 +156,10 @@
   :char_3_code: BR
   :name: Brazil
   :international_dialing_prefix: "14"
+  :area_code: "\\d{2}"
+  :local_number_format: "\\d{7,8}"
+  :mobile_format: "11[6789]\\d{7}"
+  :number_format: "\\d{10}"
 "253": 
   :country_code: "253"
   :national_dialing_prefix: None
@@ -1382,6 +1390,10 @@
   :char_3_code: BG
   :name: Bulgaria
   :international_dialing_prefix: "0"
+  :area_code: "2|32|42|43|44|48|52|56|58|64|82|8[789]|98"
+  :local_number_format: "\\d{6,7}"
+  :mobile_format: "(8[789]|98)\\d{7}|4[38]\\d{6}"
+  :number_format: "\\d{8}|(8[789]|98)\\d{7}"
 "387": 
   :country_code: "387"
   :national_dialing_prefix: "0"
@@ -1478,6 +1490,10 @@
   :char_3_code: BZ
   :name: Belize
   :international_dialing_prefix: "0"
+  :area_code: "[1-9]"
+  :local_number_format: "\\d{6}"
+  :mobile_format: "6\\d{6}"
+  :number_format: "\\d{7}"
 "672": 
   :country_code: "672"
   :national_dialing_prefix: None

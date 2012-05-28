@@ -92,11 +92,16 @@ Currently tested on:
 [AF] Afghanistan
 [AL] Albania 
 [AR] Argentina
+[AT] Austria
 [AU] Australia
 [BA] Bosnia and Herzegovina
 [BD] Bangladesh
 [BE] Belgium
+[BG] Bulgaria
+[BO] Bolivia
+[BR] Brazil
 [BT] Bhutan
+[BZ] Belize
 [CA] Canada
 [CR] Costa Rica
 [DE] Germany
@@ -130,10 +135,10 @@ Currently tested on:
 [ZA] South Africa
 [ZW] Zimbabwe
 
-= Author
-Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
-            2012 Wesley Moxam
+= How you can contribute
+More testing is needed to add support for missing countries, and improve support for tested countries. In many cases only minimal testing is done on area codes, local number formats and number length where more exact matching is possible.
+
+The best places to start is to read through the country tests and data/phone_countries.rb 
 
 = Contributors
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
-
+Tomislav Carr, Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Wesley Moxam
