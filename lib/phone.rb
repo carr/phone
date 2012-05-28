@@ -59,22 +59,23 @@ module Phoner
     # create a new phone number by parsing a string
     # the format of the string is detect automatically (from FORMATS)
     def self.parse(string, options={})
-      if string.present?
-        Country.load
-        extension = extract_extension(string)
-        string = normalize(string)
+      return nil unless string.present?
+      
+      Country.load
 
-        options[:country_code] ||= self.default_country_code
-        options[:area_code] ||= self.default_area_code
+      extension = extract_extension(string)
+      normalized = normalize(string)
 
-        parts = split_to_parts(string, options)
+      options[:country_code] ||= self.default_country_code
+      options[:area_code] ||= self.default_area_code
 
-        pn = Phone.new(parts) if parts
-        if pn.present? and extension.present?
-          pn.extension = extension
-        end
-        return pn
+      parts = split_to_parts(normalized, options)
+
+      pn = Phone.new(parts) if parts
+      if pn.present? and extension.present?
+        pn.extension = extension
       end
+      pn
     end
 
     # is this string a valid phone number?
@@ -88,6 +89,7 @@ module Phoner
       pn.is_mobile?
     end
 
+    private
     # split string into hash with keys :country_code, :area_code and :number
     def self.split_to_parts(string, options = {})
       country = Country.detect(string, options[:country_code], options[:area_code])
@@ -102,15 +104,18 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+')
+      string_with_number.sub(extension_regex, '').gsub(/\(0\)|[^0-9+]/, '').gsub(/^00/, '+')
+    end
+
+    def self.extension_regex
+      /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
     end
 
     # pull off anything that look like an extension
-    #TODO: refactor things so this doesn't change string as a side effect
     #
     def self.extract_extension(string)
       return nil if string.nil?
-      if string.sub! /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i, ''
+      if string.match extension_regex
         extension = $2
         return extension
       end
@@ -126,8 +131,8 @@ module Phoner
       return nil
     end
 
-    # format area_code with trailing zero (e.g. 91 as 091)
-    # format area_code with trailing zero (e.g. 91 as 091)
+    public # instance methods
+
     def area_code_long
       "0" + area_code if area_code
     end
