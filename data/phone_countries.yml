@@ -1306,6 +1306,32 @@
   :char_2_code: None
   :char_3_code: DK
   :name: Denmark
+  :local_number_format: "\\d{8}"
+  :number_format: "\\d{8}"
+  :mobile_format: "\\d{8}"
+  :international_dialing_prefix: "0"
+"46": 
+  :country_code: "46"
+  :national_dialing_prefix: "0"
+  :char_2_code: "0"
+  :char_3_code: SE
+  :name: Sweden
+  :international_dialing_prefix: "0"
+  :area_code: "900|1[013689]|2[0136]|3[1356]|4[0246]|54|6[03]|7[01236]|8|9[09]|1[2457][0-9]|2[2457-9][0-9]|3[0247-9][0-9]|4[1357-9][0-9]|5[0-35-9][0-9]|6[124-9][0-9]|74[0-9]|9[1-8][0-9]"
+  :local_number_format: "\\d{5,8}"
+  :mobile_format: "7\\d{8}"
+  :number_format: "\\d{7,10}"
+"47": 
+  :country_code: "47"
+  :national_dialing_prefix: None
+  :char_2_code: None
+  :char_3_code: NO
+  # http://www.howtocallabroad.com/norway/
+  # :area_code: "23||5|7|33|37|38|62|69|77" # for largest cities 
+  :name: Norway
+  :local_number_format: "\\d{8}"
+  :mobile_format: "\\d{8}"
+  :number_format: "\\d{8}"
   :international_dialing_prefix: "0"
 "385": 
   :country_code: "385"
@@ -1332,17 +1358,6 @@
   :char_3_code: TN
   :name: Tunisia
   :international_dialing_prefix: "0"
-"46": 
-  :country_code: "46"
-  :national_dialing_prefix: "0"
-  :char_2_code: "0"
-  :char_3_code: SE
-  :name: Sweden
-  :international_dialing_prefix: "0"
-  :area_code: "900|1[013689]|2[0136]|3[1356]|4[0246]|54|6[03]|7[01236]|8|9[09]|1[2457][0-9]|2[2457-9][0-9]|3[0247-9][0-9]|4[1357-9][0-9]|5[0-35-9][0-9]|6[124-9][0-9]|74[0-9]|9[1-8][0-9]"
-  :local_number_format: "\\d{5,8}"
-  :mobile_format: "7\\d{8}"
-  :number_format: "\\d{7,10}"
 "386": 
   :country_code: "386"
   :national_dialing_prefix: "0"
