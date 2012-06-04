@@ -105,6 +105,7 @@ Currently tested on:
 [CA] Canada
 [CR] Costa Rica
 [DE] Germany
+[DK] Denmark
 [DZ] Algeria
 [EG] Egypt
 [ET] Ethiopia
@@ -121,6 +122,7 @@ Currently tested on:
 [LK] Sri Lanka
 [NG] Nigeria
 [NL] Netherlands
+[NO] Norway
 [NP] Nepal
 [PH] Philippines
 [PK] Pakistan

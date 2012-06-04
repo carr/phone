@@ -1314,10 +1314,11 @@
   :char_2_code: None
   :char_3_code: DK
   :name: Denmark
-  :local_number_format: "\\d{8}"
-  :number_format: "\\d{8}"
-  :mobile_format: "\\d{8}"
   :international_dialing_prefix: "0"
+  :area_code: "\\d{2}"
+  :local_number_format: "\\d{6}"
+  :number_format: "\\d{8}"
+  :mobile_format: "40\\d{6}"
 "46": 
   :country_code: "46"
   :national_dialing_prefix: "0"
@@ -1334,13 +1335,12 @@
   :national_dialing_prefix: None
   :char_2_code: None
   :char_3_code: NO
-  # http://www.howtocallabroad.com/norway/
-  # :area_code: "23||5|7|33|37|38|62|69|77" # for largest cities 
   :name: Norway
-  :local_number_format: "\\d{8}"
-  :mobile_format: "\\d{8}"
-  :number_format: "\\d{8}"
   :international_dialing_prefix: "0"
+  :area_code: "23|5|7|33|37|38|62|69|77|4|9|\\d{1,2}"
+  :local_number_format: "\\d{6,7}"
+  :mobile_format: "[49]\\d{7}"
+  :number_format: "\\d{8}"
 "385": 
   :country_code: "385"
   :national_dialing_prefix: "0"
@@ -1390,13 +1390,6 @@
   :char_2_code: "0"
   :char_3_code: AO
   :name: Angola
-  :international_dialing_prefix: "0"
-"47": 
-  :country_code: "47"
-  :national_dialing_prefix: None
-  :char_2_code: None
-  :char_3_code: SJ
-  :name: Svalbard And Jan Mayen
   :international_dialing_prefix: "0"
 "359": 
   :country_code: "359"
