@@ -71,6 +71,10 @@
   :char_3_code: CZ
   :name: Czech Republic
   :international_dialing_prefix: "0"
+  :area_code: "2|7|8|[3-9]\\d"
+  :local_number_format: "\\d{7,8}"
+  :mobile_format: "[78]\\d{8}"
+  :number_format: "\\d{9}"
 "252": 
   :country_code: "252"
   :national_dialing_prefix: None
@@ -1308,6 +1312,10 @@
   :char_3_code: CY
   :name: Cyprus
   :international_dialing_prefix: "0"
+  :area_code: "2\\d|99"
+  :local_number_format: "\\d{6}"
+  :mobile_format: "99\\d{6}"
+  :number_format: "\\d{8}"
 "45": 
   :country_code: "45"
   :national_dialing_prefix: None

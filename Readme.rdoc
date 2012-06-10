@@ -104,6 +104,8 @@ Currently tested on:
 [BZ] Belize
 [CA] Canada
 [CR] Costa Rica
+[CY] Cyprus
+[CZ] Czech Republic
 [DE] Germany
 [DK] Denmark
 [DZ] Algeria
