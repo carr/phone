@@ -758,6 +758,10 @@
   :char_3_code: BY
   :name: Belarus
   :international_dialing_prefix: "810"
+  :area_code: "25|29|33|44|225|163|177|162|232|152|17|222|1797|2351|216|212|\\d{2,4}"
+  :local_number_format: "\\d{5,7}"
+  :mobile_format: "(25|29|33|44)\\d{7}"
+  :number_format: "\\d{9}"
 "233":
   :country_code: "233"
   :national_dialing_prefix: None

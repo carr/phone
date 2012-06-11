@@ -101,6 +101,7 @@ Currently tested on:
 [BO] Bolivia
 [BR] Brazil
 [BT] Bhutan
+[BY] Belarus
 [BZ] Belize
 [CA] Canada
 [CR] Costa Rica
