@@ -217,6 +217,10 @@
   :char_3_code: EC
   :name: Ecuador
   :international_dialing_prefix: "0"
+  :area_code: "\\d"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "[89]\\d{7}"
+  :number_format: "\\d{8}"
 "254":
   :country_code: "254"
   :national_dialing_prefix: "0"
@@ -538,6 +542,10 @@
   :char_3_code: EE
   :name: Estonia
   :international_dialing_prefix: "0"
+  :area_code: "\\d"
+  :local_number_format: "\\d{6,7}"
+  :mobile_format: "5\\d{7}"
+  :number_format: "5\\d{7}|[1-46-9]\\d{6}"
 "61": 
   :country_code: "61"
   :national_dialing_prefix: "0"
@@ -1392,6 +1400,10 @@
   :char_3_code: FI
   :name: Finland
   :international_dialing_prefix: "0"
+  :area_code: "2|3|4|50|5|8|9|\\d{2}"
+  :local_number_format: "\\d{7,8}"
+  :mobile_format: "4\\d{8}|50\\d{7}"
+  :number_format: "\\d{9}"
 "244": 
   :country_code: "244"
   :national_dialing_prefix: "0"
@@ -1552,6 +1564,10 @@
   :char_3_code: SV
   :name: El Salvador
   :international_dialing_prefix: "0"
+  :area_code: "[27]"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "7\\d{7}"
+  :number_format: "\\d{8}"
 "221": 
   :country_code: "221"
   :national_dialing_prefix: None

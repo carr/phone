@@ -109,8 +109,11 @@ Currently tested on:
 [DE] Germany
 [DK] Denmark
 [DZ] Algeria
+[EC] Ecuador
+[EE] Estonia
 [EG] Egypt
 [ET] Ethiopia
+[FI] Finland
 [FR] France
 [GB] United Kingdom
 [GH] Ghana
@@ -133,6 +136,7 @@ Currently tested on:
 [SA] Saudi Arabia
 [SE] Sweden
 [SI] Slovenia
+[SV] El Salvador
 [TO] Tonga
 [UA] Ukraine
 [US] United States
