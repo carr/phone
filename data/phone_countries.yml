@@ -386,6 +386,9 @@
   :char_3_code: "GR"
   :name: Greece
   :international_dialing_prefix: "0"
+  :area_code: "21|2821|2661|2521|281|251|241|261|2831|2431|231|\\d{2,4}?"
+  :local_number_format: "\\d{6,8}"
+  :number_format: "\\d{10}"
 "681": 
   :country_code: "681"
   :national_dialing_prefix: None
@@ -607,6 +610,10 @@
   :char_3_code: "GE"
   :name: Georgia
   :international_dialing_prefix: "810"
+  :area_code: "[57]|32|122|397|315|331|393|341|311|422|340|370|368|\\d{2,3}?"
+  :local_number_format: "\\d{6,7}"
+  :mobile_format: "[57]\\d{8}"
+  :number_format: "\\d{9}"
 "853": 
   :country_code: "853"
   :national_dialing_prefix: "0"
@@ -749,6 +756,16 @@
   :name: Canada
   :international_dialing_prefix: "11"
   :area_code: "403|587|780|825|236|250|604|672|778|204|431|506|709|902|226|249|289|343|365|416|437|519|613|647|705|807|905|902|418|438|450|514|579|581|819|873|306|639|867"
+  :local_number_format: "\\d{7}"
+  :number_format: "\\d{10}"
+"1c":
+  :country_code: "1"
+  :national_dialing_prefix: "1"
+  :char_2_code: "1"
+  :char_3_code: "GU"
+  :name: Guam
+  :international_dialing_prefix: "11"
+  :area_code: "671"
   :local_number_format: "\\d{7}"
   :number_format: "\\d{10}"
 "375":
@@ -1540,6 +1557,10 @@
   :char_3_code: "GT"
   :name: Guatemala
   :international_dialing_prefix: "0"
+  :area_code: "\\d"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "[45]\\d{7}"
+  :number_format: "\\d{8}"
 "51": 
   :country_code: "51"
   :national_dialing_prefix: "0"

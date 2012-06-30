@@ -1,12 +1,12 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
-## Norway
-class NOTest < Phoner::TestCase
+## Guatemala
+class GTTest < Phoner::TestCase
   def test_local
-    parse_test('+4737123456', '47', "37", '123456', 'Norway', false)
+    parse_test('+50212345678', '502', "1", '2345678', 'Guatemala', false)
   end
 
   def test_mobile
-    parse_test('+4741234567', '47', '4', '1234567', 'Norway', true)
+    parse_test('+50242345678', '502', '4', '2345678', 'Guatemala', true)
   end
 end
