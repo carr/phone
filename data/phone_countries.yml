@@ -1013,6 +1013,10 @@
   :char_3_code: "AE"
   :name: United Arab Emirates
   :international_dialing_prefix: "0"
+  :area_code: "2|3|4|6|7|9|48|50|55|56|58|70|77|88"
+  :local_number_format: "\\d{7}"
+  :mobile_format: "(50|55|56)\\d{7}"
+  :number_format: "\\d{8,9}"
 "238": 
   :country_code: "238"
   :national_dialing_prefix: None
