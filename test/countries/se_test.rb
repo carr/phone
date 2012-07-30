@@ -1,157 +1,157 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Sweden
-class SETest < Test::Unit::TestCase
+class SETest < Phoner::TestCase
 
   # 08  Greater Stockholm
   def test_stockholm
     parse_test('+4685555555', '46', '8', '5555555')
   end
-  
+
   ## two digit codes
-  
+
   # 010 Geographically Independent Numbers / VOIP services
   def test_independent_numbers
     parse_test('+46105555555', '46', '10', '5555555')
   end
-  
+
   # 011 Norrköping
   def test_norrkoping
     parse_test('+46115555555', '46', '11', '5555555')
   end
-  
+
   # 013 Linköping
   def test_linkoping
     parse_test('+46135555555', '46', '13', '5555555')
   end
-  
+
   # 016 Eskilstuna-Torshälla
   def test_eskilstuna
     parse_test('+46165555555', '46', '16', '5555555')
   end
-  
+
   # 018 Uppsala
   def test_uppsala
     parse_test('+46185555555', '46', '18', '5555555')
   end
-  
+
   # 019 Örebro-Kumla
   def test_orebro
     parse_test('+46195555555', '46', '19', '5555555')
   end
-  
+
   # 020 toll-free
   def test_toll_free
     parse_test('+46205555555', '46', '20', '5555555')
   end
-  
+
   # 021 Västerås
   def test_vasteras
     parse_test('+46215555555', '46', '21', '5555555')
   end
-  
+
   # 023 Falun
   def test_falun
     parse_test('+46235555555', '46', '23', '5555555')
   end
-  
+
   # 026 Gävle-Sandviken
   def test_gavle
     parse_test('+46265555555', '46', '26', '5555555')
   end
-  
+
   # 031 Göteborg
   def test_goteborg
     parse_test('+46315555555', '46', '31', '5555555')
   end
-  
+
   # 033 Borås
   def test_boras
     parse_test('+46335555555', '46', '33', '5555555')
   end
-  
+
   # 035 Halmstad
   def test_halmstad
     parse_test('+46355555555', '46', '35', '5555555')
   end
-  
+
   # 036 Jönköping-Huskvarna
   def test_jonkoping
     parse_test('+46365555555', '46', '36', '5555555')
   end
-  
+
   # 040 Malmö
   def test_malmo
     parse_test('+46405555555', '46', '40', '5555555')
   end
-  
+
   # 042 Helsingborg-Höganäs
   def test_helsingborg
     parse_test('+46425555555', '46', '42', '5555555')
   end
-  
+
   # 044 Kristianstad
   def test_kristianstad
     parse_test('+46445555555', '46', '44', '5555555')
   end
-  
+
   # 046 Lund
   def test_lund
     parse_test('+46465555555', '46', '46', '5555555')
   end
-  
+
   # 054 Karlstad
   def test_karlstad
     parse_test('+46545555555', '46', '54', '5555555')
   end
-  
+
   # 060 Sundsvall-Timrå
   def test_sundsvall
     parse_test('+46605555555', '46', '60', '5555555')
   end
-  
+
   # 063 Östersund
   def test_ostersund
-    parse_test('+46635555555', '46', '63', '5555555')
+    parse_test('+46635555555', '46', '63', '5555555', "Sweden", false)
   end
-  
+
   # 070, 
   def test_mobile_70
-    parse_test('+46705555555', '46', '70', '5555555')
+    parse_test('+46705555555', '46', '70', '5555555', "Sweden", true)
   end
 
   # 071 Telematics in Mobile Networks (used to be Premium rate numbers)
   def test_telematics
     parse_test('+46715555555', '46', '71', '5555555')
   end
-    
+
   # 072, 
   def test_mobile_72
     parse_test('+46725555555', '46', '72', '5555555')
   end
-  
+
   # 073, 
   def test_mobile_73
     parse_test('+46735555555', '46', '73', '5555555')
   end
-  
+
   # 076  Mobile networks
   def test_mobile_76
     parse_test('+46765555555', '46', '76', '5555555')
   end
-  
+
   # 090 Umeå
   def test_umea
     parse_test('+46905555555', '46', '90', '5555555')
   end
-  
+
   # 099 Premium rate calls
   def test_premium_99
     parse_test('+46995555555', '46', '99', '5555555')
   end
 
   ## three digit codes
-  
+
   # 0120  Åtvidaberg
   def test_atvidaberg
     parse_test('+46120555555', '46', '120', '555555')
@@ -181,7 +181,7 @@ class SETest < Test::Unit::TestCase
   # 0174  Alunda
   # 0175  Hallstavik-Rimbo
   # 0176  Norrtälje
-  
+
   # 0220  Hallstahammar-Surahammar
   def test_hallstahammar
     parse_test('+462205555555', '46', '220', '5555555')
@@ -221,7 +221,7 @@ class SETest < Test::Unit::TestCase
   def test_ockelbo
     parse_test('+462975555555', '46', '297', '5555555')
   end
-  
+
   # 0300  Kungsbacka
   def test_kungsbacka
     parse_test('+463005555555', '46', '300', '5555555')
@@ -250,7 +250,7 @@ class SETest < Test::Unit::TestCase
   # 0390  Gränna
   # 0392  Mullsjö
   # 0393  Vaggeryd
-  
+
   # 0410  Trelleborg
   def test_trelleborg
     parse_test('+464105555555', '46', '410', '5555555')
@@ -302,7 +302,7 @@ class SETest < Test::Unit::TestCase
   # 0496  Mariannelund
   # 0498  Gotland
   # 0499  Mönsterås
-  
+
   # 0500  Skövde
   def test_skovde
     parse_test('+465005555555', '46', '500', '5555555')
@@ -365,7 +365,7 @@ class SETest < Test::Unit::TestCase
   # 0589  Arboga
   # 0590  Filipstad
   # 0591  Hällefors-Grythyttan
-  
+
   # 0611  Härnösand
   def test_harnosand
     parse_test('+466115555555', '46', '611', '5555555')
@@ -408,15 +408,15 @@ class SETest < Test::Unit::TestCase
   # 0693  Bräcke-Gällö
   # 0695  Stugun
   # 0696  Hammarstrand
-  
+
   # 07x(x)  various non-geographical area codes
   # ambiguous!
-  
+
   # 074(x)  Pagers
   def test_pagers
     parse_test('+467405555555', '46', '740', '5555555')
   end
-  
+
   # 0900  Premium rate calls
   def test_premium_900
     parse_test('+469005555555', '46', '900', '5555555')

@@ -1,12 +1,16 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Belgium
-class BETest < Test::Unit::TestCase
-  
+class BETest < Phoner::TestCase
+
+  def test_mobile
+    parse_test('+32 4 12345678', '32', '4', '12345678', 'Belgium', true)
+  end
+
   ## single digit
   # 02:   Brussels (Bruxelles/Brussel)
   def test_brussels
-    parse_test('+32 2 1234567', '32', '2', '1234567')
+    parse_test('+32 2 1234567', '32', '2', '1234567', 'Belgium', false)
   end
   # 03:   Antwerpen (Antwerp), Sint-Niklaas
   def test_antwerpen
@@ -14,13 +18,13 @@ class BETest < Test::Unit::TestCase
   end
   # 04:   Liège (Luik), Voeren (Fourons)
   def test_liege
-    parse_test('+32 4 1234567', '32', '4', '1234567')
+    parse_test('+32 4 1234567', '32', '4', '1234567', 'Belgium', false)
   end
   # 09:   Gent (Ghent/Gand)
   def test_gent
     parse_test('+32 9 1234567', '32', '9', '1234567')
   end
-  
+
   ## two digit
   # 010:  Wavre (Waver)
   def test_wavre
@@ -45,7 +49,7 @@ class BETest < Test::Unit::TestCase
   def test_waremme
     parse_test('+32 19 123456', '32', '19', '123456')
   end
-  
+
   # 050:  Brugge (Bruges), Zeebrugge
   def test_brugge
     parse_test('+32 50 123456', '32', '50', '123456')
@@ -80,13 +84,13 @@ class BETest < Test::Unit::TestCase
   end
   # 068:  Ath (Aat)
   # 069:  Tournai (Doornik)
-  
+
   # 070:  Specialty Numbers (i.e. bus information or bank information)
   def test_specialty
     parse_test('+32 70 123456', '32', '70', '123456')
   end
   # 071:  Charleroi
-  
+
   # 081:  Namur (Namen)
   def test_namur
     parse_test('+32 81 123456', '32', '81', '123456')
@@ -103,14 +107,14 @@ class BETest < Test::Unit::TestCase
   def test_toll_free
     parse_test('+32 800 12345', '32', '800', '12345')
   end
-  
+
   # 090x: Premium numbers (0900, 0901, 0902, 0903, 0904, 0905, 0906, 0907, 0908, 0909)
   def test_premium_900
     parse_test('+32 900 12345', '32', '900', '12345')
   end
-  
+
   def test_premium_901
     parse_test('+32 901 12345', '32', '901', '12345')
   end
-  
+
 end
