@@ -11,6 +11,7 @@
 #
 require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
 require File.join(File.dirname(__FILE__), 'country')
+require File.join(File.dirname(__FILE__), 'errors')
 
 module Phoner
   class Phone
@@ -48,9 +49,9 @@ module Phoner
       self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code      
       self.extension = hash_or_args[ keys[:extension] ]
 
-      raise "Must enter number" if self.number.blank?
-      raise "Must enter area code or set default area code" if self.area_code.blank?
-      raise "Must enter country code or set default country code" if self.country_code.blank?    
+      raise NumberError, "Must enter number" if self.number.blank?
+      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.blank?
+      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.blank?
     end
 
     # create a new phone number by parsing a string
@@ -78,7 +79,8 @@ module Phoner
     def self.valid?(string)
       begin
         parse(string).present?
-      rescue RuntimeError # if we encountered exceptions (missing country code, missing area code etc)
+      # if we encountered exceptions (missing country code, missing area code etc)
+      rescue PhoneError
         return false
       end
     end
@@ -98,9 +100,9 @@ module Phoner
 
       if country.nil?
         if options[:country_code].nil?
-          raise "Must enter country code or set default country code"
+          raise CountryCodeError, "Must enter country code or set default country code"
         else
-          raise "Could not find country with country code #{options[:country_code]}"
+          raise CountryCodeError, "Could not find country with country code #{options[:country_code]}"
         end
       end
 
