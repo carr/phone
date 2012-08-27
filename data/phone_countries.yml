@@ -217,6 +217,7 @@
   :char_3_code: "EC"
   :name: Ecuador
   :international_dialing_prefix: "00"
+  :area_code: "\\d"
   :local_number_format: "\\d{7}"
   :mobile_format: "[89]\\d{7}"
   :number_format: "\\d{8}"
