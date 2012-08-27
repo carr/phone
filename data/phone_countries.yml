@@ -17,7 +17,7 @@
   :char_3_code: "AR"
   :name: Argentina
   :international_dialing_prefix: "00"
-  :area_code: "11|291|3833|297|345|351|37(83|17)|3525|22[13]|3822|261|2324|299|343|37[25]2|258|241|287|264|26(27|52)|2461|342|285|2756|2293|2965|\\d{2,4}"
+  :area_code: "11|291|3833|297|345|351|37(83|17)|3525|22[13]|3822|2324|299|343|37[25]2|258|241|287|26[14]|26(27|52)|2461|342|285|2756|2293|2965|\\d{2,4}"
   :local_number_format: "\\d{6,8}"
   :mobile_format: "9\\d{10}"
   :number_format: "[1-8]\\d{9}|9\\d{10}"
@@ -71,7 +71,7 @@
   :char_3_code: "CZ"
   :name: Czech Republic
   :international_dialing_prefix: "00"
-  :area_code: "2|7|8|[3-9]\\d"
+  :area_code: "2|7|[3-9]\\d|8"
   :local_number_format: "\\d{7,8}"
   :mobile_format: "[78]\\d{8}"
   :number_format: "\\d{9}"
@@ -217,7 +217,6 @@
   :char_3_code: "EC"
   :name: Ecuador
   :international_dialing_prefix: "00"
-"254": 
   :local_number_format: "\\d{7}"
   :mobile_format: "[89]\\d{7}"
   :number_format: "\\d{8}"
@@ -386,7 +385,7 @@
   :char_3_code: "GR"
   :name: Greece
   :international_dialing_prefix: "00"
-  :area_code: "21|2821|2661|2521|281|251|241|261|2831|2431|231|\\d{2,4}?"
+  :area_code: "21|28[23]1|2661|2521|2[34568]1|2431|\\d{2,4}?"
   :local_number_format: "\\d{6,8}"
   :number_format: "\\d{10}"
 "681": 
@@ -567,7 +566,7 @@
   :char_3_code: "BD"
   :name: Bangladesh
   :international_dialing_prefix: "00"
-  :area_code: "1\\d\\d|2|[345789]1|3[2345678]1|40[12]|42[13]|4[3456789]1|446|488|49[68]|5[23456789]1|5[56]2|6[012345689]1|628|672|7[23456789]1|732|8[234567]1|9[23458]1|3028|303[56]|322[34]|342[47]|3529|3823|4027|4031|422[258]|4326|442[24]|4623|4724|5222|5327|5334|625[14]|702[23]|7622|8023|8032|8424|852[58]|8626|8723|9028|9225|942[34]"
+  :area_code: "1\\d\\d|2|[345789]1|3[2345678]1|40[12]|42[13]|4[3456789]1|4(46|88)|49[68]|5[23456789]1|5[56]2|6[012345689]1|6(28|72)|7[23456789]1|732|8[234567]1|9[23458]1|3028|303[56]|322[34]|342[47]|3529|3823|4027|4031|422[258]|4326|442[24]|4623|4724|5(222|3(27|34))|625[14]|702[23]|7622|8(0(23|32)|424)|852[58]|8(626|723)|9(028|225)|942[34]"
   :local_number_format: "\\d{3,7}"
   :mobile_format: "[1]\\d{7,9}"
   :number_format: "\\d{7,10}"
@@ -610,7 +609,7 @@
   :char_3_code: "GE"
   :name: Georgia
   :international_dialing_prefix: "810"
-  :area_code: "[57]|32|122|397|315|331|393|341|311|422|340|370|368|\\d{2,3}?"
+  :area_code: "[57]|32|122|3(15|40|70|68|9[37])|3[134]1|422|\\d{2,3}?"
   :local_number_format: "\\d{6,7}"
   :mobile_format: "[57]\\d{8}"
   :number_format: "\\d{9}"
@@ -775,7 +774,7 @@
   :char_3_code: "BY"
   :name: Belarus
   :international_dialing_prefix: "810"
-  :area_code: "25|29|33|44|225|163|177|162|232|152|17|222|1797|2351|216|212|\\d{2,4}"
+  :area_code: "2[59]|33|44|225|16[23]|177|2[23]2|152|1797|17|2351|216|212|\\d{2,4}"
   :local_number_format: "\\d{5,7}"
   :mobile_format: "(25|29|33|44)\\d{7}"
   :number_format: "\\d{9}"
@@ -1013,7 +1012,7 @@
   :char_3_code: "AE"
   :name: United Arab Emirates
   :international_dialing_prefix: "00"
-  :area_code: "2|3|4|6|7|9|48|50|55|56|58|70|77|88"
+  :area_code: "2|3|6|9|48|5[0568]|7[07]|88|4|7"
   :local_number_format: "\\d{7}"
   :mobile_format: "(50|55|56)\\d{7}"
   :number_format: "\\d{8,9}"
@@ -1378,7 +1377,7 @@
   :char_3_code: "NO"
   :name: Norway
   :international_dialing_prefix: "0"
-  :area_code: "23|5|7|33|37|38|62|69|77|4|9|\\d{1,2}"
+  :area_code: "23|3[378]|6[29]|77|4|5|7|9|\\d{1,2}"
   :local_number_format: "\\d{6,7}"
   :mobile_format: "[49]\\d{7}"
   :number_format: "\\d{8}"
@@ -1443,7 +1442,7 @@
   :char_3_code: "BG"
   :name: Bulgaria
   :international_dialing_prefix: "00"
-  :area_code: "2|32|42|43|44|48|52|56|58|64|82|8[789]|98"
+  :area_code: "2|32|4[2348]|5[268]|64|8[2789]|98"
   :local_number_format: "\\d{6,7}"
   :mobile_format: "(8[789]|98)\\d{7}|4[38]\\d{6}"
   :number_format: "\\d{8}|(8[789]|98)\\d{7}"
