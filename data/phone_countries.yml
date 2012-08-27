@@ -17,7 +17,7 @@
   :char_3_code: "AR"
   :name: Argentina
   :international_dialing_prefix: "0"
-  :area_code: "11|291|3833|297|345|351|3783|3717|3525|221|3822|223|261|2324|299|343|3752|3722|258|241|287|264|2652|2461|2627|342|285|2756|2293|2965|\\d{2,4}"
+  :area_code: "11|291|3833|297|345|351|37(83|17)|3525|22[13]|3822|261|2324|299|343|37[25]2|258|241|287|264|26(27|52)|2461|342|285|2756|2293|2965|\\d{2,4}"
   :local_number_format: "\\d{6,8}"
   :mobile_format: "9\\d{10}"
   :number_format: "[1-8]\\d{9}|9\\d{10}"
@@ -178,7 +178,7 @@
   :char_3_code: "GY"
   :name: Guyana
   :international_dialing_prefix: "0"
-  :area_code: "218|219|223|225|226|227|231|260|262|263|328|333|334|441|444|455|777|6[0-9]{2}"
+  :area_code: "21[89]|2(2[3567]|31|6[023])|3(28|3[34])|44[14]|455|777|6[0-9]{2}"
   :local_number_format: "\\d{4}"
   :mobile_format: "6\\d{6}"
   :number_format: "\\d{7}"
@@ -560,7 +560,7 @@
   :local_number_format: "\\d{8}"
   :mobile_format: "[4]\\d{8}"
   :number_format: "\\d{9}"
-"880":
+"880": 
   :country_code: "880"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
@@ -706,7 +706,7 @@
   :local_number_format: "\\d{6,7}"
   :mobile_format: "[789]\\d{9}"
   :number_format: "\\d{10}"
-"92":
+"92": 
   :country_code: "92"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
@@ -790,7 +790,7 @@
   :local_number_format: "\\d{7}"
   :mobile_format: "2\\d{8}|54\\d{7}"
   :number_format: "\\d{9}"
-"686":
+"686": 
   :country_code: "686"
   :national_dialing_prefix: None
   :char_2_code: None
@@ -879,16 +879,16 @@
   :local_number_format: "\\d{6,7}"
   :mobile_format: "[237]0\\d{7}"
   :number_format: "[237]0\\d{7}|[145689]\\d{7}|[237][1-9]\\d{6}"
-"263":
+"263": 
   :country_code: "263"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: "ZW"
   :name: Zimbabwe
   :international_dialing_prefix: "0"
-  :area_code: "9|4|20|54|68|667|71|73|77"
+  :area_code: "9|4|20|54|6(8|67)|7[137]"
   :local_number_format: "\\d{3,8}"
-  :mobile_format: "(71|73|77)\\d{7}"
+  :mobile_format: "(7[137])\\d{7}"
   :number_format: "\\d{9}"
 "688": 
   :country_code: "688"
@@ -904,7 +904,7 @@
   :char_3_code: "LK"
   :name: Sri Lanka
   :international_dialing_prefix: "0"
-  :area_code: "[12345689]\\d|7"
+  :area_code: "[1-689]\\d|7"
   :local_number_format: "\\d{7,8}"
   :mobile_format: "7\\d{8}"
   :number_format: "\\d{9}"
@@ -1188,7 +1188,7 @@
   :local_number_format: "\\d{7}"
   :mobile_format: "6\\d{7,8}"
   :number_format: "[1-57-9]\\d{6,8}|6\\d{7,8}"
-"975":
+"975": 
   :country_code: "975"
   :national_dialing_prefix: None
   :char_2_code: None
@@ -1280,7 +1280,7 @@
   :char_3_code: "NP"
   :name: Nepal
   :international_dialing_prefix: "0"
-  :area_code: "1|21|41|51|56|61|64|65|71|98"
+  :area_code: "1|21|41|5[16]|6[145]|71|98"
   :local_number_format: "\\d{6,8}"
   :mobile_format: "98\\d{8}"
   :number_format: "\\d{8}|98\\d{8}"
@@ -1311,8 +1311,8 @@
   :international_dialing_prefix: "0"
   :area_code: "[2-8]\\d"
   :local_number_format: "\\d{6,7}"
-  :mobile_format: "(55|66|69|77|79)\\d{7}"
-  :number_format: "(55|66|69|77|79)\\d{7}|\\d{8}"
+  :mobile_format: "(55|6[69]|7[79])\\d{7}"
+  :number_format: "(55|6[69]|7[79])\\d{7}|\\d{8}"
 "44": 
   :country_code: "44"
   :national_dialing_prefix: "0"
@@ -1321,7 +1321,7 @@
   :name: United Kingdom
   :international_dialing_prefix: "0"
   :area_code: "2[03489]|11[3-8]|1[2-69]1|1(3873|5(242|39[456])|697[347]|768[347]|9467)|1[2-9]\\d{2}|3[0347]\\d|500|5[56]|70|7([45789]\\d{2}|624)|8(0[08]|4[2-5]|7[0-3])|9[018]\\d"
-  :local_number_format: "\\d{6,8}"
+  :local_number_format: "\\d{4,8}"
   :mobile_format: "7\\d{9}"
   :number_format: "\\d{9,10}"
 "242": 
