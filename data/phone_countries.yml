@@ -56,7 +56,7 @@
   :char_2_code: "0"
   :char_3_code: "KR"
   :name: Korea, Republic of
-  :international_dialing_prefix: "1"
+  :international_dialing_prefix: "001"
 "223": 
   :country_code: "223"
   :national_dialing_prefix: "0"
@@ -109,7 +109,7 @@
   :char_2_code: "10"
   :char_3_code: "BO"
   :name: Bolivia
-  :international_dialing_prefix: "10"
+  :international_dialing_prefix: "00"
   :area_code: "[1-9]"
   :local_number_format: "\\d{7}"
   :mobile_format: "7\\d{7}"
@@ -159,7 +159,7 @@
   :char_2_code: "14"
   :char_3_code: "BR"
   :name: Brazil
-  :international_dialing_prefix: "14"
+  :international_dialing_prefix: "00"
   :area_code: "\\d{2}"
   :local_number_format: "\\d{7,8}"
   :mobile_format: "11[6789]\\d{7}"
@@ -287,7 +287,7 @@
   :char_2_code: "5"
   :char_3_code: "CO"
   :name: Colombia
-  :international_dialing_prefix: "5"
+  :international_dialing_prefix: "00"
 "58": 
   :country_code: "58"
   :national_dialing_prefix: "0"
@@ -315,7 +315,7 @@
   :char_2_code: "0"
   :char_3_code: "PY"
   :name: Paraguay
-  :international_dialing_prefix: "2"
+  :international_dialing_prefix: "00"
 "961": 
   :country_code: "961"
   :national_dialing_prefix: "0"
@@ -395,7 +395,7 @@
   :char_2_code: None
   :char_3_code: "WF"
   :name: Wallis and Futuna
-  :international_dialing_prefix: "19"
+  :international_dialing_prefix: "00"
 "598": 
   :country_code: "598"
   :national_dialing_prefix: "0"
@@ -523,7 +523,7 @@
   :char_2_code: None
   :char_3_code: "MU"
   :name: Mauritius
-  :international_dialing_prefix: "20"
+  :international_dialing_prefix: "00"
 "994": 
   :country_code: "994"
   :national_dialing_prefix: "8"
@@ -537,7 +537,7 @@
   :char_2_code: None
   :char_3_code: "HK"
   :name: Hong Kong
-  :international_dialing_prefix: "1"
+  :international_dialing_prefix: "001"
 "372": 
   :country_code: "372"
   :national_dialing_prefix: None
@@ -634,7 +634,7 @@
   :char_2_code: "0"
   :char_3_code: "ID"
   :name: Indonesia
-  :international_dialing_prefix: "1"
+  :international_dialing_prefix: "001"
 "260": 
   :country_code: "260"
   :national_dialing_prefix: "0"
@@ -648,21 +648,21 @@
   :char_2_code: None
   :char_3_code: "ES"
   :name: Spain
-  :international_dialing_prefix: "0"
+  :international_dialing_prefix: "00"
 "232": 
   :country_code: "232"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
   :char_3_code: "SL"
   :name: Sierra Leone
-  :international_dialing_prefix: "0"
+  :international_dialing_prefix: "00"
 "685": 
   :country_code: "685"
   :national_dialing_prefix: None
   :char_2_code: None
   :char_3_code: "WS"
   :name: Samoa
-  :international_dialing_prefix: "0"
+  :international_dialing_prefix: "00"
 "63": 
   :country_code: "63"
   :national_dialing_prefix: "0"
@@ -810,7 +810,7 @@
   :char_2_code: None
   :char_3_code: "SG"
   :name: Singapore
-  :international_dialing_prefix: "1"
+  :international_dialing_prefix: "000"
 "290": 
   :country_code: "290"
   :national_dialing_prefix: None
@@ -921,7 +921,7 @@
   :char_2_code: None
   :char_3_code: "TD"
   :name: Chad
-  :international_dialing_prefix: "15"
+  :international_dialing_prefix: "00"
 "291": 
   :country_code: "291"
   :national_dialing_prefix: "0"
@@ -935,7 +935,7 @@
   :char_2_code: "0"
   :char_3_code: "TH"
   :name: Thailand
-  :international_dialing_prefix: "1"
+  :international_dialing_prefix: "00"
 "886": 
   :country_code: "886"
   :national_dialing_prefix: None
@@ -1183,7 +1183,7 @@
   :char_2_code: "0"
   :char_3_code: "RS"
   :name: Serbia
-  :international_dialing_prefix: "99"
+  :international_dialing_prefix: "00"
   :area_code: "[1-9]\\d"
   :local_number_format: "\\d{7}"
   :mobile_format: "6\\d{7,8}"
@@ -1233,7 +1233,7 @@
   :char_2_code: "0"
   :char_3_code: "ME"
   :name: Montenegro
-  :international_dialing_prefix: "99"
+  :international_dialing_prefix: "00"
 "976": 
   :country_code: "976"
   :national_dialing_prefix: "0"
@@ -1254,7 +1254,7 @@
   :char_2_code: None
   :char_3_code: "GL"
   :name: Greenland
-  :international_dialing_prefix: "9"
+  :international_dialing_prefix: "00"
 "354": 
   :country_code: "354"
   :national_dialing_prefix: "0"
@@ -1645,7 +1645,7 @@
   :char_2_code: None
   :char_3_code: "PG"
   :name: Papua New Guinea
-  :international_dialing_prefix: "5"
+  :international_dialing_prefix: "00"
 "505": 
   :country_code: "505"
   :national_dialing_prefix: None
