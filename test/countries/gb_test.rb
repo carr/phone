@@ -171,16 +171,12 @@ class GBTest < Phoner::TestCase
     parse_test('+44 808 1570123', '44', '808', '1570123', "United Kingdom", false)
   end
 
-  def test_freephone_2
-    parse_test('+44 873 1570123', '44', '873', '1570123')
-  end
-
   # Premium Rate Services   0909 8790000 to 8790999
-  def test_premium
+  def test_premium_service_1
     parse_test('+44 909 8790999', '44', '909', '8790999')
   end
 
-  def test_premium2
+  def test_premium_service_2
     parse_test('+44 910 8790123', '44', '910', '8790123')
   end
 
@@ -191,6 +187,76 @@ class GBTest < Phoner::TestCase
 
   def test_wide_2
     parse_test('+44 339 9990123', '44', '339', '9990123')
+  end
+
+  # Tests for additional number ranges not previously mentioned
+  
+  def test_four_plus_five_1
+    parse_test('+44 1204 62532', '44', '1204', '62532')
+  end
+
+  def test_four_plus_five_2
+    parse_test('+44 1946 62888', '44', '1946', '62888')
+  end
+
+  def test_five_plus_five_1
+    parse_test('+44 15396 48788', '44', '15396', '48788')
+  end
+
+  def test_five_plus_five_2
+    parse_test('+44 16973 88555', '44', '16973', '88555')
+  end
+
+  def test_five_plus_five_3
+    parse_test('+44 16977 44888', '44', '16977', '44888')
+  end
+
+  def test_five_plus_five_4
+    parse_test('+44 19467 22444', '44', '19467', '22444')
+  end
+
+  def test_five_plus_four_1
+    parse_test('+44 16977 3555', '44', '16977', '3555')
+  end
+
+  def test_four_plus_six_1
+    parse_test('+44 1539 248756', '44', '1539', '248756')
+  end
+
+  def test_four_plus_six_2
+    parse_test('+44 1697 222555', '44', '1697', '222555')
+  end
+
+  def test_four_plus_six_3
+    parse_test('+44 1946 555777', '44', '1946', '555777')
+  end
+
+  def test_three_plus_six_1
+    parse_test('+44 500 777888', '44', '500', '777888')
+  end
+
+  def test_three_plus_six_2
+    parse_test('+44 800 555777', '44', '800', '555777')
+  end
+
+  def test_three_plus_seven_1
+    parse_test('+44 800 3337788', '44', '800', '3337788')
+  end
+
+  def test_voip
+    parse_test('+44 56 4477 5533', '44', '56', '44775533')
+  end
+
+  def test_corporate
+    parse_test('+44 55 7567 1113', '44', '55', '75671113')
+  end
+
+  def test_business_rate
+    parse_test('+44 843 5389123', '44', '843', '5389123')
+  end
+
+  def test_premium
+    parse_test('+44 873 1570123', '44', '873', '1570123')
   end
 
 end
