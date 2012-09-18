@@ -22,4 +22,9 @@ class ExtensionTest < Test::Unit::TestCase
     assert_equal '(091)/512-5486 x 143', pn.format('(%A)/%f-%l x %x')
   end
 
+  def test_validation_keeps_extension
+    number = "555-555-1212 ext 1234"
+    Phoner::Phone.valid?(number)
+    assert_equal "555-555-1212 ext 1234", number
+  end
 end

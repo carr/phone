@@ -92,20 +92,36 @@ Currently tested on:
 [AF] Afghanistan
 [AL] Albania 
 [AR] Argentina
+[AT] Austria
 [AU] Australia
 [BA] Bosnia and Herzegovina
 [BD] Bangladesh
 [BE] Belgium
+[BG] Bulgaria
+[BO] Bolivia
+[BR] Brazil
 [BT] Bhutan
+[BY] Belarus
+[BZ] Belize
 [CA] Canada
 [CR] Costa Rica
+[CY] Cyprus
+[CZ] Czech Republic
 [DE] Germany
+[DK] Denmark
 [DZ] Algeria
+[EC] Ecuador
+[EE] Estonia
 [EG] Egypt
 [ET] Ethiopia
+[FI] Finland
 [FR] France
 [GB] United Kingdom
+[GE] Georgia
 [GH] Ghana
+[GR} Greece
+[GU] Guam
+[GT] Guatemala
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
@@ -116,6 +132,7 @@ Currently tested on:
 [LK] Sri Lanka
 [NG] Nigeria
 [NL] Netherlands
+[NO] Norway
 [NP] Nepal
 [PH] Philippines
 [PK] Pakistan
@@ -124,16 +141,17 @@ Currently tested on:
 [SA] Saudi Arabia
 [SE] Sweden
 [SI] Slovenia
+[SV] El Salvador
 [TO] Tonga
 [UA] Ukraine
 [US] United States
 [ZA] South Africa
 [ZW] Zimbabwe
 
-= Author
-Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
-            2012 Wesley Moxam
+= How you can contribute
+More testing is needed to add support for missing countries, and improve support for tested countries. In many cases only minimal testing is done on area codes, local number formats and number length where more exact matching is possible.
+
+The best places to start is to read through the country tests and data/phone_countries.rb 
 
 = Contributors
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
-
+Tomislav Carr, Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Wesley Moxam

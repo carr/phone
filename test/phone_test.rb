@@ -130,4 +130,11 @@ class PhoneTest < Phoner::TestCase
     pn2 = Phoner::Phone.new '1234567', '91', '385'
     assert pn1 != pn2
   end
+
+  def test_parse_number_without_international_code
+    assert_equal (Phoner::Phone.parse "90123456"), nil
+    assert_equal (Phoner::Phone.parse "90123456", :country_code => '47').format(:default), "+4790123456"
+    assert_equal (Phoner::Phone.parse "90123456", :country_code => '47', :area_code => '').format(:default), "+4790123456"
+  end
+
 end

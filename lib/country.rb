@@ -81,8 +81,9 @@ module Phoner
       end
 
       if number_part.nil?
-        number.match(full_number_regexp)
-        country_part, area_part, number_part = $1, $2, $3
+        matches = number.match(full_number_regexp)
+        country_part, area_part = $1, $2
+        number_part = matches.to_a.last
       end
 
       area_part ||= default_area_code

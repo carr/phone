@@ -17,4 +17,16 @@ class CountryTest < Phoner::TestCase
     assert_not_nil country = Phoner::Country.find_all_by_phone_code('972542186680')
     assert_equal country.first.name, 'Israel'
   end
+
+  def test_find_by_country_code
+    country = Phoner::Country.find_by_country_code('NO')
+    assert_equal country.name, "Norway"
+  end
+
+  def test_find_all_by_phone_code
+    countries = Phoner::Country.find_all_by_phone_code('47')
+    assert_equal countries.length, 1
+    assert_equal countries.first.name, "Norway"
+  end
+
 end
