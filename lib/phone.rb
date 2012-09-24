@@ -60,7 +60,7 @@ module Phoner
     # the format of the string is detect automatically (from FORMATS)
     def self.parse(string, options={})
       return nil unless string.present?
-      
+
       Country.load
 
       extension = extract_extension(string)

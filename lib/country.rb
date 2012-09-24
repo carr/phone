@@ -73,9 +73,9 @@ module Phoner
       end
 
       if number_part.nil?
-        number.match(area_code_number_regexp)
+        matches = number.match(area_code_number_regexp)
         area_part = $1
-        number_part = $2
+        number_part = matches.to_a.last
       end
 
       if number_part.nil?
