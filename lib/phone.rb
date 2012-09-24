@@ -80,7 +80,11 @@ module Phoner
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
-      parse(string, options).present?
+      begin
+        parse(string, options).present?
+      rescue
+        false  # don't raise exceptions on parse errors
+      end
     end
 
     def self.is_mobile?(string, options = {})
