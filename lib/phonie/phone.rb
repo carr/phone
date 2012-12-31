@@ -57,7 +57,7 @@ module Phonie
     # the format of the string is detect automatically (from FORMATS)
     def self.parse(string, options={})
       return nil unless string.present?
-      
+
       Country.load
 
       extension = extract_extension(string)
@@ -77,7 +77,11 @@ module Phonie
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
-      parse(string, options).present?
+      begin
+        parse(string, options).present?
+      rescue
+        false  # don't raise exceptions on parse errors
+      end
     end
 
     def self.is_mobile?(string, options = {})

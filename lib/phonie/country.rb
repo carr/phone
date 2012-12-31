@@ -73,14 +73,15 @@ module Phonie
       end
 
       if number_part.nil?
-        number.match(area_code_number_regexp)
+        matches = number.match(area_code_number_regexp)
         area_part = $1
-        number_part = $2
+        number_part = matches.to_a.last
       end
 
       if number_part.nil?
-        number.match(full_number_regexp)
-        country_part, area_part, number_part = $1, $2, $3
+        matches = number.match(full_number_regexp)
+        country_part, area_part = $1, $2
+        number_part = matches.to_a.last
       end
 
       area_part ||= default_area_code

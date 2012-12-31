@@ -28,4 +28,10 @@ class Phonie::TestCase < Test::Unit::TestCase
     Phonie::Phone.default_country_code = nil
     Phonie::Phone.default_area_code = nil
   end
+
+  def default_test
+    klass = self.class.to_s
+    ancestors = (self.class.ancestors - [self.class]).collect { |ancestor| ancestor.to_s }
+    super unless klass =~ /TestCase/ or ancestors.first =~ /TestCase/
+  end
 end
