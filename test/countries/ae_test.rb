@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## UAE
-class AETest < Phoner::TestCase
+class AETest < Phonie::TestCase
   def test_local
     parse_test('+97142063944',  '971', '4',  '2063944', 'United Arab Emirates', false)
     parse_test('+97122063944',  '971', '2',  '2063944', 'United Arab Emirates', false)

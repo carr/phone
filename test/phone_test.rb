@@ -129,9 +129,9 @@ class PhoneTest < Phonie::TestCase
   end
 
   def test_parse_number_without_international_code
-    assert_equal (Phoner::Phone.parse "90123456"), nil
-    assert_equal (Phoner::Phone.parse "90123456", :country_code => '47').format(:default), "+4790123456"
-    assert_equal (Phoner::Phone.parse "90123456", :country_code => '47', :area_code => '').format(:default), "+4790123456"
+    assert_equal (Phonie::Phone.parse "90123456"), nil
+    assert_equal (Phonie::Phone.parse "90123456", :country_code => '47').format(:default), "+4790123456"
+    assert_equal (Phonie::Phone.parse "90123456", :country_code => '47', :area_code => '').format(:default), "+4790123456"
   end
 
 end
