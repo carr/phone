@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Netherlands
-class NETest < Phoner::TestCase
+class NETest < Phonie::TestCase
 
   # 06:   mobile phone number
   def test_mobile

@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Germany
-class DETest < Phoner::TestCase
+class DETest < Phonie::TestCase
 
   def test_local
     parse_test('+49 714 1605832', '49', '714', '1605832', "Germany", false)

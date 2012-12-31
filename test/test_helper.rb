@@ -3,10 +3,10 @@ $:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'rubygems'
 
 require 'test/unit'
-require 'phone'
+require 'phonie'
 
 def parse_test(raw, country_code, area_code, number, country_name = nil, is_mobile = nil)
-  pn = Phoner::Phone.parse(raw)
+  pn = Phonie::Phone.parse(raw)
 
   assert_not_nil pn, %Q{parse should pass}
   assert_equal pn.country_code, country_code
@@ -22,10 +22,10 @@ def parse_test(raw, country_code, area_code, number, country_name = nil, is_mobi
 end
 
 
-class Phoner::TestCase < Test::Unit::TestCase
+class Phonie::TestCase < Test::Unit::TestCase
 
   def setup
-    Phoner::Phone.default_country_code = nil
-    Phoner::Phone.default_area_code = nil
+    Phonie::Phone.default_country_code = nil
+    Phonie::Phone.default_area_code = nil
   end
 end

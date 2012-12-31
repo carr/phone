@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Kenya
-class KETest < Phoner::TestCase
+class KETest < Phonie::TestCase
   def test_mobile
     parse_test('254724463323', '254', '72', '4463323', "Kenya", true)
   end

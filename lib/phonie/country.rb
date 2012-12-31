@@ -1,11 +1,11 @@
-module Phoner
+module Phonie
   class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :local_number_format, :mobile_format, :full_number_length, :number_format)
     cattr_accessor :all
 
     def self.load
       return @@all if @@all.present?
 
-      data_file = File.join(File.dirname(__FILE__), '..', 'data', 'phone_countries.yml')
+      data_file = File.join(File.dirname(__FILE__), 'data', 'phone_countries.yml')
 
       @@all = []
       YAML.load(File.read(data_file)).each_pair do |key, c|

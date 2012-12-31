@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Sweden
-class SETest < Phoner::TestCase
+class SETest < Phonie::TestCase
 
   # 08  Greater Stockholm
   def test_stockholm

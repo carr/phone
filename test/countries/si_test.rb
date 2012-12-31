@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Slovenia
-class SITest < Phoner::TestCase
+class SITest < Phonie::TestCase
   def test_local
     #Maribor
     parse_test('+ 386 2 23 46 611', '386', '2', '2346611')

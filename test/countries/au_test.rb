@@ -4,7 +4,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 # 0x 7010 reserved for fictitious use.
 
 ## Australia
-class AUTest < Phoner::TestCase
+class AUTest < Phonie::TestCase
 
   # 00 Emergency and International access
   # 01 Alternate phone services

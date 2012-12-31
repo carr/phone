@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Iran
-class IRTest < Phoner::TestCase
+class IRTest < Phonie::TestCase
   def test_local
     parse_test('982188686344', '98', '21', '88686344', "Iran, Islamic Republic Of", false)
     parse_test('985218868634', '98', '521', '8868634')

@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## El Salvador 
-class SVTest < Phoner::TestCase
+class SVTest < Phonie::TestCase
   def test_local
     parse_test('+50321234567', '503', '2', '1234567', 'El Salvador', false)
   end

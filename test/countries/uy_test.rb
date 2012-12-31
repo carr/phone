@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## Uruguay
 # source: http://en.wikipedia.org/wiki/Telephone_numbers_in_Uruguay
-class UYTest < Phoner::TestCase
+class UYTest < Phonie::TestCase
   # 02 Montevideo
   def test_montevideo
     parse_test('+598 2 1234567', '598', '2', '1234567')

@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 ## Austria
 # Austrian numbers are, ugh, strange. The matching patterns used are minimal :/
 # and will result in many false positives
-class ATTest < Phoner::TestCase
+class ATTest < Phonie::TestCase
   def test_local
     parse_test('+4354321', '43', "5432", '1', 'Austria', false)
   end

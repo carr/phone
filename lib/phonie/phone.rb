@@ -9,10 +9,7 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
-require File.join(File.dirname(__FILE__), 'country')
-
-module Phoner
+module Phonie
   class Phone
     attr_accessor :country_code, :area_code, :number, :extension, :country
 
