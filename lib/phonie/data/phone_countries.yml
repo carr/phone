@@ -446,6 +446,10 @@
   :char_3_code: "LT"
   :name: Lithuania
   :international_dialing_prefix: "00"
+  :area_code: "[3-9]\\d{2}"
+  :local_number_format: "\\d{5}"
+  :mobile_format: "6\\d{7}"
+  :number_format: "[3-9]\\d{7}" 
 "993": 
   :country_code: "993"
   :national_dialing_prefix: "8"
