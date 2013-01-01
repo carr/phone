@@ -485,6 +485,10 @@
   :char_3_code: "LV"
   :name: Latvia
   :international_dialing_prefix: "00"
+  :area_code: "[6|2]\\d"
+  :local_number_format: "\\d{6}"
+  :mobile_format: "2\\d{7}"
+  :number_format: "[2|6]\\d{7}"
 "682": 
   :country_code: "682"
   :national_dialing_prefix: "0"
