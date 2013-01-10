@@ -21,6 +21,13 @@ class PhoneValidatorTest < Phonie::TestCase
     assert model.phone == '+12511234567'
   end
 
+  def test_valid_number_with_extension
+    model = SomeModel.new('+1 251 123 4567 ex 1234')
+    assert model.valid?
+
+    assert model.phone == '+12511234567x1234'
+  end
+
   def test_invalid_model
     model = SomeModel.new('+1 251 123 456')
     assert model.invalid?

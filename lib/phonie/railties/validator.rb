@@ -6,7 +6,8 @@ class PhoneValidator < ActiveModel::EachValidator
     if phone.nil?
       object.errors.add(attribute, :invalid_phone)
     else
-      object.send("#{attribute}=", phone.format(:default)) if object.respond_to?("#{attribute}=")
+      formated = phone.format( phone.extension ? :default_with_extension : :default)
+      object.send("#{attribute}=", formated) if object.respond_to?("#{attribute}=")
     end
   end
 end
