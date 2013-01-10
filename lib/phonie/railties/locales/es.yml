@@ -1,0 +1,4 @@
+es:
+  errors:
+    messages:
+      invalid_phone_number: Teléfono inválido

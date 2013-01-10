@@ -31,6 +31,7 @@ class PhoneValidatorTest < Phonie::TestCase
   def test_invalid_model
     model = SomeModel.new('+1 251 123 456')
     assert model.invalid?
+
     assert !model.errors[:phone].empty?
   end
 end
