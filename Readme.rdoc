@@ -80,6 +80,7 @@ You can add your own custom named formats like so:
 Parse testing for different countries. 
 
 Currently tested on:
+[AE] UAE
 [AF] Afghanistan
 [AL] Albania 
 [AR] Argentina
@@ -110,9 +111,9 @@ Currently tested on:
 [GB] United Kingdom
 [GE] Georgia
 [GH] Ghana
-[GR} Greece
-[GU] Guam
+[GR] Greece
 [GT] Guatemala
+[GU] Guam
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
@@ -122,14 +123,19 @@ Currently tested on:
 [IT] Italy
 [KE] Kenya
 [LK] Sri Lanka
+[LT] Lithuania
+[LU] Luxembourg
+[LV] Latvia
 [NG] Nigeria
 [NL] Netherlands
 [NO] Norway
 [NP] Nepal
 [PH] Philippines
 [PK] Pakistan
+[PT] Portugal
 [QA] Qatar
 [RS] Serbia
+[RU] Russian Federation
 [SA] Saudi Arabia
 [SE] Sweden
 [SI] Slovenia
@@ -137,6 +143,7 @@ Currently tested on:
 [TO] Tonga
 [UA] Ukraine
 [US] United States
+[UY] Uruguay
 [ZA] South Africa
 [ZW] Zimbabwe
 
