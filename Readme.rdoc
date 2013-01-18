@@ -119,6 +119,7 @@ Currently tested on:
 [IL] Israel
 [IN] India
 [IR] Iran
+[IT] Italy
 [KE] Kenya
 [LK] Sri Lanka
 [NG] Nigeria
