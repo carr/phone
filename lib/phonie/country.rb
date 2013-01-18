@@ -110,7 +110,7 @@ module Phonie
     end
 
     def mobile_number_regex
-      Regexp.new("^0?(#{mobile_format})$")
+      Regexp.new("^(#{mobile_format})$")
     end
 
     def number_regex
