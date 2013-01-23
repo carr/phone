@@ -83,6 +83,7 @@ Currently tested on:
 [AE] UAE
 [AF] Afghanistan
 [AL] Albania 
+[AM] Armenia
 [AR] Argentina
 [AT] Austria
 [AU] Australia
