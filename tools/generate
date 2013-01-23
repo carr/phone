@@ -1,0 +1,112 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'tempfile'
+require 'fileutils'
+
+@data_file = File.join(File.dirname(__FILE__), '..', 'lib', 'phonie', 'data', 'phone_countries.yml')
+@readme_file = File.join(File.dirname(__FILE__), '..', 'Readme.rdoc')
+
+def usage
+  puts "USAGE: tools/generate COUNTRY_NAME"
+  puts "Generates test case, adds missing fields to country data, and updates README.rdoc to include country" 
+  exit(0)
+end
+
+def already_exists?
+  if File.exists?(@test_filename)
+    puts "It appears that #{@country} is already supported. See #{@test_filename}"
+    true
+  else
+    false
+  end
+end
+
+def get_country_code
+  YAML.load(File.read(@data_file)).each_pair do |key, c|
+    return c[:char_3_code].downcase if c[:name].downcase == @country.downcase
+  end
+  nil
+end
+
+def get_country_call_code
+  YAML.load(File.read(@data_file)).each_pair do |key, c|
+    return key if c[:name].downcase == @country.downcase
+  end
+  nil
+end
+
+def create_test_file
+  country_call_code = get_country_call_code
+
+  File.open(@test_filename, 'w') do |test_file|
+  test_file.print <<-eof
+require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+
+## #{@country}
+class #{@country_code.upcase}Test < Phonie::TestCase
+  def test_local
+    parse_test('+#{country_call_code}',  '#{country_call_code}', '',  '', '#{@country}', false)
+  end
+  
+  def test_mobile
+    parse_test('+#{country_call_code}', '#{country_call_code}', '', '', '#{@country}', true)
+  end
+end 
+    eof
+  end
+end
+
+def add_missing_fields
+  hash = YAML.load(File.read(@data_file))
+  hash[get_country_call_code].merge!({:area_code => ' ', 
+    :local_number_format => ' ',
+    :mobile_format => ' ',
+    :number_format => ' '})
+  File.open(@data_file, 'w') do |f|
+    f.puts hash.to_yaml
+  end
+end
+
+def update_readme
+  readme = File.open(@readme_file, 'r')
+  new_readme = Tempfile.new('readme')
+
+  inserted_new_country = false
+
+  readme.each_line do |line|
+    match_data = line.match(/\[(\w+)\] (.+)$/)
+    if match_data.nil?
+      new_readme.puts(line)
+    else
+      code = match_data[1]
+      country = match_data[2]
+
+      if !inserted_new_country && code.downcase > @country_code
+        new_readme.puts "[#{@country_code.upcase}] #{@country}"
+        inserted_new_country = true
+      end
+      
+      new_readme.puts "[#{code}] #{country}"
+    end
+  end 
+
+  FileUtils.mv(new_readme.path, readme.path)
+end
+
+def generate
+  return if already_exists?
+
+  create_test_file
+  add_missing_fields
+  update_readme
+end
+
+usage if ARGV.length < 1
+
+@country = ARGV[0]
+@country_code = get_country_code
+
+@test_filename = File.join(File.dirname(__FILE__), '..', 'test', 'countries', "#{@country_code}_test.rb")
+
+generate
