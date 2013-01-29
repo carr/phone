@@ -543,7 +543,7 @@
   :char_3_code: AZ
   :name: Azerbaijan
   :international_dialing_prefix: '810'
-  :area_code: '[12]\d|40|44|50|51|55|60|70|77'
+  :area_code: ! '[12]\d|40|44|50|51|55|60|70|77'
   :local_number_format: \d{7}
   :mobile_format: (40|44|50|51|55|60|70|77)\d{7}
   :number_format: \d{9}
@@ -1159,6 +1159,10 @@
   :char_3_code: BH
   :name: Bahrain
   :international_dialing_prefix: '00'
+  :area_code: \d
+  :local_number_format: \d{7}
+  :mobile_format: 3\d{7}
+  :number_format: \d{8}
 '380':
   :country_code: '380'
   :national_dialing_prefix: '0'

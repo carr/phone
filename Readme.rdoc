@@ -92,6 +92,7 @@ Currently tested on:
 [BD] Bangladesh
 [BE] Belgium
 [BG] Bulgaria
+[BH] Bahrain
 [BO] Bolivia
 [BR] Brazil
 [BS] Bahamas
