@@ -87,6 +87,7 @@ Currently tested on:
 [AR] Argentina
 [AT] Austria
 [AU] Australia
+[AZ] Azerbaijan
 [BA] Bosnia and Herzegovina
 [BD] Bangladesh
 [BE] Belgium

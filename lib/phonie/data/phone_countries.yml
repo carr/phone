@@ -538,11 +538,15 @@
   :international_dialing_prefix: '00'
 '994':
   :country_code: '994'
-  :national_dialing_prefix: '8'
-  :char_2_code: '8'
+  :national_dialing_prefix: 8
+  :char_2_code: 8
   :char_3_code: AZ
   :name: Azerbaijan
   :international_dialing_prefix: '810'
+  :area_code: '[12]\d|40|44|50|51|55|60|70|77'
+  :local_number_format: \d{7}
+  :mobile_format: (40|44|50|51|55|60|70|77)\d{7}
+  :number_format: \d{9}
 '852':
   :country_code: '852'
   :national_dialing_prefix: None
@@ -707,10 +711,10 @@
   :char_3_code: AM
   :name: Armenia
   :international_dialing_prefix: '00'
-  :area_code: '[5679]|222|285|286|256|281|232|312|226|253|246|252|249|237|238|244|224|235|245|47|267|236|263|233|231|322|266|265|268|264|234|284|223|287|10|242|262|261|283|255|254|257|269|282'
-  :local_number_format: ! '\d{5,7}'
+  :area_code: ! '[5679]|222|285|286|256|281|232|312|226|253|246|252|249|237|238|244|224|235|245|47|267|236|263|233|231|322|266|265|268|264|234|284|223|287|10|242|262|261|283|255|254|257|269|282'
+  :local_number_format: \d{5,7}
   :mobile_format: ! '[5679]\d{7}'
-  :number_format: ! '\d{8}'
+  :number_format: \d{8}
 '91':
   :country_code: '91'
   :national_dialing_prefix: '0'
