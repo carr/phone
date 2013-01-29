@@ -94,6 +94,7 @@ Currently tested on:
 [BG] Bulgaria
 [BO] Bolivia
 [BR] Brazil
+[BS] Bahamas
 [BT] Bhutan
 [BY] Belarus
 [BZ] Belize

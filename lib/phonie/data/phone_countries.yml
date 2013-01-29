@@ -788,6 +788,17 @@
   :area_code: '671'
   :local_number_format: \d{7}
   :number_format: \d{10}
+1d:
+  :country_code: '1'
+  :national_dialing_prefix: '1'
+  :char_2_code: '1'
+  :char_3_code: BS
+  :name: Bahamas
+  :international_dialing_prefix: '011'
+  :area_code: '242'
+  :local_number_format: \d{7}
+  :number_format: \d{10}
+  :mobile_format: (357|359|375|395|4[0-57-9]\d|46[02-9]|5[1-9]\d|50[013-9]|636|646|727)\d{4}
 '375':
   :country_code: '375'
   :national_dialing_prefix: '8'
