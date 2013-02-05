@@ -85,6 +85,15 @@ You can add your own custom named formats like so:
     Phoner::Phone.named_formats[:short] = '%A/%n1-%n2'    
     pn.format(:short) # => 091/512-5486
 
+== Finding countries by their isocode
+If you don't have the country code, but you know from other sources what country a phone is from, you can retrieve the country using the country isocode (such as 'de', 'es', 'us', ...).
+
+    if country = Phoner::Country.find_by_country_isocode(user_country_isocode)
+      phone_number = Phoner::Phone.parse(user_input, :country_code => country.country_code)
+    end
+
+You have to remember to run Phoner::Country.load method before though.
+
 = TODO
 Parse testing for different countries. 
 
@@ -93,6 +102,7 @@ Currently tested on:
 [BA] Bosnia and Herzegovina
 [BE] Belgium
 [DE] Germany
+[ES] Spain
 [FR] France
 [GB] United Kingdom
 [HR] Croatia
@@ -106,11 +116,11 @@ Currently tested on:
 [ZA] South Africa
 
 = Known issues
-There's an issue with Germany and area codes.
+There's an issue with Germany and Spanish area codes.
 
 = Author
 Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
 
 = Contributors
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
+Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Jakob Hilden, Tieg Zaharia
 

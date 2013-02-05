@@ -11,12 +11,11 @@
 #
 require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
 require File.join(File.dirname(__FILE__), 'country')
-require File.join(File.dirname(__FILE__), 'errors')
 
 module Phoner
   class Phone
     NUMBER = '([0-9]{1,8})$'  
-    DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
+    DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
@@ -49,9 +48,9 @@ module Phoner
       self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code      
       self.extension = hash_or_args[ keys[:extension] ]
 
-      raise NumberError, "Must enter number" if self.number.blank?
-      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.blank?
-      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.blank?
+      raise "Must enter number" if self.number.blank?
+      raise "Must enter area code or set default area code" if self.area_code.blank?
+      raise "Must enter country code or set default country code" if self.country_code.blank?    
     end
 
     # create a new phone number by parsing a string
@@ -79,8 +78,7 @@ module Phoner
     def self.valid?(string)
       begin
         parse(string).present?
-      # if we encountered exceptions (missing country code, missing area code etc)
-      rescue PhoneError
+      rescue RuntimeError # if we encountered exceptions (missing country code, missing area code etc)
         return false
       end
     end
@@ -100,9 +98,9 @@ module Phoner
 
       if country.nil?
         if options[:country_code].nil?
-          raise CountryCodeError, "Must enter country code or set default country code"
+          raise "Must enter country code or set default country code"
         else
-          raise CountryCodeError, "Could not find country with country code #{options[:country_code]}"
+          raise "Could not find country with country code #{options[:country_code]}"
         end
       end
 
@@ -159,7 +157,7 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+')
+      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+').gsub(/^\+00/, '+').gsub(/^\+0/, '+')
     end
 
     # pull off anything that look like an extension
