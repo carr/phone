@@ -1,5 +1,5 @@
 # An object representing a phone number.
-# 
+#
 # The phone number is recorded in 3 separate parts:
 # * country_code - e.g. '385', '386'
 # * area_code - e.g. '91', '47'
@@ -14,13 +14,13 @@ require File.join(File.dirname(__FILE__), 'country')
 
 module Phoner
   class Phone
-    NUMBER = '([0-9]{1,8})$'  
+    NUMBER = '([0-9]{1,8})$'
     DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
     cattr_accessor :default_country_code
-    cattr_accessor :default_area_code  
+    cattr_accessor :default_area_code
     cattr_accessor :named_formats
 
     # length of first number part (using multi number format)
@@ -35,7 +35,7 @@ module Phoner
       :us => "(%a) %f-%l"
     }
 
-    def initialize(*hash_or_args)    
+    def initialize(*hash_or_args)
       if hash_or_args.first.is_a?(Hash)
         hash_or_args = hash_or_args.first
         keys = {:number => :number, :area_code => :area_code, :country_code => :country_code, :extension => :extension}
@@ -45,26 +45,26 @@ module Phoner
 
       self.number = hash_or_args[ keys[:number] ]
       self.area_code = hash_or_args[ keys[:area_code] ] || self.default_area_code
-      self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code      
+      self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code
       self.extension = hash_or_args[ keys[:extension] ]
 
       raise "Must enter number" if self.number.blank?
       raise "Must enter area code or set default area code" if self.area_code.blank?
-      raise "Must enter country code or set default country code" if self.country_code.blank?    
+      raise "Must enter country code or set default country code" if self.country_code.blank?
     end
 
     # create a new phone number by parsing a string
     # the format of the string is detect automatically (from FORMATS)
-    def self.parse(string, options={})       
-      if string.present?    
+    def self.parse(string, options={})
+      if string.present?
         Country.load
         extension = extract_extension(string)
         string = normalize(string)
 
         options[:country_code] ||= self.default_country_code
-        options[:area_code] ||= self.default_area_code         
+        options[:area_code] ||= self.default_area_code
 
-        parts = split_to_parts(string, options)      
+        parts = split_to_parts(string, options)
 
         pn = Phone.new(parts) if parts
         if pn.present? and extension.present?
@@ -88,7 +88,7 @@ module Phoner
       country = detect_country(string)
 
       if country
-        options[:country_code] = country.country_code      
+        options[:country_code] = country.country_code
         string = string.gsub(country.country_code_regexp, '0')
       else
         if options[:country_code]
@@ -105,17 +105,19 @@ module Phoner
       end
 
       format = detect_format(string, country)
+      return nil if format.nil?
 
-      return nil if format.nil?    
+      # Override the format IF overriding options are not present
+      format = :short if options[:area_code].nil?
 
       parts = string.match formats(country)[format]
 
-      case format  
+      case format
         when :short
-          {:number => parts[2], :area_code => parts[1], :country_code => options[:country_code]}            
+          {:number => parts[2], :area_code => parts[1], :country_code => options[:country_code]}
         when :really_short
-          {:number => parts[1], :area_code => options[:area_code], :country_code => options[:country_code]}                      
-      end    
+          {:number => parts[1], :area_code => options[:area_code], :country_code => options[:country_code]}
+      end
     end
 
     # detect country from the string entered
@@ -127,7 +129,7 @@ module Phoner
           detected_country = country
         end
       end
-      detected_country    
+      detected_country
     end
 
     def self.formats(country)
@@ -137,7 +139,7 @@ module Phoner
         :short => Regexp.new('^0?(' + area_code_regexp + ')' + NUMBER),
         # 451588
         :really_short => Regexp.new('^' + NUMBER)
-      }    
+      }
     end
 
     # detect format (from FORMATS) of input string
@@ -199,8 +201,8 @@ module Phoner
     end
 
     # Formats the phone number.
-    # 
-    # if the method argument is a String, it is used as a format string, with the following fields being interpolated:  
+    #
+    # if the method argument is a String, it is used as a format string, with the following fields being interpolated:
     #
     # * %c - country_code (385)
     # * %a - area_code (91)
@@ -212,7 +214,7 @@ module Phoner
     #
     # if the method argument is a Symbol, it is used as a lookup key for a format String in Phone.named_formats
     #   pn.format(:europe)
-    def format(fmt)    
+    def format(fmt)
       if fmt.is_a?(Symbol)
         raise "The format #{fmt} doesn't exist'" unless named_formats.has_key?(fmt)
         format_number named_formats[fmt]
@@ -235,24 +237,24 @@ module Phoner
     def has_default_area_code?
       area_code == self.class.default_area_code
     end
-    
+
     # comparison of 2 phone objects
     def ==(other)
       methods = [:country_code, :area_code, :number, :extension]
       methods.all? { |method| other.respond_to?(method) && send(method) == other.send(method) }
-    end    
+    end
 
     private
 
     def format_number(fmt)
       result = fmt.gsub("%c", country_code || "").
              gsub("%a", area_code || "").
-             gsub("%A", area_code_long || "").           
+             gsub("%A", area_code_long || "").
              gsub("%n", number || "").
              gsub("%f", number1 || "").
              gsub("%l", number2 || "").
              gsub("%x", extension || "")
       return result
     end
-  end  
+  end
 end
