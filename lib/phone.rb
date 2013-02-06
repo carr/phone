@@ -111,6 +111,7 @@ module Phoner
       format = :short if options[:area_code].nil?
 
       parts = string.match formats(country)[format]
+      return nil if parts.nil?
 
       case format
         when :short
