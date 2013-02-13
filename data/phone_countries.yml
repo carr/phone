@@ -630,11 +630,12 @@
   :international_dialing_prefix: "0"
 "64": 
   :country_code: "64"
-  :national_dialing_prefix: 0 (None fo
-  :char_2_code: 0 (None fo
+  :national_dialing_prefix: 0
+  :char_2_code: 0
   :char_3_code: NZ
   :name: New Zealand
   :international_dialing_prefix: "0"
+  :area_code: "[1-9]"
 "855": 
   :country_code: "855"
   :national_dialing_prefix: "0"

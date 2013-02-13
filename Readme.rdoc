@@ -104,6 +104,7 @@ Currently tested on:
 [UA] Ukraine
 [US] United States
 [ZA] South Africa
+[NZ] New Zealand
 
 = Known issues
 There's an issue with Germany and area codes.
