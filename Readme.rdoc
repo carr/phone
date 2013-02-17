@@ -121,6 +121,7 @@ Currently tested on:
 [GY] Guyana
 [HR] Croatia
 [HU] Hungary
+[IE] Ireland
 [IL] Israel
 [IN] India
 [IR] Iran
