@@ -135,6 +135,7 @@ Currently tested on:
 [NL] Netherlands
 [NO] Norway
 [NP] Nepal
+[NZ] New Zealand
 [PH] Philippines
 [PK] Pakistan
 [PT] Portugal
