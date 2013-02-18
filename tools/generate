@@ -40,7 +40,7 @@ def create_test_file
   country_call_code = get_country_call_code
 
   File.open(@test_filename, 'w') do |test_file|
-  test_file.print <<-eof
+    test_file.print <<-eof
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 
 ## #{@country}
@@ -55,6 +55,7 @@ class #{@country_code.upcase}Test < Phonie::TestCase
 end 
     eof
   end
+   puts "Create: #{@test_filename}"
 end
 
 def add_missing_fields
@@ -66,6 +67,8 @@ def add_missing_fields
   File.open(@data_file, 'w') do |f|
     f.puts hash.to_yaml
   end
+
+  puts "Modified: #{@data_file}"
 end
 
 def update_readme
@@ -92,6 +95,7 @@ def update_readme
   end 
 
   FileUtils.mv(new_readme.path, readme.path)
+  puts "Modified: #{@readme_file}"
 end
 
 def generate
@@ -104,8 +108,13 @@ end
 
 usage if ARGV.length < 1
 
-@country = ARGV[0]
+@country = ARGV.join(' ')
 @country_code = get_country_code
+
+if @country_code.nil?
+  puts "Could not find a country code for '#{@country}'"
+  exit
+end
 
 @test_filename = File.join(File.dirname(__FILE__), '..', 'test', 'countries', "#{@country_code}_test.rb")
 
