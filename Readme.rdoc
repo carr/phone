@@ -109,6 +109,7 @@ Currently tested on:
 [EC] Ecuador
 [EE] Estonia
 [EG] Egypt
+[ES] Spain
 [ET] Ethiopia
 [FI] Finland
 [FR] France
