@@ -9,7 +9,7 @@ module Phoner
 
       @@all = {}
       YAML.load(File.read(data_file)).each_pair do |key, c|
-        @@all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:area_code])
+        @@all[key] = Country.new(c['name'], c['country_code'], c['char_2_code'], c['area_code'])
       end
       @@all
     end
