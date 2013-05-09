@@ -109,7 +109,7 @@ Currently tested on:
 There's an issue with Germany and area codes.
 
 = Author
-Copyright © 2010 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
+Copyright © 2013 Tomislav Car, {Infinum}[http://www.infinumdigital.com]
 
 = Contributors
 Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
