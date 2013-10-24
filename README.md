@@ -9,7 +9,7 @@ Parsing, validating and creating phone numbers
 
 ## Version
 
-This documentation is for the unreleased development branch. The current stable version is {1.2}[https://github.com/carr/phone/blob/v1.2/Readme.rdoc].
+This documentation is for the unreleased development branch. The current stable version is [1.2](https://github.com/carr/phone/blob/v1.2/Readme.rdoc)
 
 ## Description
 
