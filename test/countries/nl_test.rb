@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## Netherlands
-class NETest < Test::Unit::TestCase
+class NETest < Minitest::Test
   
   # 06:   mobile phone number
   def test_mobile

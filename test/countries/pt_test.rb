@@ -1,10 +1,10 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## Portugal
 # source 1: http://pt.wikipedia.org/wiki/N%C3%BAmeros_de_telefone_em_Portugal
 # source 2: http://www.anacom.pt/render.jsp?categoryId=279035
 
-class PTTest < Test::Unit::TestCase
+class PTTest < Minitest::Test
   
   ### Prefixes followed by corresponding tests
   

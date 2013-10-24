@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## Croatia
-class HRTest < Test::Unit::TestCase
+class HRTest < Minitest::Test
   
   def test_zagreb
     parse_test('+38513668734', '385', '1', '3668734')

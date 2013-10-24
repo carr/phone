@@ -1,7 +1,8 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+# -*- coding: utf-8 -*-
+require "helper"
 
 ## Sweden
-class SETest < Test::Unit::TestCase
+class SETest < Minitest::Test
 
   # 08  Greater Stockholm
   def test_stockholm

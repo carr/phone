@@ -1,4 +1,5 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+# -*- coding: utf-8 -*-
+require "helper"
 
 # http://stakeholders.ofcom.org.uk/telecoms/numbering/guidance-tele-no/numbers-for-drama
 #
@@ -31,7 +32,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 # Premium Rate Services   0909 8790000 to 8790999
 # UK Wide                 03069 990000 to 990999
 
-class GBTest < Test::Unit::TestCase
+class GBTest < Minitest::Test
   
   ## SHORT CODES
   # London              020                   7946 0000 to 7946 0999

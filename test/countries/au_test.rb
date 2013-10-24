@@ -1,10 +1,10 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 # 0x 5551 reserved for fictitious use. (not including x=3)
 # 0x 7010 reserved for fictitious use.
 
 ## Australia
-class AUTest < Test::Unit::TestCase
+class AUTest < Minitest::Test
   
   # 00 Emergency and International access
   # 01 Alternate phone services

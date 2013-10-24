@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## United States
-class USTest < Test::Unit::TestCase
+class USTest < Minitest::Test
   
   def test_local
     parse_test('+1 555 123 4567', '1', '555', '1234567')

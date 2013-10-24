@@ -1,8 +1,8 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## Uruguay
 # source: http://en.wikipedia.org/wiki/Telephone_numbers_in_Uruguay
-class UYTest < Test::Unit::TestCase
+class UYTest < Minitest::Test
   
   # 02 Montevideo
   def test_montevideo

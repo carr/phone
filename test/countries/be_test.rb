@@ -1,7 +1,8 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+# -*- coding: utf-8 -*-
+require "helper"
 
 ## Belgium
-class BETest < Test::Unit::TestCase
+class BETest < Minitest::Test
   
   ## single digit
   # 02:   Brussels (Bruxelles/Brussel)

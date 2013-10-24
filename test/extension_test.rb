@@ -1,11 +1,11 @@
-require File.expand_path(File.dirname(__FILE__) + '/test_helper')
+require "helper"
 
-class ExtensionTest < Test::Unit::TestCase
+class ExtensionTest < Minitest::Test
 
   def test_parse_usa_long_with_simple_extension
     pn = Phoner::Phone.parse "+1 2069735100 x143"
 
-    assert_not_nil pn, %Q{parse should pass}
+    refute_nil pn, %Q{parse should pass}
     assert_equal '9735100', pn.number
     assert_equal '206', pn.area_code
     assert_equal '1', pn.country_code

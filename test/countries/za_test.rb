@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
+require "helper"
 
 ## South Africa
-class ZATest < Test::Unit::TestCase
+class ZATest < Minitest::Test
   
   def test_local
     # Telkom

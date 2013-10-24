@@ -1,11 +1,11 @@
-require File.expand_path(File.dirname(__FILE__) + '/test_helper')
+require "helper"
 
-class PhoneTest < Test::Unit::TestCase
+class PhoneTest < Minitest::Test
   
   def test_number_without_country_code_initialize    
     Phoner::Phone.default_country_code = nil
 
-    assert_raise Phoner::CountryCodeError do
+    assert_raises Phoner::CountryCodeError do
       pn = Phoner::Phone.new '5125486', '91'
     end
   end
@@ -14,7 +14,7 @@ class PhoneTest < Test::Unit::TestCase
     Phoner::Phone.default_country_code = nil
     Phoner::Phone.default_area_code = nil
 
-    assert_raise Phoner::AreaCodeError do
+    assert_raises Phoner::AreaCodeError do
       pn = Phoner::Phone.new '451588'
     end
   end  
@@ -55,7 +55,7 @@ class PhoneTest < Test::Unit::TestCase
   def test_parse_short_without_special_characters_without_country
     Phoner::Phone.default_country_code = nil
 
-    assert_raise Phoner::CountryCodeError do
+    assert_raises Phoner::CountryCodeError do
       pn = Phoner::Phone.parse "0915125486"
     end
   end  
@@ -63,7 +63,7 @@ class PhoneTest < Test::Unit::TestCase
   def test_parse_short_with_special_characters_without_country
     Phoner::Phone.default_country_code = nil
 
-    assert_raise Phoner::CountryCodeError do
+    assert_raises Phoner::CountryCodeError do
       pn = Phoner::Phone.parse "091/512-5486"
     end
   end
