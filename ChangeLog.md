@@ -1,5 +1,7 @@
 # 1.3.0 / (unreleased)
 
+* Update README for yaml name and location (pepe)
+* Relocate / rename `data/phone_countries.yml` to `data/phone/countries.yml` (elskwid)
 * [improvement] Add modern gem infrastructure - add bundler, update gemspec, convert to minitest, locate gem files in proper directories, add .ruby-version, update README, update LICENSE.txt, add Changelog.md. (elskwid)
 
 # 1.2 / 2013-10-23
