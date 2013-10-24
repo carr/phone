@@ -18,7 +18,7 @@ TODO: Description
 ## Features
 
 ### Automatic country and area code detection
-Phone does it's best to automatically detect the country and area code while parsing. To do this phone uses data stored in `data/countries.yml`.
+Phone does it's best to automatically detect the country and area code while parsing. To do this phone uses data stored in `data/phone/countries.yml`.
 
 Each country code can have a regular expression named `area_code` that describes what the area code for that
 particular country looks like.
