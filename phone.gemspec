@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'phone'
-  s.version = '1.2'
+  s.version = '1.2.1'
   
   s.summary = "Phone number parsing, validation and formatting"
   s.description = "Phone number parsing, validation and formatting."
@@ -21,7 +21,8 @@ Gem::Specification.new do |s|
       LICENSE 
       data/phone_countries.yml 
       lib/phone.rb 
-      lib/country.rb 
+      lib/country.rb
+      lib/errors.rb
       lib/support.rb 
       test/extension_test.rb 
       test/phone_test.rb 
