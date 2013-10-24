@@ -1,68 +1,25 @@
-Gem::Specification.new do |s|
-  s.name    = 'phone'
-  s.version = '1.2'
-  
-  s.summary = "Phone number parsing, validation and formatting"
-  s.description = "Phone number parsing, validation and formatting."
-  
-  s.authors  = ['Tomislav Car', 'Todd Eichel', 'Don Morrison']
-  s.email    = ['tomislav@infinum.hr', 'todd@toddeichel.com', 'elskwid@gmail.com']
-  s.homepage = 'http://github.com/carr/phone'
-  
-  s.has_rdoc = true
-  s.rdoc_options = ['--main', 'Readme.rdoc']
-  s.rdoc_options << '--inline-source' << '--charset=UTF-8'
-  s.extra_rdoc_files = ['Readme.rdoc', 'LICENSE']
-  
-  s.require_paths = ["lib"]
-  
-  s.files = %w(
-      Readme.rdoc 
-      LICENSE 
-      data/phone_countries.yml 
-      lib/phone.rb 
-      lib/country.rb 
-      lib/support.rb 
-      test/extension_test.rb 
-      test/phone_test.rb 
-      test/test_helper.rb 
-      test/countries/au_test.rb 
-      test/countries/ba_test.rb 
-      test/countries/be_test.rb 
-      test/countries/de_test.rb 
-      test/countries/fr_test.rb 
-      test/countries/gb_test.rb 
-      test/countries/hr_test.rb 
-      test/countries/hu_test.rb 
-      test/countries/nl_test.rb
-      test/countries/pt_test.rb 
-      test/countries/rs_test.rb 
-      test/countries/se_test.rb 
-      test/countries/si_test.rb 
-      test/countries/ua_test.rb 
-      test/countries/us_test.rb 
-      test/countries/za_test.rb 
-    )
+# -*- encoding: utf-8 -*-
 
-    s.test_files = %w(
-      test/extension_test.rb 
-      test/phone_test.rb 
-      test/test_helper.rb 
-      test/countries/au_test.rb 
-      test/countries/ba_test.rb 
-      test/countries/be_test.rb 
-      test/countries/de_test.rb 
-      test/countries/fr_test.rb 
-      test/countries/gb_test.rb 
-      test/countries/hr_test.rb 
-      test/countries/hu_test.rb 
-      test/countries/nl_test.rb
-      test/countries/pt_test.rb 
-      test/countries/rs_test.rb 
-      test/countries/se_test.rb 
-      test/countries/si_test.rb 
-      test/countries/ua_test.rb 
-      test/countries/us_test.rb 
-      test/countries/za_test.rb 
-    )
+require File.expand_path('../lib/phone/version', __FILE__)
+
+Gem::Specification.new do |gem|
+  gem.name          = "phone"
+  gem.version       = Phone::VERSION
+  gem.summary       = %q{Phone number parsing, validation and formatting}
+  gem.description   = %q{Phone number parsing, validation and formatting in Ruby}
+  gem.license       = "MIT"
+  gem.authors       = ["Tomislav Carr", "Todd Eichel", "Don Morrison"]
+  gem.email         = ["tomislav@infinum.hr", "todd@toddeichel.com", "don@elskwid.net"]
+  gem.homepage      = "https://github.com/carr/phone#readme"
+
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.require_paths = ['lib']
+
+  gem.add_development_dependency 'bundler', '~> 1.2'
+  gem.add_development_dependency 'minitest', '~> 5.0'
+  gem.add_development_dependency 'rake', '~> 10.0'
+  gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
+  gem.add_development_dependency 'yard', '~> 0.8'
 end

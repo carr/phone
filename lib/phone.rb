@@ -9,9 +9,9 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-require File.join(File.dirname(__FILE__), 'support') unless defined? ActiveSupport
-require File.join(File.dirname(__FILE__), 'country')
-require File.join(File.dirname(__FILE__), 'errors')
+require "phone/support" unless defined?(ActiveSupport)
+require "phone/country"
+require "phone/errors"
 
 module Phoner
   class Phone

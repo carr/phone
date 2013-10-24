@@ -5,7 +5,8 @@ module Phoner
     def self.load
       return @@all if @@all.present?
 
-      data_file = File.join(File.dirname(__FILE__), '..', 'data', 'phone_countries.yml')
+      data_file = File.expand_path(File.join('..','..','data', 'phone', 'phone_countries.yml'), File.dirname(__FILE__))
+#      data_file = File.join(File.dirname(__FILE__), '..', 'data', 'phone_countries.yml')
 
       @@all = {}
       YAML.load(File.read(data_file)).each_pair do |key, c|

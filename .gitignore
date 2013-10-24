@@ -1,1 +1,4 @@
-*.gem
+Gemfile.lock
+doc/
+pkg/
+vendor/cache/*.gem

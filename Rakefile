@@ -1,12 +1,36 @@
-require 'rake'
-require 'rake/testtask'
+# encoding: utf-8
 
-desc 'Default: run unit tests.'
-task :default => :test
+require "rubygems"
 
-desc 'Run unit tests.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
+begin
+  require "bundler"
+rescue LoadError => e
+  warn e.message
+  warn "Run `gem install bundler` to install Bundler."
+  exit -1
 end
+
+begin
+  Bundler.setup(:development)
+rescue Bundler::BundlerError => e
+  warn e.message
+  warn "Run `bundle install` to install missing gems."
+  exit e.status_code
+end
+
+require "rake"
+
+require "rubygems/tasks"
+Gem::Tasks.new
+
+require "rake/testtask"
+
+Rake::TestTask.new do |test|
+  test.libs << "test"
+  test.pattern = "test/**/*_test.rb"
+  test.verbose = true
+end
+
+require "yard"
+YARD::Rake::YardocTask.new
+task :doc => :yard
