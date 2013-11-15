@@ -5,12 +5,12 @@ require "helper"
 # source 2: http://www.anacom.pt/render.jsp?categoryId=279035
 
 class PTTest < Minitest::Test
-  
+
   ### Prefixes followed by corresponding tests
-  
+
   ## 01-09: reserved for future use
   ## 1: Short Numbers
-  
+
   ## 2: Landline / fixed numbers
 
   ## two digits landlines
@@ -22,13 +22,13 @@ class PTTest < Minitest::Test
   def test_oporto
     parse_test('+351 22 123 4567', '351', '22', '1234567')
   end
-  
+
   ## three digits landlines
   # 231:  Mealhada
   def test_mealhada
     parse_test('+351 231 123456', '351', '231', '123456')
   end
-  
+
   # 232-295  (Viseu - Angra do Heroismo)
   def test_viseu
     parse_test('+351 232 123456', '351', '232', '123456')
@@ -36,27 +36,27 @@ class PTTest < Minitest::Test
   def test_angra
     parse_test('+351 295 123456', '351', '295', '123456')
   end
-  
+
   # 296: Ponta Delgada
   def test_pontadelgada
     parse_test('+351 296 123456', '351', '296', '123456')
   end
-  
+
   ## 3: Nomad services
   ## 4: Not used
   ## 5: Free
   ## 6: Audiotext service, data network access...
 
-  ## 7: Premium numbers ("Universal access numbers")  
-  
+  ## 7: Premium numbers ("Universal access numbers")
+
   # 707-708: Premium Numbers
   def test_707
     Phoner::Phone.default_country_code = '351'
     parse_test('707 123 456', '351', '707', '123456')
   end
-  
+
   ## 8: Free toll numbers
-    
+
   # 800: Numero verde ("Green Number")
   def test_800
     Phoner::Phone.default_country_code = '351'
@@ -72,9 +72,9 @@ class PTTest < Minitest::Test
     Phoner::Phone.default_country_code = '351'
     parse_test('809 123 456', '351', '809', '123456')
   end
-  
+
   ## 9: Mobile networks
-  
+
   ## two-digits mobile networks
   # 91: Vodafone
   def test_vodafone
@@ -88,7 +88,7 @@ class PTTest < Minitest::Test
   def test_tmn
     parse_test('+351 96 1234567', '351', '96', '1234567')
   end
-  
+
   ## three-digits mobile networks
   # 921: TMN three-digits
   def test_tmn921
@@ -106,7 +106,7 @@ class PTTest < Minitest::Test
   def test_zonmobile
     parse_test('+351 929 123456', '351', '929', '123456')
   end
-  
+
   def test_validates
     Phoner::Phone.default_country_code = nil
     assert_equal Phoner::Phone.valid?('00351211234567'), true
@@ -125,5 +125,5 @@ class PTTest < Minitest::Test
     assert_equal Phoner::Phone.valid?('708123456'), true
     assert_equal Phoner::Phone.valid?('800 123 456'), true
   end
-  
+
 end

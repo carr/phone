@@ -2,7 +2,7 @@ require "helper"
 
 ## South Africa
 class ZATest < Minitest::Test
-  
+
   def test_local
     # Telkom
     parse_test('+27 11 555 5555', '27', '11', '5555555')
@@ -17,5 +17,5 @@ class ZATest < Minitest::Test
     # Telkom
     parse_test('+27 800 123 321', '27', '800', '123321')
   end
-  
+
 end
