@@ -973,7 +973,7 @@
   :char_3_code: UA
   :name: Ukraine
   :international_dialing_prefix: "00"
-  :area_code: "[1-9][0-9]"
+  :area_code: "[1-9]\\d"
 "41": 
   :country_code: "41"
   :national_dialing_prefix: "0"
