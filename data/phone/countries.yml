@@ -1202,7 +1202,7 @@
   :char_3_code: SI
   :name: Slovenia
   :international_dialing_prefix: "0"
-  :area_code: "30|40|31|41|51|71|70|64|59|1|2|3|4|5|6|7"
+  :area_code: "3[01]|4[01]|51|7[01]|64|59|1|2|3|4|5|6|7"
 "358": 
   :country_code: "358"
   :national_dialing_prefix: "0"
