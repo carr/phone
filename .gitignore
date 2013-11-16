@@ -1,4 +1,5 @@
 Gemfile.lock
 doc/
 pkg/
+tmp/
 vendor/cache/*.gem
