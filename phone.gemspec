@@ -4,6 +4,7 @@ Gem::Specification.new do |s|
   
   s.summary = "Phone number parsing, validation and formatting"
   s.description = "Phone number parsing, validation and formatting."
+  s.license = "MIT"
   
   s.authors  = ['Tomislav Car', 'Todd Eichel', 'Don Morrison']
   s.email    = ['tomislav@infinum.hr', 'todd@toddeichel.com', 'elskwid@gmail.com']
