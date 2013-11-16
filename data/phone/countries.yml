@@ -1172,7 +1172,7 @@
   :char_3_code: HR
   :name: Croatia
   :international_dialing_prefix: "0"
-  :area_code: "1|[2-9][0-9]"
+  :area_code: "1|[2-9]\\d"
 "243": 
   :country_code: "243"
   :national_dialing_prefix: None
