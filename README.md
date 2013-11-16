@@ -70,6 +70,15 @@ Phoner::Phone.named_formats[:short] = '%A/%n1-%n2'
 pn.format(:short) # => 091/512-5486
 ```
 
+### Finding countries by their isocode
+If you don't have the country code, but you know from other sources what country a phone is from, you can retrieve the country using the country isocode (such as 'de', 'es', 'us', ...). Remember to call `Phoner::Country.load` before using this lookup.
+
+```ruby
+if country = Phoner::Country.find_by_country_isocode(user_country_isocode)
+  phone_number = Phoner::Phone.parse(user_input, :country_code => country.country_code)
+end
+```
+
 ## Examples
 
 ```ruby
@@ -132,6 +141,7 @@ Phoner::Phone.parse '451-588'
 * [BA] Bosnia and Herzegovina
 * [BE] Belgium
 * [DE] Germany
+* [ES] Spain
 * [FR] France
 * [GB] United Kingdom
 * [HR] Croatia
@@ -146,7 +156,7 @@ Phoner::Phone.parse '451-588'
 
 ## Known issues
 
-There's an issue with Germany and area codes.
+There's an issue with Germany and Spanish area codes.
 
 ## Requirements
 
@@ -168,4 +178,4 @@ See {file:LICENSE.txt} for details.
 
 ## Contributors
 
-Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall
+Don Morrison, Michael Squires, Todd Eichel (Fooala, Inc.), chipiga, Etienne Samson, Luke Randall, Jakob Hilden, Tieg Zaharia
