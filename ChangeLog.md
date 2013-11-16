@@ -3,6 +3,7 @@
 * Update README for yaml name and location (pepe)
 * Relocate / rename `data/phone_countries.yml` to `data/phone/countries.yml` (elskwid)
 * [improvement] Add modern gem infrastructure - add bundler, update gemspec, convert to minitest, locate gem files in proper directories, add .ruby-version, update README, update LICENSE.txt, add Changelog.md. (elskwid)
+* [improvement] Memoize country code regex (tiegz)
 
 # 1.2.2 / 2013-11-15
 
