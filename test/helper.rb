@@ -19,6 +19,18 @@ end
 require "phone"
 require "minitest/autorun"
 
+class Minitest::Test
+  def setup
+    Phoner::Phone.default_country_code = nil
+    Phoner::Phone.default_area_code = nil
+  end
+
+  def teardown
+    Phoner::Phone.default_country_code = nil
+    Phoner::Phone.default_area_code = nil
+  end
+end
+
 def parse_test(raw, country_code, area_code, number)
   pn = Phoner::Phone.parse(raw)
 
