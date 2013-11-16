@@ -16,7 +16,7 @@ require File.join(File.dirname(__FILE__), 'errors')
 module Phoner
   class Phone
     NUMBER = '([0-9]{1,8})$'  
-    DEFAULT_AREA_CODE = '[2-9][0-8][0-9]' # USA
+    DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
@@ -159,7 +159,7 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+')
+      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+').gsub(/^\+00/, '+').gsub(/^\+0/, '+')
     end
 
     # pull off anything that look like an extension
