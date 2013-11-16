@@ -1023,7 +1023,7 @@
   :char_3_code: RS
   :name: Serbia
   :international_dialing_prefix: "99"
-  :area_code: "[1-9][0-9]"
+  :area_code: "[1-9]\\d"
 "975": 
   :country_code: "975"
   :national_dialing_prefix: None
