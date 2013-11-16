@@ -19,12 +19,12 @@ module Phoner
     end
 
     def self.find_by_country_code(code)
-      @@all[code]    
+      @@all[code]
     end
 
     def country_code_regexp
-      Regexp.new("^[+]#{country_code}")    
+      Regexp.new("^[+]#{country_code}")
     end
   end
-  
+
 end
