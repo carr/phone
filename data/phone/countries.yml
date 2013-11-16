@@ -1238,7 +1238,7 @@
   :char_3_code: BA
   :name: Bosnia and Herzegovina
   :international_dialing_prefix: "0"
-  :area_code: "[0-9][0-9]"
+  :area_code: "6|[0-57-9]\\d"
 "245": 
   :country_code: "245"
   :national_dialing_prefix: None
