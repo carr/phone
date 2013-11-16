@@ -4,6 +4,10 @@
 * Relocate / rename `data/phone_countries.yml` to `data/phone/countries.yml` (elskwid)
 * [improvement] Add modern gem infrastructure - add bundler, update gemspec, convert to minitest, locate gem files in proper directories, add .ruby-version, update README, update LICENSE.txt, add Changelog.md. (elskwid)
 
+# 1.2.2 / 2013-11-15
+
+* Add license to gemspec (bf4)
+
 # 1.2.1 / 2013-10-24
 
 * Add errors.rb to gemspec to fix gem (mtarnovan)
