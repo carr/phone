@@ -26,7 +26,8 @@ particular country looks like.
 If an `area_code` regular expression isn't specified, the default, `Phoner::Phone::DEFAULT_AREA_CODE` (correct for
 the US) is used.
 
-== Validating
+### Validating
+
 Validating is very relaxed, basically it strips out everything that's not a number or '+' character:
 
 ```ruby
