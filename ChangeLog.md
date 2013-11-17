@@ -8,6 +8,7 @@
 * [fix] Bring changes from v1.1 that were mysteriously missing from repo. (elskwid)
 * [improvement] Add IE support. (dramalho)
 * [improvement] Update #split_to_parts to provide a format override and handle nil parts. (dramalho)
+* [improvement] Add NZ support. (jurgens)
 
 # 1.2.2 / 2013-11-15
 
