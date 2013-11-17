@@ -1046,6 +1046,7 @@
   :char_3_code: IE
   :name: Ireland
   :international_dialing_prefix: "0"
+  :area_code: "1|[2,4-7,9][0-9]|8[0,3-9]|822|818"  
 "692": 
   :country_code: "692"
   :national_dialing_prefix: "1"

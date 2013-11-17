@@ -146,6 +146,7 @@ Phoner::Phone.parse '451-588'
 * [GB] United Kingdom
 * [HR] Croatia
 * [HU] Hungary
+* [IE] Ireland
 * [NL] Netherlands
 * [RS] Serbia
 * [SE] Sweden
