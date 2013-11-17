@@ -98,6 +98,10 @@ class PhoneTest < Minitest::Test
     assert_equal pn.format(:europe), '+385 (0) 91 512 5486'
   end
 
+  def test_validity
+    assert true, Phoner::Phone.valid?("+17788827175")
+  end
+
   def test_doesnt_validate
     assert_equal Phoner::Phone.valid?('asdas'), false
     assert_equal Phoner::Phone.valid?('385915125486'), false
