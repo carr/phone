@@ -35,7 +35,7 @@ def parse_test(raw, country_code, area_code, number)
   pn = Phoner::Phone.parse(raw)
 
   refute_nil pn, %Q{parse should pass}
-  assert_equal pn.country_code, country_code
-  assert_equal pn.area_code, area_code
-  assert_equal pn.number, number
+  assert_equal country_code, pn.country_code
+  assert_equal area_code, pn.area_code
+  assert_equal number, pn.number
 end
