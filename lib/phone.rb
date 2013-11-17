@@ -107,10 +107,13 @@ module Phoner
       end
 
       format = detect_format(string, country)
-
       return nil if format.nil?
 
+      # Override the format IF overriding options are not present
+      format = :short if options[:area_code].nil?
+
       parts = string.match formats(country)[format]
+      return nil if parts.nil?
 
       case format
         when :short
