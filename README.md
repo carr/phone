@@ -148,6 +148,7 @@ Phoner::Phone.parse '451-588'
 * [HU] Hungary
 * [IE] Ireland
 * [NL] Netherlands
+* [NZ] New Zealand
 * [RS] Serbia
 * [SE] Sweden
 * [SI] Slovenia
