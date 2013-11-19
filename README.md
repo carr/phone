@@ -18,13 +18,12 @@ TODO: Description
 ## Features
 
 ### Automatic country and area code detection
+
 Phone does its best to automatically detect the country and area code while parsing. To do this, phone uses data stored in `data/phone/countries.yml`.
 
-Each country code can have a regular expression named `area_code` that describes what the area code for that
-particular country looks like.
+Each country code can have a regular expression named `area_code` that describes what the area code for that particular country looks like.
 
-If an `area_code` regular expression isn't specified, the default, `Phoner::Phone::DEFAULT_AREA_CODE` (correct for
-the US) is used.
+If an `area_code` regular expression isn't specified, the default, `Phoner::Phone::DEFAULT_AREA_CODE` (correct for the US) is used.
 
 ### Validating
 
@@ -71,6 +70,7 @@ pn.format(:short) # => 091/512-5486
 ```
 
 ### Finding countries by their isocode
+
 If you don't have the country code, but you know from other sources what country a phone is from, you can retrieve the country using the country isocode (such as 'de', 'es', 'us', ...). Remember to call `Phoner::Country.load` before using this lookup.
 
 ```ruby
