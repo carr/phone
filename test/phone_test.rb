@@ -109,6 +109,10 @@ class PhoneTest < Minitest::Test
     assert true, Phoner::Phone.valid?("+17788827175")
   end
 
+  def test_validity_with_country_code
+    assert true, Phoner::Phone.valid?("7788827175", country_code: "1")
+  end
+
   def test_doesnt_validate
     assert_equal Phoner::Phone.valid?('asdas'), false
     assert_equal Phoner::Phone.valid?('385915125486'), false
@@ -124,7 +128,7 @@ class PhoneTest < Minitest::Test
     pn1 = Phoner::Phone.new '5125486', '91', '385'
     pn2 = Phoner::Phone.new '1234567', '91', '385'
     assert pn1 != pn2
-  end  
+  end
 
   def test_find_by_country_isocode
     Phoner::Country.load

@@ -15,7 +15,7 @@ require "phone/errors"
 
 module Phoner
   class Phone
-    NUMBER = '([0-9]{1,8})$'  
+    NUMBER = '([0-9]{1,8})$'
     DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
@@ -76,9 +76,9 @@ module Phoner
     end
 
     # is this string a valid phone number?
-    def self.valid?(string)
+    def self.valid?(string, options = {})
       begin
-        parse(string).present?
+        parse(string, options).present?
       # if we encountered exceptions (missing country code, missing area code etc)
       rescue PhoneError
         return false
