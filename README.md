@@ -140,6 +140,7 @@ Phoner::Phone.parse '451-588'
 * [AU] Australia
 * [BA] Bosnia and Herzegovina
 * [BE] Belgium
+* [CA] Canada
 * [DE] Germany
 * [ES] Spain
 * [FR] France

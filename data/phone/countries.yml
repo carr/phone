@@ -658,6 +658,13 @@
   :char_3_code: US
   :name: United States
   :international_dialing_prefix: "11"
+"1": 
+  :country_code: "1"
+  :national_dialing_prefix: "1"
+  :char_2_code: "1"
+  :char_3_code: CA
+  :name: Canada
+  :international_dialing_prefix: "11"
 "375": 
   :country_code: "375"
   :national_dialing_prefix: "8"
