@@ -3,3 +3,5 @@ doc/
 pkg/
 tmp/
 vendor/cache/*.gem
+.ruby-version
+.rvmrc

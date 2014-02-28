@@ -1,0 +1,1441 @@
+---
+TO:
+  :country_code: '676'
+  :national_dialing_prefix: None
+  :char_2_code: TO
+  :char_3_code: TON
+  :name: Tonga
+  :international_dialing_prefix: '0'
+CA:
+  :country_code: '1'
+  :national_dialing_prefix: '1'
+  :char_2_code: CA
+  :char_3_code: CAN
+  :name: Canada
+  :international_dialing_prefix: '11'
+AR:
+  :country_code: '54'
+  :national_dialing_prefix: '0'
+  :char_2_code: AR
+  :char_3_code: ARG
+  :name: Argentina
+  :international_dialing_prefix: '0'
+CR:
+  :country_code: '506'
+  :national_dialing_prefix: None
+  :char_2_code: CR
+  :char_3_code: CRI
+  :name: Costa Rica
+  :international_dialing_prefix: '0'
+ET:
+  :country_code: '251'
+  :national_dialing_prefix: '0'
+  :char_2_code: ET
+  :char_3_code: ETH
+  :name: Ethiopia
+  :international_dialing_prefix: '0'
+GP:
+  :country_code: '590'
+  :national_dialing_prefix: None
+  :char_2_code: GP
+  :char_3_code: GLP
+  :name: Guadeloupe
+  :international_dialing_prefix: '0'
+KR:
+  :country_code: '82'
+  :national_dialing_prefix: '0'
+  :char_2_code: KR
+  :char_3_code: KOR
+  :name: Korea, Republic of
+  :international_dialing_prefix: '1'
+ML:
+  :country_code: '223'
+  :national_dialing_prefix: '0'
+  :char_2_code: ML
+  :char_3_code: MLI
+  :name: Mali
+  :international_dialing_prefix: '0'
+CZ:
+  :country_code: '420'
+  :national_dialing_prefix: None
+  :char_2_code: CZ
+  :char_3_code: CZE
+  :name: Czech Republic
+  :international_dialing_prefix: '0'
+SO:
+  :country_code: '252'
+  :national_dialing_prefix: None
+  :char_2_code: SO
+  :char_3_code: SOM
+  :name: Somalia
+  :international_dialing_prefix: '0'
+SB:
+  :country_code: '677'
+  :national_dialing_prefix: None
+  :char_2_code: SB
+  :char_3_code: SLB
+  :name: Solomon Islands
+  :international_dialing_prefix: '0'
+SK:
+  :country_code: '421'
+  :national_dialing_prefix: '0'
+  :char_2_code: SK
+  :char_3_code: SVK
+  :name: Slovakia
+  :international_dialing_prefix: '0'
+PA:
+  :country_code: '507'
+  :national_dialing_prefix: None
+  :char_2_code: PA
+  :char_3_code: PAN
+  :name: Panama
+  :international_dialing_prefix: '0'
+BO:
+  :country_code: '591'
+  :national_dialing_prefix: '10'
+  :char_2_code: BO
+  :char_3_code: BOL
+  :name: Bolivia
+  :international_dialing_prefix: '10'
+GN:
+  :country_code: '224'
+  :national_dialing_prefix: None
+  :char_2_code: GN
+  :char_3_code: GIN
+  :name: Guinea
+  :international_dialing_prefix: '0'
+VN:
+  :country_code: '84'
+  :national_dialing_prefix: '0'
+  :char_2_code: VN
+  :char_3_code: VNM
+  :name: Viet Nam
+  :international_dialing_prefix: '0'
+VU:
+  :country_code: '678'
+  :national_dialing_prefix: None
+  :char_2_code: VU
+  :char_3_code: VUT
+  :name: Vanuatu
+  :international_dialing_prefix: '0'
+ZA:
+  :country_code: '27'
+  :national_dialing_prefix: '0'
+  :char_2_code: ZA
+  :char_3_code: ZAF
+  :name: South Africa
+  :international_dialing_prefix: '0'
+  :area_code: 800|86[01]|[1-57-8]\d
+PM:
+  :country_code: '508'
+  :national_dialing_prefix: '0'
+  :char_2_code: PM
+  :char_3_code: SPM
+  :name: Saint Pierre And Miquelon
+  :international_dialing_prefix: '0'
+BR:
+  :country_code: '55'
+  :national_dialing_prefix: '14'
+  :char_2_code: BR
+  :char_3_code: BRA
+  :name: Brazil
+  :international_dialing_prefix: '14'
+DJ:
+  :country_code: '253'
+  :national_dialing_prefix: None
+  :char_2_code: DJ
+  :char_3_code: DJI
+  :name: Djibouti
+  :international_dialing_prefix: '0'
+GY:
+  :country_code: '592'
+  :national_dialing_prefix: None
+  :char_2_code: GY
+  :char_3_code: GUY
+  :name: Guyana
+  :international_dialing_prefix: '0'
+CI:
+  :country_code: '225'
+  :national_dialing_prefix: '0'
+  :char_2_code: CI
+  :char_3_code: CIV
+  :name: CÃ´te D'Ivoire
+  :international_dialing_prefix: '0'
+CL:
+  :country_code: '56'
+  :national_dialing_prefix: '0'
+  :char_2_code: CL
+  :char_3_code: CHL
+  :name: Chile
+  :international_dialing_prefix: '0'
+FJ:
+  :country_code: '679'
+  :national_dialing_prefix: None
+  :char_2_code: FJ
+  :char_3_code: FJI
+  :name: Fiji
+  :international_dialing_prefix: '0'
+HT:
+  :country_code: '509'
+  :national_dialing_prefix: None
+  :char_2_code: HT
+  :char_3_code: HTI
+  :name: Haiti
+  :international_dialing_prefix: '0'
+EC:
+  :country_code: '593'
+  :national_dialing_prefix: '0'
+  :char_2_code: EC
+  :char_3_code: ECU
+  :name: Ecuador
+  :international_dialing_prefix: '0'
+KE:
+  :country_code: '254'
+  :national_dialing_prefix: '0'
+  :char_2_code: KE
+  :char_3_code: KEN
+  :name: Kenya
+  :international_dialing_prefix: '0'
+BF:
+  :country_code: '226'
+  :national_dialing_prefix: None
+  :char_2_code: BF
+  :char_3_code: BFA
+  :name: Burkina Faso
+  :international_dialing_prefix: '0'
+LI:
+  :country_code: '423'
+  :national_dialing_prefix: None
+  :char_2_code: LI
+  :char_3_code: LIE
+  :name: Liechtenstein
+  :international_dialing_prefix: '0'
+TZ:
+  :country_code: '255'
+  :national_dialing_prefix: '0'
+  :char_2_code: TZ
+  :char_3_code: TZA
+  :name: Tanzania, United Republic of
+  :international_dialing_prefix: '0'
+NE:
+  :country_code: '227'
+  :national_dialing_prefix: '0'
+  :char_2_code: NE
+  :char_3_code: NER
+  :name: Niger
+  :international_dialing_prefix: '0'
+GF:
+  :country_code: '594'
+  :national_dialing_prefix: None
+  :char_2_code: GF
+  :char_3_code: GUF
+  :name: French Guiana
+  :international_dialing_prefix: '0'
+CN:
+  :country_code: '86'
+  :national_dialing_prefix: '0'
+  :char_2_code: CN
+  :char_3_code: CHN
+  :name: China
+  :international_dialing_prefix: '0'
+MV:
+  :country_code: '960'
+  :national_dialing_prefix: None
+  :char_2_code: MV
+  :char_3_code: MDV
+  :name: Maldives
+  :international_dialing_prefix: '0'
+CO:
+  :country_code: '57'
+  :national_dialing_prefix: '5'
+  :char_2_code: CO
+  :char_3_code: COL
+  :name: Colombia
+  :international_dialing_prefix: '5'
+VE:
+  :country_code: '58'
+  :national_dialing_prefix: '0'
+  :char_2_code: VE
+  :char_3_code: VEN
+  :name: Venezuela, Bolivarian Republic of
+  :international_dialing_prefix: '0'
+UG:
+  :country_code: '256'
+  :national_dialing_prefix: '0'
+  :char_2_code: UG
+  :char_3_code: UGA
+  :name: Uganda
+  :international_dialing_prefix: '0'
+TG:
+  :country_code: '228'
+  :national_dialing_prefix: None
+  :char_2_code: TG
+  :char_3_code: TGO
+  :name: Togo
+  :international_dialing_prefix: '0'
+PY:
+  :country_code: '595'
+  :national_dialing_prefix: '0'
+  :char_2_code: PY
+  :char_3_code: PRY
+  :name: Paraguay
+  :international_dialing_prefix: '2'
+LB:
+  :country_code: '961'
+  :national_dialing_prefix: '0'
+  :char_2_code: LB
+  :char_3_code: LBN
+  :name: Lebanon
+  :international_dialing_prefix: '0'
+MQ:
+  :country_code: '596'
+  :national_dialing_prefix: None
+  :char_2_code: MQ
+  :char_3_code: MTQ
+  :name: Martinique
+  :international_dialing_prefix: '0'
+BI:
+  :country_code: '257'
+  :national_dialing_prefix: None
+  :char_2_code: BI
+  :char_3_code: BDI
+  :name: Burundi
+  :international_dialing_prefix: '0'
+BJ:
+  :country_code: '229'
+  :national_dialing_prefix: None
+  :char_2_code: BJ
+  :char_3_code: BEN
+  :name: Benin
+  :international_dialing_prefix: '0'
+JO:
+  :country_code: '962'
+  :national_dialing_prefix: '0'
+  :char_2_code: JO
+  :char_3_code: JOR
+  :name: Jordan
+  :international_dialing_prefix: '0'
+SY:
+  :country_code: '963'
+  :national_dialing_prefix: '0'
+  :char_2_code: SY
+  :char_3_code: SYR
+  :name: Syrian Arab Republic
+  :international_dialing_prefix: '0'
+SR:
+  :country_code: '597'
+  :national_dialing_prefix: '0'
+  :char_2_code: SR
+  :char_3_code: SUR
+  :name: Suriname
+  :international_dialing_prefix: '0'
+PW:
+  :country_code: '680'
+  :national_dialing_prefix: None
+  :char_2_code: PW
+  :char_3_code: PLW
+  :name: Palau
+  :international_dialing_prefix: '0'
+MZ:
+  :country_code: '258'
+  :national_dialing_prefix: '0'
+  :char_2_code: MZ
+  :char_3_code: MOZ
+  :name: Mozambique
+  :international_dialing_prefix: '0'
+GR:
+  :country_code: '30'
+  :national_dialing_prefix: None
+  :char_2_code: GR
+  :char_3_code: GRC
+  :name: Greece
+  :international_dialing_prefix: '0'
+WF:
+  :country_code: '681'
+  :national_dialing_prefix: None
+  :char_2_code: WF
+  :char_3_code: WLF
+  :name: Wallis and Futuna
+  :international_dialing_prefix: '19'
+UY:
+  :country_code: '598'
+  :national_dialing_prefix: '0'
+  :char_2_code: UY
+  :char_3_code: URY
+  :name: Uruguay
+  :international_dialing_prefix: '0'
+  :area_code: 2|42|4364|43[34567]|4452|44[3457]|454[24]|4567?|4586|46[234]|4675|47[237]|4779|9[13456789]
+TJ:
+  :country_code: '992'
+  :national_dialing_prefix: '8'
+  :char_2_code: TJ
+  :char_3_code: TJK
+  :name: Tajikistan
+  :international_dialing_prefix: '810'
+NL:
+  :country_code: '31'
+  :national_dialing_prefix: '0'
+  :char_2_code: NL
+  :char_3_code: NLD
+  :name: Netherlands
+  :international_dialing_prefix: '0'
+  :area_code: 6760|66|6|800|878|8[4578]|90[069]|1[035]|2[0346]|3[03568]|4[0356]|5[0358]|7\d|11[134578]|16[124-8]|17[24]|18[0-467]|22[2-46-9]|25[125]|29[479]|31[3-8]|32[01]|34[1-8]|41[12368]|47[58]|48[15-8]|49[23579]|5[129][1-9]|54[134-8]|56[126]|57[0-3578]
+KP:
+  :country_code: '850'
+  :national_dialing_prefix: '0'
+  :char_2_code: KP
+  :char_3_code: PRK
+  :name: Korea, Democratic People's Republic Of
+  :international_dialing_prefix: '0'
+IQ:
+  :country_code: '964'
+  :national_dialing_prefix: None
+  :char_2_code: IQ
+  :char_3_code: IRQ
+  :name: Iraq
+  :international_dialing_prefix: '0'
+LT:
+  :country_code: '370'
+  :national_dialing_prefix: '8'
+  :char_2_code: LT
+  :char_3_code: LTU
+  :name: Lithuania
+  :international_dialing_prefix: '0'
+TM:
+  :country_code: '993'
+  :national_dialing_prefix: '8'
+  :char_2_code: TM
+  :char_3_code: TKM
+  :name: Turkmenistan
+  :international_dialing_prefix: '810'
+BE:
+  :country_code: '32'
+  :national_dialing_prefix: '0'
+  :char_2_code: BE
+  :char_3_code: BEL
+  :name: Belgium
+  :international_dialing_prefix: '0'
+  :area_code: 800|90\d|2|3|4|9|1[0-69]|5\d|6[013-9]|7[01]|8[1-9]
+KW:
+  :country_code: '965'
+  :national_dialing_prefix: None
+  :char_2_code: KW
+  :char_3_code: KWT
+  :name: Kuwait
+  :international_dialing_prefix: '0'
+LV:
+  :country_code: '371'
+  :national_dialing_prefix: '8'
+  :char_2_code: LV
+  :char_3_code: LVA
+  :name: Latvia
+  :international_dialing_prefix: '0'
+CK:
+  :country_code: '682'
+  :national_dialing_prefix: '0'
+  :char_2_code: CK
+  :char_3_code: COK
+  :name: Cook Islands
+  :international_dialing_prefix: '0'
+MY:
+  :country_code: '60'
+  :national_dialing_prefix: '0'
+  :char_2_code: MY
+  :char_3_code: MYS
+  :name: Malaysia
+  :international_dialing_prefix: '0'
+SA:
+  :country_code: '966'
+  :national_dialing_prefix: '0'
+  :char_2_code: SA
+  :char_3_code: SAU
+  :name: Saudi Arabia
+  :international_dialing_prefix: '0'
+NU:
+  :country_code: '683'
+  :national_dialing_prefix: None
+  :char_2_code: NU
+  :char_3_code: NIU
+  :name: Niue
+  :international_dialing_prefix: '0'
+MU:
+  :country_code: '230'
+  :national_dialing_prefix: None
+  :char_2_code: MU
+  :char_3_code: MUS
+  :name: Mauritius
+  :international_dialing_prefix: '20'
+AZ:
+  :country_code: '994'
+  :national_dialing_prefix: '8'
+  :char_2_code: AZ
+  :char_3_code: AZE
+  :name: Azerbaijan
+  :international_dialing_prefix: '810'
+HK:
+  :country_code: '852'
+  :national_dialing_prefix: None
+  :char_2_code: HK
+  :char_3_code: HKG
+  :name: Hong Kong
+  :international_dialing_prefix: '1'
+EE:
+  :country_code: '372'
+  :national_dialing_prefix: None
+  :char_2_code: EE
+  :char_3_code: EST
+  :name: Estonia
+  :international_dialing_prefix: '0'
+AU:
+  :country_code: '61'
+  :national_dialing_prefix: '0'
+  :char_2_code: AU
+  :char_3_code: AUS
+  :name: Australia
+  :international_dialing_prefix: '11'
+  :area_code: "[234578]"
+BD:
+  :country_code: '880'
+  :national_dialing_prefix: '0'
+  :char_2_code: BD
+  :char_3_code: BGD
+  :name: Bangladesh
+  :international_dialing_prefix: '0'
+YE:
+  :country_code: '967'
+  :national_dialing_prefix: '0'
+  :char_2_code: YE
+  :char_3_code: YEM
+  :name: Yemen
+  :international_dialing_prefix: '0'
+TR:
+  :country_code: '90'
+  :national_dialing_prefix: '0'
+  :char_2_code: TR
+  :char_3_code: TUR
+  :name: Turkey
+  :international_dialing_prefix: '0'
+MD:
+  :country_code: '373'
+  :national_dialing_prefix: '0'
+  :char_2_code: MD
+  :char_3_code: MDA
+  :name: Moldova, Republic of
+  :international_dialing_prefix: '0'
+FR:
+  :country_code: '33'
+  :national_dialing_prefix: '0'
+  :char_2_code: FR
+  :char_3_code: FRA
+  :name: France
+  :international_dialing_prefix: '0'
+  :area_code: "[1-9]"
+GE:
+  :country_code: '995'
+  :national_dialing_prefix: 8*
+  :char_2_code: GE
+  :char_3_code: GEO
+  :name: Georgia
+  :international_dialing_prefix: '810'
+MO:
+  :country_code: '853'
+  :national_dialing_prefix: '0'
+  :char_2_code: MO
+  :char_3_code: MAC
+  :name: Macao
+  :international_dialing_prefix: '0'
+LR:
+  :country_code: '231'
+  :national_dialing_prefix: '22'
+  :char_2_code: LR
+  :char_3_code: LBR
+  :name: Liberia
+  :international_dialing_prefix: '0'
+ID:
+  :country_code: '62'
+  :national_dialing_prefix: '0'
+  :char_2_code: ID
+  :char_3_code: IDN
+  :name: Indonesia
+  :international_dialing_prefix: '1'
+ZM:
+  :country_code: '260'
+  :national_dialing_prefix: '0'
+  :char_2_code: ZM
+  :char_3_code: ZMB
+  :name: Zambia
+  :international_dialing_prefix: '0'
+ES:
+  :country_code: '34'
+  :national_dialing_prefix: None
+  :char_2_code: ES
+  :char_3_code: ESP
+  :name: Spain
+  :international_dialing_prefix: '0'
+  :area_code: 6[0-9][0-9]|7[1-9][0-9]|9[0-9][0-9]
+SL:
+  :country_code: '232'
+  :national_dialing_prefix: '0'
+  :char_2_code: SL
+  :char_3_code: SLE
+  :name: Sierra Leone
+  :international_dialing_prefix: '0'
+WS:
+  :country_code: '685'
+  :national_dialing_prefix: None
+  :char_2_code: WS
+  :char_3_code: WSM
+  :name: Samoa
+  :international_dialing_prefix: '0'
+PH:
+  :country_code: '63'
+  :national_dialing_prefix: '0'
+  :char_2_code: PH
+  :char_3_code: PHL
+  :name: Philippines
+  :international_dialing_prefix: '0'
+OM:
+  :country_code: '968'
+  :national_dialing_prefix: None
+  :char_2_code: OM
+  :char_3_code: OMN
+  :name: Oman
+  :international_dialing_prefix: '0'
+KG:
+  :country_code: '996'
+  :national_dialing_prefix: '0'
+  :char_2_code: KG
+  :char_3_code: KGZ
+  :name: Kyrgyzstan
+  :international_dialing_prefix: '0'
+AM:
+  :country_code: '374'
+  :national_dialing_prefix: '8'
+  :char_2_code: AM
+  :char_3_code: ARM
+  :name: Armenia
+  :international_dialing_prefix: '0'
+IN:
+  :country_code: '91'
+  :national_dialing_prefix: '0'
+  :char_2_code: IN
+  :char_3_code: IND
+  :name: India
+  :international_dialing_prefix: '0'
+PK:
+  :country_code: '92'
+  :national_dialing_prefix: '0'
+  :char_2_code: PK
+  :char_3_code: PAK
+  :name: Pakistan
+  :international_dialing_prefix: '0'
+NZ:
+  :country_code: '64'
+  :national_dialing_prefix: 0 (None fo
+  :char_2_code: NZ
+  :char_3_code: NZL
+  :name: New Zealand
+  :international_dialing_prefix: '0'
+  :area_code: "[1-9]"
+KH:
+  :country_code: '855'
+  :national_dialing_prefix: '0'
+  :char_2_code: KH
+  :char_3_code: KHM
+  :name: Cambodia
+  :international_dialing_prefix: '0'
+MG:
+  :country_code: '261'
+  :national_dialing_prefix: None
+  :char_2_code: MG
+  :char_3_code: MDG
+  :name: Madagascar
+  :international_dialing_prefix: '0'
+US:
+  :country_code: '1'
+  :national_dialing_prefix: '1'
+  :char_2_code: US
+  :char_3_code: USA
+  :name: United States
+  :international_dialing_prefix: '11'
+BY:
+  :country_code: '375'
+  :national_dialing_prefix: '8'
+  :char_2_code: BY
+  :char_3_code: BLR
+  :name: Belarus
+  :international_dialing_prefix: '810'
+GH:
+  :country_code: '233'
+  :national_dialing_prefix: None
+  :char_2_code: GH
+  :char_3_code: GHA
+  :name: Ghana
+  :international_dialing_prefix: '0'
+KI:
+  :country_code: '686'
+  :national_dialing_prefix: None
+  :char_2_code: KI
+  :char_3_code: KIR
+  :name: Kiribati
+  :international_dialing_prefix: '0'
+UZ:
+  :country_code: '998'
+  :national_dialing_prefix: '8'
+  :char_2_code: UZ
+  :char_3_code: UZB
+  :name: Uzbekistan
+  :international_dialing_prefix: '810'
+SG:
+  :country_code: '65'
+  :national_dialing_prefix: None
+  :char_2_code: SG
+  :char_3_code: SGP
+  :name: Singapore
+  :international_dialing_prefix: '1'
+SH:
+  :country_code: '290'
+  :national_dialing_prefix: None
+  :char_2_code: SH
+  :char_3_code: SHN
+  :name: Saint Helena
+  :international_dialing_prefix: '0'
+RE:
+  :country_code: '262'
+  :national_dialing_prefix: None
+  :char_2_code: RE
+  :char_3_code: REU
+  :name: RÃ©union
+  :international_dialing_prefix: '0'
+NG:
+  :country_code: '234'
+  :national_dialing_prefix: '0'
+  :char_2_code: NG
+  :char_3_code: NGA
+  :name: Nigeria
+  :international_dialing_prefix: '9'
+NC:
+  :country_code: '687'
+  :national_dialing_prefix: None
+  :char_2_code: NC
+  :char_3_code: NCL
+  :name: New Caledonia
+  :international_dialing_prefix: '0'
+LA:
+  :country_code: '856'
+  :national_dialing_prefix: '0'
+  :char_2_code: LA
+  :char_3_code: LAO
+  :name: Lao People's Democratic Republic
+  :international_dialing_prefix: '0'
+AF:
+  :country_code: '93'
+  :national_dialing_prefix: '0'
+  :char_2_code: AF
+  :char_3_code: AFG
+  :name: Afghanistan
+  :international_dialing_prefix: '0'
+AD:
+  :country_code: '376'
+  :national_dialing_prefix: None
+  :char_2_code: AD
+  :char_3_code: AND
+  :name: Andorra
+  :international_dialing_prefix: '0'
+HU:
+  :country_code: '36'
+  :national_dialing_prefix: '6'
+  :char_2_code: HU
+  :char_3_code: HUN
+  :name: Hungary
+  :international_dialing_prefix: '0'
+  :area_code: 1|[2-9]\d
+ZW:
+  :country_code: '263'
+  :national_dialing_prefix: '0'
+  :char_2_code: ZW
+  :char_3_code: ZWE
+  :name: Zimbabwe
+  :international_dialing_prefix: '0'
+TV:
+  :country_code: '688'
+  :national_dialing_prefix: None
+  :char_2_code: TV
+  :char_3_code: TUV
+  :name: Tuvalu
+  :international_dialing_prefix: '0'
+LK:
+  :country_code: '94'
+  :national_dialing_prefix: '0'
+  :char_2_code: LK
+  :char_3_code: LKA
+  :name: Sri Lanka
+  :international_dialing_prefix: '0'
+MC:
+  :country_code: '377'
+  :national_dialing_prefix: '0'
+  :char_2_code: MC
+  :char_3_code: MCO
+  :name: Monaco
+  :international_dialing_prefix: '0'
+TD:
+  :country_code: '235'
+  :national_dialing_prefix: None
+  :char_2_code: TD
+  :char_3_code: TCD
+  :name: Chad
+  :international_dialing_prefix: '15'
+ER:
+  :country_code: '291'
+  :national_dialing_prefix: '0'
+  :char_2_code: ER
+  :char_3_code: ERI
+  :name: Eritrea
+  :international_dialing_prefix: '0'
+TH:
+  :country_code: '66'
+  :national_dialing_prefix: '0'
+  :char_2_code: TH
+  :char_3_code: THA
+  :name: Thailand
+  :international_dialing_prefix: '1'
+TW:
+  :country_code: '886'
+  :national_dialing_prefix: None
+  :char_2_code: TW
+  :char_3_code: TWN
+  :name: Taiwan, Province Of China
+  :international_dialing_prefix: '2'
+SM:
+  :country_code: '378'
+  :national_dialing_prefix: None
+  :char_2_code: SM
+  :char_3_code: SMR
+  :name: San Marino
+  :international_dialing_prefix: '0'
+NA:
+  :country_code: '264'
+  :national_dialing_prefix: '0'
+  :char_2_code: NA
+  :char_3_code: NAM
+  :name: Namibia
+  :international_dialing_prefix: '0'
+MM:
+  :country_code: '95'
+  :national_dialing_prefix: None
+  :char_2_code: MM
+  :char_3_code: MMR
+  :name: Myanmar
+  :international_dialing_prefix: '0'
+CF:
+  :country_code: '236'
+  :national_dialing_prefix: None
+  :char_2_code: CF
+  :char_3_code: CAF
+  :name: Central African Republic
+  :international_dialing_prefix: '0'
+PF:
+  :country_code: '689'
+  :national_dialing_prefix: None
+  :char_2_code: PF
+  :char_3_code: PYF
+  :name: French Polynesia
+  :international_dialing_prefix: '0'
+PS:
+  :country_code: '970'
+  :national_dialing_prefix: '0'
+  :char_2_code: PS
+  :char_3_code: PSE
+  :name: Palestinian Territory, Occupied
+  :international_dialing_prefix: '0'
+CM:
+  :country_code: '237'
+  :national_dialing_prefix: None
+  :char_2_code: CM
+  :char_3_code: CMR
+  :name: Cameroon
+  :international_dialing_prefix: '0'
+IT:
+  :country_code: '39'
+  :national_dialing_prefix: None
+  :char_2_code: IT
+  :char_3_code: ITA
+  :name: Italy
+  :international_dialing_prefix: '0'
+MW:
+  :country_code: '265'
+  :national_dialing_prefix: None
+  :char_2_code: MW
+  :char_3_code: MWI
+  :name: Malawi
+  :international_dialing_prefix: '0'
+AE:
+  :country_code: '971'
+  :national_dialing_prefix: '0'
+  :char_2_code: AE
+  :char_3_code: ARE
+  :name: United Arab Emirates
+  :international_dialing_prefix: '0'
+CV:
+  :country_code: '238'
+  :national_dialing_prefix: None
+  :char_2_code: CV
+  :char_3_code: CPV
+  :name: Cape Verde
+  :international_dialing_prefix: '0'
+LS:
+  :country_code: '266'
+  :national_dialing_prefix: None
+  :char_2_code: LS
+  :char_3_code: LSO
+  :name: Lesotho
+  :international_dialing_prefix: '0'
+ST:
+  :country_code: '239'
+  :national_dialing_prefix: '0'
+  :char_2_code: ST
+  :char_3_code: STP
+  :name: Sao Tome and Principe
+  :international_dialing_prefix: '0'
+RU:
+  :country_code: '7'
+  :national_dialing_prefix: '8'
+  :char_2_code: RU
+  :char_3_code: RUS
+  :name: Russian Federation
+  :international_dialing_prefix: '810'
+IR:
+  :country_code: '98'
+  :national_dialing_prefix: '0'
+  :char_2_code: IR
+  :char_3_code: IRN
+  :name: Iran, Islamic Republic Of
+  :international_dialing_prefix: '0'
+IL:
+  :country_code: '972'
+  :national_dialing_prefix: '0'
+  :char_2_code: IL
+  :char_3_code: ISR
+  :name: Israel
+  :international_dialing_prefix: '0'
+GI:
+  :country_code: '350'
+  :national_dialing_prefix: None
+  :char_2_code: GI
+  :char_3_code: GIB
+  :name: Gibraltar
+  :international_dialing_prefix: '0'
+BW:
+  :country_code: '267'
+  :national_dialing_prefix: None
+  :char_2_code: BW
+  :char_3_code: BWA
+  :name: Botswana
+  :international_dialing_prefix: '0'
+TK:
+  :country_code: '690'
+  :national_dialing_prefix: None
+  :char_2_code: TK
+  :char_3_code: TKL
+  :name: Tokelau
+  :international_dialing_prefix: '0'
+SZ:
+  :country_code: '268'
+  :national_dialing_prefix: None
+  :char_2_code: SZ
+  :char_3_code: SWZ
+  :name: Swaziland
+  :international_dialing_prefix: '0'
+RO:
+  :country_code: '40'
+  :national_dialing_prefix: '0'
+  :char_2_code: RO
+  :char_3_code: ROU
+  :name: Romania
+  :international_dialing_prefix: '0'
+PT:
+  :country_code: '351'
+  :national_dialing_prefix: None
+  :char_2_code: PT
+  :char_3_code: PRT
+  :name: Portugal
+  :international_dialing_prefix: '0'
+  :area_code: 2[12]|2[3-9][1-9]|70[78]|80[089]|9[136]|92[1-9]
+BH:
+  :country_code: '973'
+  :national_dialing_prefix: None
+  :char_2_code: BH
+  :char_3_code: BHR
+  :name: Bahrain
+  :international_dialing_prefix: '0'
+UA:
+  :country_code: '380'
+  :national_dialing_prefix: '0'
+  :char_2_code: UA
+  :char_3_code: UKR
+  :name: Ukraine
+  :international_dialing_prefix: '00'
+  :area_code: "[1-9]\\d"
+CH:
+  :country_code: '41'
+  :national_dialing_prefix: '0'
+  :char_2_code: CH
+  :char_3_code: CHE
+  :name: Switzerland
+  :international_dialing_prefix: '0'
+QA:
+  :country_code: '974'
+  :national_dialing_prefix: None
+  :char_2_code: QA
+  :char_3_code: QAT
+  :name: Qatar
+  :international_dialing_prefix: '0'
+FM:
+  :country_code: '691'
+  :national_dialing_prefix: '1'
+  :char_2_code: FM
+  :char_3_code: FSM
+  :name: Micronesia, Federated States Of
+  :international_dialing_prefix: '11'
+AW:
+  :country_code: '297'
+  :national_dialing_prefix: None
+  :char_2_code: AW
+  :char_3_code: ABW
+  :name: Aruba
+  :international_dialing_prefix: '0'
+LU:
+  :country_code: '352'
+  :national_dialing_prefix: None
+  :char_2_code: LU
+  :char_3_code: LUX
+  :name: Luxembourg
+  :international_dialing_prefix: '0'
+YT:
+  :country_code: '269'
+  :national_dialing_prefix: None
+  :char_2_code: YT
+  :char_3_code: MYT
+  :name: Mayotte
+  :international_dialing_prefix: '0'
+RS:
+  :country_code: '381'
+  :national_dialing_prefix: '0'
+  :char_2_code: RS
+  :char_3_code: SRB
+  :name: Serbia
+  :international_dialing_prefix: '99'
+  :area_code: "[1-9]\\d"
+BT:
+  :country_code: '975'
+  :national_dialing_prefix: None
+  :char_2_code: BT
+  :char_3_code: BTN
+  :name: Bhutan
+  :international_dialing_prefix: '0'
+FO:
+  :country_code: '298'
+  :national_dialing_prefix: None
+  :char_2_code: FO
+  :char_3_code: FRO
+  :name: Faroe Islands
+  :international_dialing_prefix: '0'
+IE:
+  :country_code: '353'
+  :national_dialing_prefix: '0'
+  :char_2_code: IE
+  :char_3_code: IRL
+  :name: Ireland
+  :international_dialing_prefix: '0'
+  :area_code: 1|[2,4-7,9][0-9]|8[0,3-9]|822|818
+MH:
+  :country_code: '692'
+  :national_dialing_prefix: '1'
+  :char_2_code: MH
+  :char_3_code: MHL
+  :name: Marshall Islands
+  :international_dialing_prefix: '0'
+MA:
+  :country_code: '212'
+  :national_dialing_prefix: '0'
+  :char_2_code: MA
+  :char_3_code: MAR
+  :name: Morocco
+  :international_dialing_prefix: '0'
+ME:
+  :country_code: '382'
+  :national_dialing_prefix: '0'
+  :char_2_code: ME
+  :char_3_code: MNE
+  :name: Montenegro
+  :international_dialing_prefix: '99'
+MN:
+  :country_code: '976'
+  :national_dialing_prefix: '0'
+  :char_2_code: MN
+  :char_3_code: MNG
+  :name: Mongolia
+  :international_dialing_prefix: '1'
+GQ:
+  :country_code: '240'
+  :national_dialing_prefix: None
+  :char_2_code: GQ
+  :char_3_code: GNQ
+  :name: Equatorial Guinea
+  :international_dialing_prefix: '0'
+GL:
+  :country_code: '299'
+  :national_dialing_prefix: None
+  :char_2_code: GL
+  :char_3_code: GRL
+  :name: Greenland
+  :international_dialing_prefix: '9'
+IS:
+  :country_code: '354'
+  :national_dialing_prefix: '0'
+  :char_2_code: IS
+  :char_3_code: ISL
+  :name: Iceland
+  :international_dialing_prefix: '0'
+AT:
+  :country_code: '43'
+  :national_dialing_prefix: '0'
+  :char_2_code: AT
+  :char_3_code: AUT
+  :name: Austria
+  :international_dialing_prefix: '0'
+NP:
+  :country_code: '977'
+  :national_dialing_prefix: '0'
+  :char_2_code: NP
+  :char_3_code: NPL
+  :name: Nepal
+  :international_dialing_prefix: '0'
+GA:
+  :country_code: '241'
+  :national_dialing_prefix: None
+  :char_2_code: GA
+  :char_3_code: GAB
+  :name: Gabon
+  :international_dialing_prefix: '0'
+AL:
+  :country_code: '355'
+  :national_dialing_prefix: '0'
+  :char_2_code: AL
+  :char_3_code: ALB
+  :name: Albania
+  :international_dialing_prefix: '0'
+DZ:
+  :country_code: '213'
+  :national_dialing_prefix: '7'
+  :char_2_code: DZ
+  :char_3_code: DZA
+  :name: Algeria
+  :international_dialing_prefix: '0'
+GB:
+  :country_code: '44'
+  :national_dialing_prefix: '0'
+  :char_2_code: GB
+  :char_3_code: GBR
+  :name: United Kingdom
+  :international_dialing_prefix: '0'
+  :area_code: 2[03489]|11[3-8]|1[2-69]1|1[2-9][0-9]{2}|70|7[0-9]{3}|[8|9][0-9]{2}|3[0-9]{2}
+CG:
+  :country_code: '242'
+  :national_dialing_prefix: None
+  :char_2_code: CG
+  :char_3_code: COG
+  :name: Congo
+  :international_dialing_prefix: '0'
+MT:
+  :country_code: '356'
+  :national_dialing_prefix: '21'
+  :char_2_code: MT
+  :char_3_code: MLT
+  :name: Malta
+  :international_dialing_prefix: '0'
+CY:
+  :country_code: '357'
+  :national_dialing_prefix: None
+  :char_2_code: CY
+  :char_3_code: CYP
+  :name: Cyprus
+  :international_dialing_prefix: '0'
+DK:
+  :country_code: '45'
+  :national_dialing_prefix: None
+  :char_2_code: DK
+  :char_3_code: DNK
+  :name: Denmark
+  :international_dialing_prefix: '0'
+HR:
+  :country_code: '385'
+  :national_dialing_prefix: '0'
+  :char_2_code: HR
+  :char_3_code: HRV
+  :name: Croatia
+  :international_dialing_prefix: '0'
+  :area_code: 1|[2-9]\d
+CD:
+  :country_code: '243'
+  :national_dialing_prefix: None
+  :char_2_code: CD
+  :char_3_code: COD
+  :name: Congo, The Democratic Republic Of The
+  :international_dialing_prefix: '0'
+TN:
+  :country_code: '216'
+  :national_dialing_prefix: None
+  :char_2_code: TN
+  :char_3_code: TUN
+  :name: Tunisia
+  :international_dialing_prefix: '0'
+SE:
+  :country_code: '46'
+  :national_dialing_prefix: '0'
+  :char_2_code: SE
+  :char_3_code: SWE
+  :name: Sweden
+  :international_dialing_prefix: '0'
+  :area_code: 900|1[013689]|2[0136]|3[1356]|4[0246]|54|6[03]|7[01236]|8|9[09]|1[2457]\d|2[2457-9]\d|3[0247-9]\d|4[1357-9]\d|5[0-35-9]\d|6[124-9]\d|74\d|9[1-8]\d
+SI:
+  :country_code: '386'
+  :national_dialing_prefix: '0'
+  :char_2_code: SI
+  :char_3_code: SVN
+  :name: Slovenia
+  :international_dialing_prefix: '0'
+  :area_code: 3[01]|4[01]|51|7[01]|64|59|1|2|3|4|5|6|7
+FI:
+  :country_code: '358'
+  :national_dialing_prefix: '0'
+  :char_2_code: FI
+  :char_3_code: FIN
+  :name: Finland
+  :international_dialing_prefix: '0'
+AO:
+  :country_code: '244'
+  :national_dialing_prefix: '0'
+  :char_2_code: AO
+  :char_3_code: AGO
+  :name: Angola
+  :international_dialing_prefix: '0'
+SJ:
+  :country_code: '47'
+  :national_dialing_prefix: None
+  :char_2_code: SJ
+  :char_3_code: SJM
+  :name: Svalbard And Jan Mayen
+  :international_dialing_prefix: '0'
+BG:
+  :country_code: '359'
+  :national_dialing_prefix: '0'
+  :char_2_code: BG
+  :char_3_code: BGR
+  :name: Bulgaria
+  :international_dialing_prefix: '0'
+BA:
+  :country_code: '387'
+  :national_dialing_prefix: '0'
+  :char_2_code: BA
+  :char_3_code: BIH
+  :name: Bosnia and Herzegovina
+  :international_dialing_prefix: '0'
+  :area_code: 6|[0-57-9]\d
+GW:
+  :country_code: '245'
+  :national_dialing_prefix: None
+  :char_2_code: GW
+  :char_3_code: GNB
+  :name: Guinea-Bissau
+  :international_dialing_prefix: '0'
+PL:
+  :country_code: '48'
+  :national_dialing_prefix: '0'
+  :char_2_code: PL
+  :char_3_code: POL
+  :name: Poland
+  :international_dialing_prefix: '0'
+LY:
+  :country_code: '218'
+  :national_dialing_prefix: '0'
+  :char_2_code: LY
+  :char_3_code: LBY
+  :name: Libyan Arab Jamahiriya
+  :international_dialing_prefix: '0'
+DE:
+  :country_code: '49'
+  :national_dialing_prefix: '0'
+  :char_2_code: DE
+  :char_3_code: DEU
+  :name: Germany
+  :international_dialing_prefix: '0'
+  :area_code: "[0-9]{3}"
+MK:
+  :country_code: '389'
+  :national_dialing_prefix: '0'
+  :char_2_code: MK
+  :char_3_code: MKD
+  :name: Macedonia, the Former Yugoslav Republic Of
+  :international_dialing_prefix: '0'
+TL:
+  :country_code: '670'
+  :national_dialing_prefix: None
+  :char_2_code: TL
+  :char_3_code: TLS
+  :name: Timor-Leste
+  :international_dialing_prefix: None
+SC:
+  :country_code: '248'
+  :national_dialing_prefix: None
+  :char_2_code: SC
+  :char_3_code: SYC
+  :name: Seychelles
+  :international_dialing_prefix: '0'
+EG:
+  :country_code: '20'
+  :national_dialing_prefix: '0'
+  :char_2_code: EG
+  :char_3_code: EGY
+  :name: Egypt
+  :international_dialing_prefix: '0'
+FK:
+  :country_code: '500'
+  :national_dialing_prefix: None
+  :char_2_code: FK
+  :char_3_code: FLK
+  :name: Falkland Islands (Malvinas)
+  :international_dialing_prefix: '0'
+SD:
+  :country_code: '249'
+  :national_dialing_prefix: '0'
+  :char_2_code: SD
+  :char_3_code: SDN
+  :name: Sudan
+  :international_dialing_prefix: '0'
+BZ:
+  :country_code: '501'
+  :national_dialing_prefix: '0'
+  :char_2_code: BZ
+  :char_3_code: BLZ
+  :name: Belize
+  :international_dialing_prefix: '0'
+NF:
+  :country_code: '672'
+  :national_dialing_prefix: None
+  :char_2_code: NF
+  :char_3_code: NFK
+  :name: Norfolk Island
+  :international_dialing_prefix: '0'
+GT:
+  :country_code: '502'
+  :national_dialing_prefix: None
+  :char_2_code: GT
+  :char_3_code: GTM
+  :name: Guatemala
+  :international_dialing_prefix: '0'
+PE:
+  :country_code: '51'
+  :national_dialing_prefix: '0'
+  :char_2_code: PE
+  :char_3_code: PER
+  :name: Peru
+  :international_dialing_prefix: '0'
+GM:
+  :country_code: '220'
+  :national_dialing_prefix: None
+  :char_2_code: GM
+  :char_3_code: GMB
+  :name: Gambia
+  :international_dialing_prefix: '0'
+BN:
+  :country_code: '673'
+  :national_dialing_prefix: '0'
+  :char_2_code: BN
+  :char_3_code: BRN
+  :name: Brunei Darussalam
+  :international_dialing_prefix: '0'
+SV:
+  :country_code: '503'
+  :national_dialing_prefix: None
+  :char_2_code: SV
+  :char_3_code: SLV
+  :name: El Salvador
+  :international_dialing_prefix: '0'
+SN:
+  :country_code: '221'
+  :national_dialing_prefix: None
+  :char_2_code: SN
+  :char_3_code: SEN
+  :name: Senegal
+  :international_dialing_prefix: '0'
+NR:
+  :country_code: '674'
+  :national_dialing_prefix: '0'
+  :char_2_code: NR
+  :char_3_code: NRU
+  :name: Nauru
+  :international_dialing_prefix: '0'
+MX:
+  :country_code: '52'
+  :national_dialing_prefix: '1'
+  :char_2_code: MX
+  :char_3_code: MEX
+  :name: Mexico
+  :international_dialing_prefix: '0'
+HN:
+  :country_code: '504'
+  :national_dialing_prefix: None
+  :char_2_code: HN
+  :char_3_code: HND
+  :name: Honduras
+  :international_dialing_prefix: '0'
+RW:
+  :country_code: '250'
+  :national_dialing_prefix: '0'
+  :char_2_code: RW
+  :char_3_code: RWA
+  :name: Rwanda
+  :international_dialing_prefix: '0'
+PN:
+  :country_code: '872'
+  :national_dialing_prefix: '0'
+  :char_2_code: PN
+  :char_3_code: PCN
+  :name: Pitcairn
+  :international_dialing_prefix: '0'
+PG:
+  :country_code: '675'
+  :national_dialing_prefix: None
+  :char_2_code: PG
+  :char_3_code: PNG
+  :name: Papua New Guinea
+  :international_dialing_prefix: '5'
+NI:
+  :country_code: '505'
+  :national_dialing_prefix: None
+  :char_2_code: NI
+  :char_3_code: NIC
+  :name: Nicaragua
+  :international_dialing_prefix: '0'
+MR:
+  :country_code: '222'
+  :national_dialing_prefix: '0'
+  :char_2_code: MR
+  :char_3_code: MRT
+  :name: Mauritania
+  :international_dialing_prefix: '0'
+CU:
+  :country_code: '53'
+  :national_dialing_prefix: '0'
+  :char_2_code: CU
+  :char_3_code: CUB
+  :name: Cuba
+  :international_dialing_prefix: '119'
+JP:
+  :country_code: '81'
+  :national_dialing_prefix: '0'
+  :char_2_code: JP
+  :char_3_code: JPN
+  :name: Japan
+  :international_dialing_prefix: '10'
