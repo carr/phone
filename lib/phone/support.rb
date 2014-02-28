@@ -71,7 +71,7 @@ module Accessorize
 
 
   def self.included(receiver)
-    receiver.extend         ClassMethods
+    receiver.extend ClassMethods
   end
 end
 
