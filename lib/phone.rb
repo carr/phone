@@ -9,7 +9,6 @@
 #   Phone.default_country_code
 #   Phone.default_area_code
 #
-require "phone/support" unless defined?(ActiveSupport)
 require "phone/country"
 require "phone/errors"
 

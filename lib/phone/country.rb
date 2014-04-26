@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Phoner
   class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code)
     module All
@@ -10,7 +12,7 @@ module Phoner
     end
 
     def self.load
-      return self.all if self.all.present?
+      return self.all if !self.all.nil? && !self.all.empty?
 
       data_file = File.expand_path(File.join('..','..','data', 'phone', 'countries.yml'), File.dirname(__FILE__))
 
