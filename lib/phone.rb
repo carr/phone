@@ -79,23 +79,21 @@ module Phoner
     # create a new phone number by parsing a string
     # the format of the string is detect automatically (from FORMATS)
     def self.parse(string, options={})
-      if string.present?
-        Country.load
-        extension = extract_extension(string)
-        string = normalize(string)
+      return if string.to_s.empty?
 
-        options[:country_code] ||= self.default_country_code
-        options[:area_code] ||= self.default_area_code
+      Country.load
+      extension = extract_extension(string)
+      string = normalize(string)
 
-        parts = split_to_parts(string, options)
+      options[:country_code] ||= self.default_country_code
+      options[:area_code] ||= self.default_area_code
 
-        pn = Phone.new(parts) if parts
-        if pn.present? and extension.present?
-          pn.extension = extension
-        end
-        return pn
-      end
+      parts = split_to_parts(string, options)
+
+      pn = Phone.new(parts.merge(:extension => extension)) if parts
+      return pn
     end
+
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
