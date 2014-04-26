@@ -71,7 +71,7 @@ module Phoner
       self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code
       self.extension = hash_or_args[ keys[:extension] ]
 
-      raise NumberError, "Must enter number" if self.number.blank?
+      raise BlankNumberError, "Must enter number" if self.number.blank?
       raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.blank?
       raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.blank?
     end

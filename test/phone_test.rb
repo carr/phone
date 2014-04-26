@@ -2,6 +2,12 @@ require "helper"
 
 class PhoneTest < Minitest::Test
 
+  def test_without_number_initialize
+    assert_raises Phoner::BlankNumberError do
+      pn = Phoner::Phone.new nil
+    end
+  end
+
   def test_number_without_country_code_initialize
     Phoner::Phone.default_country_code = nil
 
