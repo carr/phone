@@ -10,6 +10,7 @@
 * [improvement] Add NZ support. (jurgens)
 * [improvement] Add options support to `#valid?`. (soulcutter)
 * [improvement] Remove need for `cattr_accessor`. (elskwid)
+* [fix] Incorrect error raised when missing phone number and add missing test. (elskwid)
 
 # 1.2.3 / 2013-11-16
 
