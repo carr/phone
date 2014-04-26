@@ -2,9 +2,15 @@ require "helper"
 
 class PhoneTest < Minitest::Test
 
-  def test_without_number_initialize
+  def test_with_nil_number_initialize
     assert_raises Phoner::BlankNumberError do
       pn = Phoner::Phone.new nil
+    end
+  end
+
+  def test_with_empty_number_initialize
+    assert_raises Phoner::BlankNumberError do
+      pn = Phoner::Phone.new ""
     end
   end
 

@@ -66,14 +66,14 @@ module Phoner
         keys = {:number => 0, :area_code => 1, :country_code => 2, :extension => 3}
       end
 
-      self.number = hash_or_args[ keys[:number] ]
-      self.area_code = hash_or_args[ keys[:area_code] ] || self.default_area_code
-      self.country_code = hash_or_args[ keys[:country_code] ] || self.default_country_code
+      self.number = hash_or_args[ keys[:number] ].to_s.strip
+      self.area_code = (hash_or_args[ keys[:area_code] ] || self.default_area_code).to_s.strip
+      self.country_code = (hash_or_args[ keys[:country_code] ] || self.default_country_code).to_s.strip
       self.extension = hash_or_args[ keys[:extension] ]
 
-      raise BlankNumberError, "Must enter number" if self.number.blank?
-      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.blank?
-      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.blank?
+      raise BlankNumberError, "Must enter number" if self.number.empty?
+      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.empty?
+      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.empty?
     end
 
     # create a new phone number by parsing a string
