@@ -34,3 +34,5 @@ end
 require "yard"
 YARD::Rake::YardocTask.new
 task :doc => :yard
+
+task :default => :test
