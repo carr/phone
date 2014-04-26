@@ -5,14 +5,15 @@
 * [improvement] Add modern gem infrastructure - add bundler, update gemspec, convert to minitest, locate gem files in proper directories, add .ruby-version, update README, update LICENSE.txt, add Changelog.md. (elskwid)
 * [improvement] Memoize country code regex. (tiegz)
 * [improvement] Update regex for: ZA, UY, NL, BE, FR, HU, PT, UA, RS, HR, SE, SI, and BA. (g1smd)
-* [fix] Bring changes from v1.1 that were mysteriously missing from repo. (elskwid)
 * [improvement] Add IE support. (dramalho)
 * [improvement] Update #split_to_parts to provide a format override and handle nil parts. (dramalho)
 * [improvement] Add NZ support. (jurgens)
+* [improvement] Add options support to `#valid?`. (soulcutter)
+* [improvement] Remove need for `cattr_accessor`. (elskwid)
 
 # 1.2.3 / 2013-11-16
 
-* Merged in changes from the mysteriously missing 1.1 release.
+* [fix] Bring changes from v1.1 that were mysteriously missing from repo. (elskwid)
   - README updates
   - Spain area code updates
   - Support 3 character codes for countries
