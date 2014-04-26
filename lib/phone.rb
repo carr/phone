@@ -15,26 +15,48 @@ require "phone/errors"
 
 module Phoner
   class Phone
+    module ClassAttributes
+      attr_accessor :default_country_code
+      attr_accessor :default_area_code
+      attr_accessor :named_formats
+      attr_accessor :n1_length
+    end
+    extend ClassAttributes
+
+    module ClassAttributeAccessors
+      def default_country_code
+        self.class.default_country_code
+      end
+
+      def default_area_code
+        self.class.default_area_code
+      end
+
+      def named_formats
+        self.class.named_formats
+      end
+
+      def n1_length
+        self.class.n1_length
+      end
+    end
+    include ClassAttributeAccessors
+
     NUMBER = '([0-9]{1,8})$'
     DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
-    cattr_accessor :default_country_code
-    cattr_accessor :default_area_code
-    cattr_accessor :named_formats
-
-    # length of first number part (using multi number format)
-    cattr_accessor :n1_length
-    # default length of first number part
-    @@n1_length = 3
-
-    @@named_formats = {
+    self.named_formats = {
       :default => "+%c%a%n",
       :default_with_extension => "+%c%a%nx%x",
       :europe => '+%c (0) %a %f %l',
       :us => "(%a) %f-%l"
     }
+
+    # length of first number part (using multi number format)
+    # default length of first number part
+    self.n1_length = 3
 
     def initialize(*hash_or_args)
       if hash_or_args.first.is_a?(Hash)

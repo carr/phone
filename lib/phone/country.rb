@@ -1,17 +1,24 @@
 module Phoner
   class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code)
-    cattr_accessor :all
+    module All
+      attr_accessor :all
+    end
+    extend All
+
+    def all
+      self.class.all
+    end
 
     def self.load
-      return @@all if @@all.present?
+      return self.all if self.all.present?
 
       data_file = File.expand_path(File.join('..','..','data', 'phone', 'countries.yml'), File.dirname(__FILE__))
 
-      @@all = {}
+      self.all = {}
       YAML.load(File.read(data_file)).each_pair do |key, c|
-        @@all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code])
+        self.all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code])
       end
-      @@all
+      self.all
     end
 
     def to_s
@@ -19,11 +26,11 @@ module Phoner
     end
 
     def self.find_by_country_code(code)
-      @@all[code]
+      self.all[code]
     end
     
     def self.find_by_country_isocode(isocode)
-      if country = @@all.detect{|c|c[1].char_3_code.downcase == isocode}
+      if country = self.all.detect{|c|c[1].char_3_code.downcase == isocode}
         country[1]
       end
     end
