@@ -10,6 +10,15 @@
 * [improvement] Update #split_to_parts to provide a format override and handle nil parts. (dramalho)
 * [improvement] Add NZ support. (jurgens)
 
+# 1.2.3 / 2013-11-16
+
+* Merged in changes from the mysteriously missing 1.1 release.
+  - README updates
+  - Spain area code updates
+  - Support 3 character codes for countries
+  - Update default area code
+  - Update `::normalize`
+
 # 1.2.2 / 2013-11-15
 
 * Add license to gemspec. (bf4)
