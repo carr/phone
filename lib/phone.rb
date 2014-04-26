@@ -98,7 +98,7 @@ module Phoner
     # is this string a valid phone number?
     def self.valid?(string, options = {})
       begin
-        parse(string, options).present?
+        !parse(string, options).nil?
       # if we encountered exceptions (missing country code, missing area code etc)
       rescue PhoneError
         return false
