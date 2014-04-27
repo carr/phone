@@ -130,7 +130,7 @@ class PhoneTest < Minitest::Test
   end
 
   def test_validity_with_country_code
-    assert true, Phoner::Phone.valid?("7788827175", country_code: "1")
+    assert true, Phoner::Phone.valid?("7788827175", :country_code => "1")
   end
 
   def test_doesnt_validate
