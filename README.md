@@ -1,6 +1,7 @@
 # phone
 
 ![Travis badge](https://api.travis-ci.org/carr/phone.svg)
+![CodeClimate badge](https://codeclimate.com/github/carr/phone.png)
 
 Parsing, validating and creating phone numbers
 
