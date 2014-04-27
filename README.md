@@ -173,7 +173,7 @@ Or as a Rails plugin
 
 ## Copyright
 
-Copyright (c) 2010-2013 Tomislav Car, [Infinum](http://www.infinumdigital.com)
+Copyright (c) 2010-2013 Tomislav Car, [Infinum](http://www.infinum.co)
 Copyright (c) 2013 Don Morrison
 
 See {file:LICENSE.txt} for details.
