@@ -1,5 +1,7 @@
 # phone
 
+![Travis badge](https://api.travis-ci.org/carr/phone.svg)
+
 Parsing, validating and creating phone numbers
 
 * [Homepage](https://github.com/carr/phone#readme)
