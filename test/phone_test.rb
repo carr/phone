@@ -150,6 +150,20 @@ class PhoneTest < Minitest::Test
     assert_equal Phoner::Phone.valid?('385915125486'), false
   end
 
+  def test_valid_wont_strip_the_extension
+    number = '+1 (123) 456-7890 x321'
+
+    parsed = Phoner::Phone.parse(number)
+    assert_equal "+11234567890", parsed.to_s
+    assert_equal "321", parsed.extension
+
+    assert Phoner::Phone.valid?(number)
+
+    parsed = Phoner::Phone.parse(number)
+    assert_equal "+11234567890", parsed.to_s
+    assert_equal"321", parsed.extension
+  end
+
   def test_comparison_true
     pn1 = Phoner::Phone.new '5125486', '91', '385'
     pn2 = Phoner::Phone.new '5125486', '91', '385'

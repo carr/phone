@@ -81,7 +81,7 @@ module Phoner
       return if string.to_s.empty?
 
       Country.load
-      extension = extract_extension(string)
+      string, extension = extract_extension(string)
       string = normalize(string)
 
       options[:country_code] ||= self.default_country_code
@@ -184,25 +184,20 @@ module Phoner
       string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+').gsub(/^\+00/, '+').gsub(/^\+0/, '+')
     end
 
-    # pull off anything that look like an extension
-    #TODO: refactor things so this doesn't change string as a side effect
+    # Returns an array of the number with the extension removed, and the extension.
     #
+    # Example:
+    #
+    #  number, ext = Phoner::Phone.extract_extension("+1 (123) 456-7890 x321")
+    #  # []
     def self.extract_extension(string)
-      return nil if string.nil?
-      if string.sub! /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i, ''
-        extension = $2
-        return extension
+      return [nil, nil] if string.nil?
+
+      if subbed = string.sub(/[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i, '')
+        [subbed, $2]
+      else
+        [string, nil]
       end
-      #
-      # We already returned any recognizable extension.
-      # However, we might still have extra junk to the right
-      # of the phone number proper, so just chop it off.
-      #
-      idx = string.rindex(/[0-9]/)
-      return nil if idx.nil?
-      return nil if idx == (string.length - 1)      # at the end
-      string.slice!((idx+1)..-1)                    # chop it
-      return nil
     end
 
     # format area_code with trailing zero (e.g. 91 as 091)

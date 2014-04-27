@@ -22,4 +22,12 @@ class ExtensionTest < Minitest::Test
     assert_equal '(091)/512-5486 x 143', pn.format('(%A)/%f-%l x %x')
   end
 
+  def test_extract_extension
+    string = "+1 2069735100 x143"
+    number, ext = Phoner::Phone.extract_extension(string)
+
+    assert_equal "+1 2069735100 x143", string
+    assert_equal "+1 2069735100", number
+    assert_equal "143", ext
+  end
 end
