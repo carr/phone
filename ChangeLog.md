@@ -14,6 +14,7 @@
 * [fix] Fix extension handling in `::parse`. (elskwid)
 * [improvement] Remove need for ActiveSupport detection. (elskwid)
 * [improvement] Remove monkeypatching support library. (elskwid)
+* [improvement] Add support for Travis CI. (elskwid)
 
 # 1.2.3 / 2013-11-16
 
