@@ -129,6 +129,18 @@ class PhoneTest < Minitest::Test
     assert true, Phoner::Phone.valid?("+17788827175")
   end
 
+  def test_successful_validity_wont_alter_parameter
+    number = "+17755551212"
+    Phoner::Phone.valid?(number)
+    assert_equal "+17755551212", number
+  end
+
+  def test_failing_validity_wont_alter_parameter
+    number = "ABC123"
+    Phoner::Phone.valid?(number)
+    assert_equal "ABC123", number
+  end
+
   def test_validity_with_country_code
     assert true, Phoner::Phone.valid?("7788827175", :country_code => "1")
   end
