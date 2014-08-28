@@ -101,6 +101,12 @@ class PhoneTest < Minitest::Test
     assert pn.to_s == '+385915125486'
   end
 
+  def test_to_s_with_extension
+    Phoner::Phone.default_country_code = nil
+    pn = Phoner::Phone.new '5125486', '91', '385', '111'
+    assert pn.to_s == '+385915125486x111'
+  end
+
   def test_to_s_without_country_code
     Phoner::Phone.default_country_code = '385'
     pn = Phoner::Phone.new '5125486', '91'
