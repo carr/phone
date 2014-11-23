@@ -917,7 +917,8 @@
   :char_2_code: "0"
   :char_3_code: IL
   :name: Israel
-  :international_dialing_prefix: "0"
+  :international_dialing_prefix: "00","012","013","014","015"
+  :area_code: "(([2,3,4,8,9]{1})|([5,7]{1}\d))"
 "350": 
   :country_code: "350"
   :national_dialing_prefix: None
