@@ -1,7 +1,7 @@
 require 'yaml'
 
 module Phoner
-  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code)
+  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :country_detect_regexp, :country_code_regexp)
     module All
       attr_accessor :all
     end
@@ -18,7 +18,7 @@ module Phoner
 
       self.all = {}
       YAML.load(File.read(data_file)).each_pair do |key, c|
-        self.all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code])
+        self.all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code], c[:country_detect_regexp], c[:country_code_regexp])
       end
       self.all
     end
@@ -37,8 +37,12 @@ module Phoner
       end
     end
 
+    def country_detect_regexp
+      Regexp.new(super || "^[+]#{country_code}")
+    end
+
     def country_code_regexp
-      @country_code_regexp ||= Regexp.new("^[+]#{country_code}")
+      Regexp.new(super || "^[+]#{country_code}")
     end
   end
 
