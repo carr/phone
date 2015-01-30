@@ -61,7 +61,7 @@ When given a symbol it is used as a lookup for the format in the <tt>Phoner::Pho
 
 ```ruby
 pn.format(:europe) # => "+385 (0) 91 512 5486"
-pn.format(:us) # => "(234) 123 4567"
+pn.format(:us) # => "(234) 123-4567"
 pn.format(:default_with_extension) # => "+3851234567x143"
 ```
 
