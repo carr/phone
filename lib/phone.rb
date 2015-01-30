@@ -1,9 +1,9 @@
 # An object representing a phone number.
 #
 # The phone number is recorded in 3 separate parts:
-# * country_code - e.g. '385', '386'
-# * area_code - e.g. '91', '47'
-# * number - e.g. '5125486', '451588'
+# * country_code - e.g. "385", "386"
+# * area_code - e.g. "91", "47"
+# * number - e.g. "5125486", "451588"
 #
 # All parts are mandatory, but country code and area code can be set for all phone numbers using
 #   Phone.default_country_code
@@ -41,15 +41,15 @@ module Phoner
     end
     include ClassAttributeAccessors
 
-    NUMBER = '([0-9]{1,8})$'
-    DEFAULT_AREA_CODE = '[0-9][0-9][0-9]' # any 3 digits
+    NUMBER = "([0-9]{1,8})$"
+    DEFAULT_AREA_CODE = "[0-9][0-9][0-9]" # any 3 digits
 
     attr_accessor :country_code, :area_code, :number, :extension
 
     self.named_formats = {
       :default => "+%c%a%n",
       :default_with_extension => "+%c%a%nx%x",
-      :europe => '+%c (0) %a %f %l',
+      :europe => "+%c (0) %a %f %l",
       :us => "(%a) %f-%l"
     }
 
@@ -110,7 +110,7 @@ module Phoner
 
       if country
         options[:country_code] = country.country_code
-        string = string.gsub(country.country_code_regexp, '0')
+        string = string.gsub(country.country_code_regexp, "0")
       else
         if options[:country_code]
           country = Country.find_by_country_code options[:country_code]
@@ -158,9 +158,9 @@ module Phoner
       area_code_regexp = country.area_code || DEFAULT_AREA_CODE
       {
         # 047451588, 013668734
-        :short => Regexp.new('^0?(' + area_code_regexp + ')' + NUMBER),
+        :short => Regexp.new("^0?(" + area_code_regexp + ")" + NUMBER),
         # 451588
-        :really_short => Regexp.new('^' + NUMBER)
+        :really_short => Regexp.new("^" + NUMBER)
       }
     end
 
@@ -181,7 +181,7 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, '').gsub(/^00/, '+').gsub(/^\+00/, '+').gsub(/^\+0/, '+')
+      string_with_number.gsub("(0)", "").gsub(/[^0-9+]/, "").gsub(/^00/, "+").gsub(/^\+00/, "+").gsub(/^\+0/, "+")
     end
 
     # Returns an array of the number with the extension removed, and the extension.
@@ -193,7 +193,7 @@ module Phoner
     def self.extract_extension(string)
       return [nil, nil] if string.nil?
 
-      if subbed = string.sub(/[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i, '')
+      if subbed = string.sub(/[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i, "")
         [subbed, $2]
       else
         [string, nil]
@@ -233,7 +233,7 @@ module Phoner
     #   pn.format(:europe)
     def format(fmt)
       if fmt.is_a?(Symbol)
-        raise "The format #{fmt} doesn't exist'" unless named_formats.has_key?(fmt)
+        raise "The format #{fmt} doesn't exist" unless named_formats.has_key?(fmt)
         format_number named_formats[fmt]
       else
         format_number(fmt)
