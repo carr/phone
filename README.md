@@ -12,11 +12,14 @@ Parsing, validating and creating phone numbers
 
 ## Version
 
-This documentation is for the unreleased development branch. The current stable version is [1.2.3](https://github.com/carr/phone/tree/v1.2.3)
+This documentation is for the unreleased development branch.
+
+* Current release: [1.3.0.beta0](https://github.com/carr/phone/tree/v1.3.0.beta0/).
+* Current stable: [1.2.3](https://github.com/carr/phone/tree/v1.2.3)
 
 ## Description
 
-TODO: Description
+Ruby library for phone number parsing, validation, and formatting.
 
 ## Features
 
