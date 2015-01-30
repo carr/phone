@@ -1,7 +1,18 @@
+[gem]: https://rubygems.org/gems/phone
+[stable]: https://github.com/carr/phone/tree/v1.2.3
+[gem-beta]: https://rubygems.org/gems/phone/versions/1.3.0.beta0
+[beta]: https://github.com/carr/phone/tree/v1.3.0.beta0/
+[travis]: https://travis-ci.org/carr/phone
+[gemnasium]: https://gemnasium.com/carr/phone
+[codeclimate]: https://codeclimate.com/github/carr/phone
+
 # phone
 
-![Travis badge](https://api.travis-ci.org/carr/phone.svg)
-![CodeClimate badge](https://codeclimate.com/github/carr/phone.png)
+[![Beta Gem Version](https://img.shields.io/badge/beta-v1.3.0.beta0-blue.svg)][gem-beta]
+[![Gem Version](https://img.shields.io/gem/v/phone.svg)][gem]
+[![Build Status](https://img.shields.io/travis/carr/phone.svg)][travis]
+[![Dependency Status](https://img.shields.io/gemnasium/carr/phone.svg)][gemnasium]
+[![Code Climate](https://img.shields.io/codeclimate/github/carr/phone.svg)][codeclimate]
 
 Parsing, validating and creating phone numbers
 
@@ -14,8 +25,8 @@ Parsing, validating and creating phone numbers
 
 This documentation is for the unreleased development branch.
 
-* Current release: [1.3.0.beta0](https://github.com/carr/phone/tree/v1.3.0.beta0/).
-* Current stable: [1.2.3](https://github.com/carr/phone/tree/v1.2.3)
+* Current release: [1.3.0.beta0][beta]
+* Current stable: [1.2.3][stable]
 
 ## Description
 
