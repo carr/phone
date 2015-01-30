@@ -101,6 +101,20 @@ class PhoneTest < Minitest::Test
     end
   end
 
+  def test_normalize
+    numbers = [
+      ["(0)512-5486", "5125486"],
+      ["z512-5486", "5125486"],
+      ["00512-5486", "+5125486"],
+      ["+00512-5486", "+5125486"],
+      ["+0512-5486", "+5125486"],
+    ]
+
+    numbers.each do |number, expected|
+      assert_equal expected, Phoner::Phone.normalize(number)
+    end
+  end
+
   def test_to_s
     Phoner::Phone.default_country_code = nil
     pn = Phoner::Phone.new '5125486', '91', '385'

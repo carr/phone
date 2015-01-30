@@ -52,9 +52,25 @@ module Phoner
     # default length of first number part
     self.n1_length = 3
 
+    # phone number pattern
     NUMBER = "([0-9]{1,8})$".freeze
-    DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze # any 3 digits
-    EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
+    # default area code format - any 3 digits
+    DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze
+    # common extension patterns
+    COMMON_EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
+    # common extra characters and sequences we normalize out
+    COMMON_EXTRAS = /(\(0\)|[^0-9+]|^\+?00?)/
+    # replacements for extra characters
+    COMMON_EXTRAS_REPLACEMENTS = {
+      "00" => "+",
+      "+00" => "+",
+      "+0" => "+"
+    }
+    # default replacement
+    COMMON_EXTRAS_REPLACEMENTS.default = ""
+
+    # tokens used in the formatting string: %c, %a, %A, etc
+    FORMAT_TOKENS = /(%[caAnflx])/
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
@@ -93,7 +109,7 @@ module Phoner
     def self.extract_extension(string)
       return [nil, nil] if string.nil?
 
-      if subbed = string.sub(EXTENSIONS, "")
+      if subbed = string.sub(COMMON_EXTENSIONS, "")
         [subbed, $2]
       else
         [string, nil]
@@ -102,12 +118,10 @@ module Phoner
 
     # fix string so it's easier to parse, remove extra characters etc.
     def self.normalize(string_with_number)
-      string_with_number.
-        gsub("(0)", "").
-        gsub(/[^0-9+]/, "").
-        gsub(/^00/, "+").
-        gsub(/^\+00/, "+").
-        gsub(/^\+0/, "+")
+      # TODO: When we drop 1.8.7 we can pass the hash in as an arg to #gsub
+      string_with_number.gsub(COMMON_EXTRAS) do |match|
+        COMMON_EXTRAS_REPLACEMENTS[match.to_s]
+      end
     end
 
     # split string into hash with keys :country_code, :area_code and :number
@@ -311,13 +325,20 @@ module Phoner
     end
 
     def format_number(fmt)
-      fmt.gsub("%c", country_code || "").
-        gsub("%a", area_code || "").
-        gsub("%A", area_code_long || "").
-        gsub("%n", number || "").
-        gsub("%f", number1 || "").
-        gsub("%l", number2 || "").
-        gsub("%x", extension || "")
+      replacements = {
+        "%c" => (country_code || ""),
+        "%a" => (area_code || ""),
+        "%A" => (area_code_long || ""),
+        "%n" => (number || ""),
+        "%f" => (number1 || ""),
+        "%l" => (number2 || ""),
+        "%x" => (extension || "")
+      }
+
+      # TODO: When we drop 1.8.7 we can pass the hash in as an arg to #gsub
+      fmt.gsub(FORMAT_TOKENS) do |match|
+        replacements[match.to_s]
+      end
     end
   end
 end
