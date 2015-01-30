@@ -904,6 +904,8 @@
   :char_3_code: RU
   :name: Russian Federation
   :international_dialing_prefix: "810"
+  :country_detect_regexp: (^[+]7)|(^8\d{10})|(^7\d{10})
+  :country_code_regexp: (^[+]7)|(^8)|(^7)
 "98": 
   :country_code: "98"
   :national_dialing_prefix: "0"

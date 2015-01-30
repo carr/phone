@@ -147,7 +147,7 @@ module Phoner
       detected_country = nil
       # find if the number has a country code
       Country.all.each_pair do |country_code, country|
-        if string =~ country.country_code_regexp
+        if string =~ country.country_detect_regexp
           detected_country = country
         end
       end
