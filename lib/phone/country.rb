@@ -14,11 +14,18 @@ module Phoner
     def self.load
       return self.all if !self.all.nil? && !self.all.empty?
 
-      data_file = File.expand_path(File.join("..","..","data", "phone", "countries.yml"), File.dirname(__FILE__))
+      data_file = File.join("..","..","data", "phone", "countries.yml")
+      data_path = File.expand_path(data_file, File.dirname(__FILE__))
 
       self.all = {}
-      YAML.load(File.read(data_file)).each_pair do |key, c|
-        self.all[key] = Country.new(c[:name], c[:country_code], c[:char_2_code], c[:char_3_code], c[:area_code])
+      YAML.load(File.read(data_path)).each_pair do |key, c|
+        self.all[key] = Country.new(
+          c[:name],
+          c[:country_code],
+          c[:char_2_code],
+          c[:char_3_code],
+          c[:area_code]
+        )
       end
       self.all
     end
@@ -41,5 +48,4 @@ module Phoner
       @country_code_regexp ||= Regexp.new("^[+]#{country_code}")
     end
   end
-
 end
