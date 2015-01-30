@@ -72,7 +72,7 @@ class PhoneTest < Minitest::Test
   end
 
   def test_parse_with_extension
-    pn = Phoner::Phone.parse"+1 545-545-5454 ext. 4307"
+    pn = Phoner::Phone.parse "+1 545-545-5454 ext. 4307"
     assert "1", pn.country_code
     assert "545", pn.area_code
     assert "5455454", pn.number
