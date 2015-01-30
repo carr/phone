@@ -55,18 +55,6 @@ module Phoner
     NUMBER = "([0-9]{1,8})$".freeze
     DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze # any 3 digits
     EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
-    PARAM_HASH_KEYS = {
-      :number => :number,
-      :area_code => :area_code,
-      :country_code => :country_code,
-      :extension => :extension
-    }
-    PARAM_ARGUMENT_INDEXES = {
-      :number => 0,
-      :area_code => 1,
-      :country_code => 2,
-      :extension => 3
-    }
 
     # is this string a valid phone number?
     def self.valid?(string, options = {})
@@ -207,21 +195,38 @@ module Phoner
 
     attr_accessor :country_code, :area_code, :number, :extension
 
-    def initialize(*hash_or_args)
-      input, index_or_key = if hash_or_args.first.is_a?(Hash)
-        [hash_or_args.first, PARAM_HASH_KEYS]
-      else
-        [hash_or_args, PARAM_ARGUMENT_INDEXES]
-      end
+    # Initialize a new instance with a list or hash of phone number parts
+    #
+    # Example:
+    #  Phone.new("5125486", "91", "385")
+    #
+    #  # or
+    #
+    #  Phone.new(
+    #    :number => "5125486",
+    #    :area_code => "91",
+    #    :country_code => "385",
+    #    :extension => "143"
+    #  )
+    def initialize(*args)
+      input = args.first.is_a?(Hash) ? args.first : args_to_hash(args)
 
-      self.number = input[ index_or_key[:number] ].to_s.strip
-      self.area_code = (input[ index_or_key[:area_code] ] || self.default_area_code).to_s.strip
-      self.country_code = (input[ index_or_key[:country_code] ] || self.default_country_code).to_s.strip
-      self.extension = input[ index_or_key[:extension] ]
+      # set defaults
+      input[:area_code] ||= self.default_area_code
+      input[:country_code] ||= self.default_country_code
 
-      raise BlankNumberError, "Must enter number" if self.number.empty?
-      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.empty?
-      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.empty?
+      @number = input[:number].to_s.strip
+      raise BlankNumberError, "Must enter number" if @number.empty?
+
+      @area_code = input[:area_code].to_s.strip
+      raise AreaCodeError,
+            "Must enter area code or set default" if @area_code.empty?
+
+      @country_code = input[:country_code].to_s.strip
+      raise CountryCodeError,
+            "Must enter country code or set default" if @country_code.empty?
+
+      @extension = input[:extension]
     end
 
     # format area_code with trailing zero (e.g. 91 as 091)
@@ -286,6 +291,24 @@ module Phoner
     end
 
     private
+
+    # Convert initialize arguments into parameter hash
+    #
+    # Example:
+    #
+    # args_to_hash ["5125486", "91", "385"]
+    # #=> { :number => "5125486",
+    #       :area_code => "91",
+    #       :country_code => "385",
+    #       :extension => nil }
+    def args_to_hash(args)
+      {
+        :number => args[0],
+        :area_code => args[1],
+        :country_code => args[2],
+        :extension => args[3]
+      }
+    end
 
     def format_number(fmt)
       fmt.gsub("%c", country_code || "").
