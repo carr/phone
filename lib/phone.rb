@@ -41,6 +41,17 @@ module Phoner
     end
     include ClassAttributeAccessors
 
+    self.named_formats = {
+      :default => "+%c%a%n",
+      :default_with_extension => "+%c%a%nx%x",
+      :europe => "+%c (0) %a %f %l",
+      :us => "(%a) %f-%l"
+    }
+
+    # length of first number part (using multi number format)
+    # default length of first number part
+    self.n1_length = 3
+
     NUMBER = "([0-9]{1,8})$".freeze
     DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze # any 3 digits
     EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
@@ -57,34 +68,14 @@ module Phoner
       :extension => 3
     }
 
-    attr_accessor :country_code, :area_code, :number, :extension
-
-    self.named_formats = {
-      :default => "+%c%a%n",
-      :default_with_extension => "+%c%a%nx%x",
-      :europe => "+%c (0) %a %f %l",
-      :us => "(%a) %f-%l"
-    }
-
-    # length of first number part (using multi number format)
-    # default length of first number part
-    self.n1_length = 3
-
-    def initialize(*hash_or_args)
-      input, index_or_key = if hash_or_args.first.is_a?(Hash)
-        [hash_or_args.first, PARAM_HASH_KEYS]
-      else
-        [hash_or_args, PARAM_ARGUMENT_INDEXES]
+    # is this string a valid phone number?
+    def self.valid?(string, options = {})
+      begin
+        !parse(string, options).nil?
+      # if we encountered exceptions (missing country code, missing area code etc)
+      rescue PhoneError
+        return false
       end
-
-      self.number = input[ index_or_key[:number] ].to_s.strip
-      self.area_code = (input[ index_or_key[:area_code] ] || self.default_area_code).to_s.strip
-      self.country_code = (input[ index_or_key[:country_code] ] || self.default_country_code).to_s.strip
-      self.extension = input[ index_or_key[:extension] ]
-
-      raise BlankNumberError, "Must enter number" if self.number.empty?
-      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.empty?
-      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.empty?
     end
 
     # create a new phone number by parsing a string
@@ -105,15 +96,30 @@ module Phoner
       return pn
     end
 
+    # Returns an array of the number with the extension removed, and the extension.
+    #
+    # Example:
+    #
+    #  number, ext = Phoner::Phone.extract_extension("+1 (123) 456-7890 x321")
+    #  # []
+    def self.extract_extension(string)
+      return [nil, nil] if string.nil?
 
-    # is this string a valid phone number?
-    def self.valid?(string, options = {})
-      begin
-        !parse(string, options).nil?
-      # if we encountered exceptions (missing country code, missing area code etc)
-      rescue PhoneError
-        return false
+      if subbed = string.sub(EXTENSIONS, "")
+        [subbed, $2]
+      else
+        [string, nil]
       end
+    end
+
+    # fix string so it's easier to parse, remove extra characters etc.
+    def self.normalize(string_with_number)
+      string_with_number.
+        gsub("(0)", "").
+        gsub(/[^0-9+]/, "").
+        gsub(/^00/, "+").
+        gsub(/^\+00/, "+").
+        gsub(/^\+0/, "+")
     end
 
     # split string into hash with keys :country_code, :area_code and :number
@@ -174,16 +180,6 @@ module Phoner
       detected_country
     end
 
-    def self.formats(country)
-      area_code_regexp = country.area_code || DEFAULT_AREA_CODE
-      {
-        # 047451588, 013668734
-        :short => Regexp.new("^0?(#{area_code_regexp})#{NUMBER}"),
-        # 451588
-        :really_short => Regexp.new("^#{NUMBER}")
-      }
-    end
-
     # detect format (from FORMATS) of input string
     def self.detect_format(string_with_number, country)
       arr = []
@@ -199,30 +195,33 @@ module Phoner
       arr.first
     end
 
-    # fix string so it's easier to parse, remove extra characters etc.
-    def self.normalize(string_with_number)
-      string_with_number.
-        gsub("(0)", "").
-        gsub(/[^0-9+]/, "").
-        gsub(/^00/, "+").
-        gsub(/^\+00/, "+").
-        gsub(/^\+0/, "+")
+    def self.formats(country)
+      area_code_regexp = country.area_code || DEFAULT_AREA_CODE
+      {
+        # 047451588, 013668734
+        :short => Regexp.new("^0?(#{area_code_regexp})#{NUMBER}"),
+        # 451588
+        :really_short => Regexp.new("^#{NUMBER}")
+      }
     end
 
-    # Returns an array of the number with the extension removed, and the extension.
-    #
-    # Example:
-    #
-    #  number, ext = Phoner::Phone.extract_extension("+1 (123) 456-7890 x321")
-    #  # []
-    def self.extract_extension(string)
-      return [nil, nil] if string.nil?
+    attr_accessor :country_code, :area_code, :number, :extension
 
-      if subbed = string.sub(EXTENSIONS, "")
-        [subbed, $2]
+    def initialize(*hash_or_args)
+      input, index_or_key = if hash_or_args.first.is_a?(Hash)
+        [hash_or_args.first, PARAM_HASH_KEYS]
       else
-        [string, nil]
+        [hash_or_args, PARAM_ARGUMENT_INDEXES]
       end
+
+      self.number = input[ index_or_key[:number] ].to_s.strip
+      self.area_code = (input[ index_or_key[:area_code] ] || self.default_area_code).to_s.strip
+      self.country_code = (input[ index_or_key[:country_code] ] || self.default_country_code).to_s.strip
+      self.extension = input[ index_or_key[:extension] ]
+
+      raise BlankNumberError, "Must enter number" if self.number.empty?
+      raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.empty?
+      raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.empty?
     end
 
     # format area_code with trailing zero (e.g. 91 as 091)
