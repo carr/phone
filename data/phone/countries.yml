@@ -1069,6 +1069,7 @@
   :char_3_code: ME
   :name: Montenegro
   :international_dialing_prefix: "99"
+  :area_code: "[2-6][0-9]"
 "976": 
   :country_code: "976"
   :national_dialing_prefix: "0"
