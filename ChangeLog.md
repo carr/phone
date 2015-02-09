@@ -15,6 +15,12 @@
 * [improvement] Remove need for ActiveSupport detection. (elskwid)
 * [improvement] Remove monkeypatching support library. (elskwid)
 * [improvement] Add support for Travis CI. (elskwid)
+* [improvement] Add tests for parameter mutation in `#valid?`. (elskwid)
+* [fix] Fix parameter mutation in extension extraction. (elskwid)
+* [fix] ME (Montenegro) area code correction and tests. (bsboris)
+* [improvement] Add test for parameter mutation in `::parse`. (elskwid)
+* [improvement] Code style clean up and method refactoring to clarify processing and remove multiple gsub calls. (elskwid)
+* [doc] README updates.
 
 # 1.2.3 / 2013-11-16
 
