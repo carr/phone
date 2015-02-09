@@ -164,13 +164,16 @@ Phoner::Phone.parse '451-588'
 * [HR] Croatia
 * [HU] Hungary
 * [IE] Ireland
+* [ME] Montenegro
 * [NL] Netherlands
 * [NZ] New Zealand
+* [PT] Portugal
 * [RS] Serbia
 * [SE] Sweden
 * [SI] Slovenia
 * [UA] Ukraine
 * [US] United States
+* [UY] Uruguay
 * [ZA] South Africa
 
 ## Known issues
