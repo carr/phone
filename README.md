@@ -70,7 +70,12 @@ pn = Phoner::Phone.parse('+385915125486')
 pn.to_s # => "+385915125486"
 pn.format("%A/%f-%l") # => "091/512-5486"
 pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
-pn.format('(%a) %n%d{ ext.}%x') # => "(91) 5125486"
+pn.format("+ %c (%a) %n%d{ ext.}%x") # => "+ 385 (91) 5125486"
+```
+```ruby
+pn = Phoner::Phone.parse('+1-800-555-0125x443')
+pn.format("%c (%a) %n") # => "1 (800) 5550125"
+pn.format("%c (%a) %n%d{ ext.}%x") # => "1 (800) 5550125 ext.443"
 ```
 
 When given a symbol it is used as a lookup for the format in the <tt>Phoner::Phone.named_formats</tt> hash.
@@ -79,7 +84,7 @@ When given a symbol it is used as a lookup for the format in the <tt>Phoner::Pho
 pn.format(:europe) # => "+385 (0) 91 512 5486"
 pn.format(:us) # => "(234) 123-4567"
 pn.format(:default_with_extension) # => "+3851234567x143"
-pn.format('(%a) %n%d{ ext.}%x') # => "(385) 1234567 ext.143"
+
 ```
 
 You can add your own custom named formats like so:
