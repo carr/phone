@@ -338,6 +338,8 @@ module Phoner
       # TODO: When we drop 1.8.7 we can pass the hash in as an arg to #gsub
       fmt.gsub(FORMAT_TOKENS) do |match|
         replacements[match.to_s]
+      end.gsub(/%d\{(.*?)\}/) do
+        extension.nil? ? '' : $1
       end
     end
   end
