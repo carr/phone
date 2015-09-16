@@ -59,7 +59,7 @@ module Phoner
     # common extension patterns
     COMMON_EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
     # common extra characters and sequences we normalize out
-    COMMON_EXTRAS = /(\(0\)|[^0-9+]|^\+?00?)/
+    COMMON_EXTRAS = /(\(0\)|[^0-9+]|^\+)/
     # replacements for extra characters
     COMMON_EXTRAS_REPLACEMENTS = {
       "00" => "+",
