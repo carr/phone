@@ -25,4 +25,16 @@ class DETest < Minitest::Test
   def test_country_side
    parse_test('+49 (0)6120 59511-23', '49', '6120', '5951123')
   end
+
+  def test_phone_number_with_9_digits
+    parse_test('+49 30 123456789', '49', '30', '123456789')
+  end
+
+  def test_phone_number_with_10_digits
+    parse_test('+49 30 1234567890', '49', '30', '1234567890')
+  end
+
+  def test_phone_number_with_11_digits
+    parse_test('+49 30 12345678901', '49', '30', '12345678901')
+  end
 end

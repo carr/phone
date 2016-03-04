@@ -53,7 +53,7 @@ module Phoner
     self.n1_length = 3
 
     # phone number pattern
-    NUMBER = "([0-9]{1,8})$".freeze
+    NUMBER = "([0-9]{1,11})$".freeze
     # default area code format - any 3 digits
     DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze
     # common extension patterns
