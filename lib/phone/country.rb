@@ -42,12 +42,12 @@ module Phoner
     end
 
     def self.process_german_area_codes
-      german_area_codes_file = File.join '..', '..', 'data', 'phone', 'german_area_codes.txt'
-      german_area_codes_path = File.expand_path german_area_codes_file, File.dirname(__FILE__)
-      german_area_codes = File.readlines german_area_codes_path
-      german_area_codes.map! &:strip
+      german_area_codes_file = File.join('..', '..', 'data', 'phone', 'german_area_codes.txt')
+      german_area_codes_path = File.expand_path(german_area_codes_file, File.dirname(__FILE__))
+      german_area_codes = File.readlines(german_area_codes_path)
+      german_area_codes.map!(&:strip)
 
-      area_code = german_area_codes.join '|'
+      area_code = german_area_codes.join('|')
       area_code << '|' + self.all['49'].area_code
 
       self.all['49'].area_code = area_code
