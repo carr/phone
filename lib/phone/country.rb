@@ -27,6 +27,7 @@ module Phoner
           c[:area_code]
         )
       end
+      self.process_german_area_codes
       self.all
     end
 
@@ -38,6 +39,18 @@ module Phoner
       if country = self.all.detect{|c|c[1].char_3_code.downcase == isocode}
         country[1]
       end
+    end
+
+    def self.process_german_area_codes
+      german_area_codes_file = File.join '..', '..', 'data', 'phone', 'german_area_codes.txt'
+      german_area_codes_path = File.expand_path german_area_codes_file, File.dirname(__FILE__)
+      german_area_codes = File.readlines german_area_codes_path
+      german_area_codes.map! &:strip
+
+      area_code = german_area_codes.join '|'
+      area_code << '|' + self.all['49'].area_code
+
+      self.all['49'].area_code = area_code
     end
 
     def to_s
