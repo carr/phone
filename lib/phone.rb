@@ -131,10 +131,9 @@ module Phoner
       if country
         options[:country_code] = country.country_code
         string = string.gsub(country.country_code_regexp, "0")
-      else
-        if options[:country_code]
-          country = Country.find_by_country_code options[:country_code]
-        end
+      elsif options[:country_code]
+        country = Country.find_by_country_code options[:country_code]
+        string = string.gsub(/^#{Regexp.quote(options[:country_code])}/, '')
       end
 
       if country.nil?
