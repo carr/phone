@@ -573,7 +573,7 @@
   :char_3_code: ES
   :name: Spain
   :international_dialing_prefix: "0"
-  :area_code: "6[0-9][0-9]|7[1-9][0-9]|9[0-9][0-9]"  
+  :area_code: "6[0-9][0-9]|7[1-9][0-9]|8[0-9][0-9]|9[0-9][0-9]"  
 "232": 
   :country_code: "232"
   :national_dialing_prefix: "0"
