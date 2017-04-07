@@ -27,4 +27,8 @@ class RUTest < Minitest::Test
     parse_test('+7(903)389-12-28', '7', '903', '3891228')
   end
 
+  def test_freecall
+    parse_test('8(800)111-11-11', '8', '800', '1111111')
+  end
+
 end

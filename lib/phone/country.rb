@@ -30,7 +30,7 @@ module Phoner
     def self.find_by_country_code(code)
       self.all[code]
     end
-    
+
     def self.find_by_country_isocode(isocode)
       if country = self.all.detect{|c|c[1].char_3_code.downcase == isocode}
         country[1]

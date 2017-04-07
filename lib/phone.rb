@@ -70,6 +70,8 @@ module Phoner
       self.country_code = (hash_or_args[ keys[:country_code] ] || self.default_country_code).to_s.strip
       self.extension = hash_or_args[ keys[:extension] ]
 
+      self.country_code = '8' if country_code == '7' && area_code == '800'
+
       raise BlankNumberError, "Must enter number" if self.number.empty?
       raise AreaCodeError, "Must enter area code or set default area code" if self.area_code.empty?
       raise CountryCodeError, "Must enter country code or set default country code" if self.country_code.empty?
