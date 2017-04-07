@@ -32,7 +32,11 @@ module Phoner
       end
 
       def named_formats
-        self.class.named_formats
+        if country_code == '8'
+          self.class.named_formats.merge({ :default => '%c%a%n' })
+        else
+          self.class.named_formats
+        end
       end
 
       def n1_length

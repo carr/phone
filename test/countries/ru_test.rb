@@ -28,7 +28,13 @@ class RUTest < Minitest::Test
   end
 
   def test_freecall
-    parse_test('8(800)111-11-11', '8', '800', '1111111')
+    phone = '8(800)111-11-11'
+
+    parse_test(phone, '8', '800', '1111111')
+
+    pn = Phoner::Phone.parse(phone)
+
+    assert_equal '88001111111', pn.to_s
   end
 
 end
