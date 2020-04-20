@@ -60,8 +60,8 @@ class PhoneTest < Minitest::Test
   end
 
   def test_parse_empty
-    assert_equal Phoner::Phone.parse(''), nil
-    assert_equal Phoner::Phone.parse(nil), nil
+    assert_nil Phoner::Phone.parse('')
+    assert_nil Phoner::Phone.parse(nil)
   end
 
   def test_parse_with_special_characters_with_country
@@ -199,7 +199,7 @@ class PhoneTest < Minitest::Test
   def test_find_by_country_isocode
     Phoner::Country.load
     assert_equal Phoner::Country.find_by_country_isocode('de').country_code, "49"
-    assert_equal Phoner::Country.find_by_country_isocode('xx'), nil
-    assert_equal Phoner::Country.find_by_country_isocode('bla'), nil
+    assert_nil Phoner::Country.find_by_country_isocode('xx')
+    assert_nil Phoner::Country.find_by_country_isocode('bla')
   end
 end
