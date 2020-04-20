@@ -4,13 +4,13 @@ class PhoneTest < Minitest::Test
 
   def test_with_nil_number_initialize
     assert_raises Phoner::BlankNumberError do
-      pn = Phoner::Phone.new nil
+      Phoner::Phone.new nil
     end
   end
 
   def test_with_empty_number_initialize
     assert_raises Phoner::BlankNumberError do
-      pn = Phoner::Phone.new ""
+      Phoner::Phone.new ""
     end
   end
 
@@ -18,7 +18,7 @@ class PhoneTest < Minitest::Test
     Phoner::Phone.default_country_code = nil
 
     assert_raises Phoner::CountryCodeError do
-      pn = Phoner::Phone.new '5125486', '91'
+      Phoner::Phone.new '5125486', '91'
     end
   end
 
@@ -27,7 +27,7 @@ class PhoneTest < Minitest::Test
     Phoner::Phone.default_area_code = nil
 
     assert_raises Phoner::AreaCodeError do
-      pn = Phoner::Phone.new '451588'
+      Phoner::Phone.new '451588'
     end
   end
 
@@ -60,8 +60,8 @@ class PhoneTest < Minitest::Test
   end
 
   def test_parse_empty
-    assert_equal Phoner::Phone.parse(''), nil
-    assert_equal Phoner::Phone.parse(nil), nil
+    assert_nil Phoner::Phone.parse('')
+    assert_nil Phoner::Phone.parse(nil)
   end
 
   def test_parse_with_special_characters_with_country
@@ -81,7 +81,7 @@ class PhoneTest < Minitest::Test
 
   def test_parse_wont_alter_parameter
     number = "+1 545-545-5454 ext. 4307"
-    parsed = Phoner::Phone.parse number
+    _parsed = Phoner::Phone.parse number
     assert_equal "+1 545-545-5454 ext. 4307", number
   end
 
@@ -89,7 +89,7 @@ class PhoneTest < Minitest::Test
     Phoner::Phone.default_country_code = nil
 
     assert_raises Phoner::CountryCodeError do
-      pn = Phoner::Phone.parse "0915125486"
+      Phoner::Phone.parse "0915125486"
     end
   end
 
@@ -97,7 +97,7 @@ class PhoneTest < Minitest::Test
     Phoner::Phone.default_country_code = nil
 
     assert_raises Phoner::CountryCodeError do
-      pn = Phoner::Phone.parse "091/512-5486"
+      Phoner::Phone.parse "091/512-5486"
     end
   end
 
@@ -199,7 +199,7 @@ class PhoneTest < Minitest::Test
   def test_find_by_country_isocode
     Phoner::Country.load
     assert_equal Phoner::Country.find_by_country_isocode('de').country_code, "49"
-    assert_equal Phoner::Country.find_by_country_isocode('xx'), nil
-    assert_equal Phoner::Country.find_by_country_isocode('bla'), nil
+    assert_nil Phoner::Country.find_by_country_isocode('xx')
+    assert_nil Phoner::Country.find_by_country_isocode('bla')
   end
 end

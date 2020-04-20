@@ -13,7 +13,7 @@ class FRTest < Minitest::Test
 
   def test_mobile_07
      parse_test('+33 7 11 22 33 44', '33', '7', '11223344')
-   end
+  end
 
   def test_voip
     parse_test('+33 9 11 22 33 44', '33', '9', '11223344')
