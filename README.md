@@ -38,7 +38,9 @@ Phone does its best to automatically detect the country and area code while pars
 
 Each country code can have a regular expression named `area_code` that describes what the area code for that particular country looks like.
 
-If an `area_code` regular expression isn't specified, the default, `Phoner::Phone::DEFAULT_AREA_CODE` (correct for the US) is used.
+If an `area_code` regular expression isn't specified, a default value which is considered correct for the US will be used.
+
+If your country has phone numbers longer that 8 digits - exluding country and area code - you can specify that within the country's configuration in `data/phone/countries.yml`
 
 ### Validating
 
