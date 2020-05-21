@@ -52,8 +52,6 @@ module Phoner
     # default length of first number part
     self.n1_length = 3
 
-    # default area code format - any 3 digits
-    DEFAULT_AREA_CODE = "[0-9][0-9][0-9]".freeze
     # common extension patterns
     COMMON_EXTENSIONS = /[ ]*(ext|ex|x|xt|#|:)+[^0-9]*\(*([-0-9]{1,})\)*#?$/i
     # common extra characters and sequences we normalize out
@@ -196,7 +194,7 @@ module Phoner
     end
 
     def self.formats(country)
-      area_code_regexp = country.area_code || DEFAULT_AREA_CODE
+      area_code_regexp = country.area_code
       number_regex     = "([0-9]{1,#{country.max_num_length}})$".freeze
 
       {

@@ -24,7 +24,7 @@ module Phoner
           c[:country_code],
           c[:char_2_code],
           c[:char_3_code],
-          c[:area_code]
+          c.fetch(:area_code, "[0-9][0-9][0-9]").freeze,
           c.fetch(:max_num_length, 8)
         )
       end
