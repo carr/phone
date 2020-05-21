@@ -22,4 +22,8 @@ class ZATest < Minitest::Test
     parse_test('+27 800 123 321', '27', '800', '123321')
   end
 
+  def test_long_msisdns
+    parse_test('+279602007648699', '27', '96', '02007648699')
+  end
+
 end
