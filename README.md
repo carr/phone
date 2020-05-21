@@ -201,9 +201,11 @@ There's an issue with Germany and Spanish area codes.
 
     $ gem install phone
 
-Or as a Rails plugin
+Or as a Rails plugin, in your Gemfile
 
-    $ script/plugin install git://github.com/carr/phone.git
+    gem 'phone'
+
+And then `bundle install` from your command line.
 
 ## Copyright
 
