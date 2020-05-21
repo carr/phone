@@ -14,6 +14,7 @@ class ZATest < Minitest::Test
 
     # Broader cellular ranges past initial allocation given to telecoms service providers
     parse_test('+27 62 555 5555', '27', '62', '5555555')
+    parse_test('+27 99 555 5555', '27', '99', '5555555')
   end
 
   def test_tollfree
