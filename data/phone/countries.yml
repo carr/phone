@@ -120,6 +120,7 @@
   :international_dialing_prefix: "0"
   :area_code: "800|86[01]|[1-8]\\d"
 "508": 
+  :max_num_length: 11
   :country_code: "508"
   :national_dialing_prefix: "0"
   :char_2_code: "0"
