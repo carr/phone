@@ -152,6 +152,20 @@ Phoner::Phone.default_area_code = '47'
 Phoner::Phone.parse '451-588'
 ```
 
+## Adding and maintaining countries
+
+From time to time, the specifics about your countries information may change. You can add or update your countries configuration by editing `data/phone/countries.yml`
+
+The following are the available attributes for configuration:
+
+* `country_code`: Required. A string representing your country's international dialling code. e.g. "123"
+* `national_dialing_prefix`: Required. A string representing your default dialling prefix for national calls. e.g. "0"
+* `char_3_code`: Required. A string representing a country's ISO code. e.g. "US"
+* `name`: Required. The name of the country. e.g. "Denmark"
+* `international_dialing_prefix`: Required. The dialling prefix a country typically uses when making international calls. e.g. "0"
+* `area_code`: Optional. A regular expression detailing valid area codes. Default: "\d{3}" i.e. any 3 digits.
+* `max_num_length`: Optional. The maximum length of a phone number after country and area codes have been removed. Default: 8
+
 ## Test Countries
 
 * [AU] Australia
