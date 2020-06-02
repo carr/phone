@@ -1,7 +1,7 @@
 require "yaml"
 
 module Phoner
-  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code)
+  class Country < Struct.new(:name, :country_code, :char_2_code, :char_3_code, :area_code, :max_num_length)
     module All
       attr_accessor :all
     end
@@ -24,9 +24,11 @@ module Phoner
           c[:country_code],
           c[:char_2_code],
           c[:char_3_code],
-          c[:area_code]
+          c.fetch(:area_code, "[0-9][0-9][0-9]").freeze,
+          c.fetch(:max_num_length, 8)
         )
       end
+
       self.all
     end
 
