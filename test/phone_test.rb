@@ -145,6 +145,18 @@ class PhoneTest < Minitest::Test
     assert_equal pn.format(:europe), '+385 (0) 91 512 5486'
   end
 
+  def test_format_with_conditional_extension_with_extension
+    Phoner::Phone.default_country_code = nil
+    pn = Phoner::Phone.new '5125486', '191', '385', '242'
+    assert_equal pn.format('+ %c (%a) %n%d{ #}%x'), '+ 385 (191) 5125486 #242'
+  end
+
+  def test_format_with_conditional_extension_without_extension
+    Phoner::Phone.default_country_code = nil
+    pn = Phoner::Phone.new '5125486', '191', '385'
+    assert_equal pn.format('+ %c (%a) %n%d{ #}%x'), '+ 385 (191) 5125486'
+  end
+
   def test_validity
     assert true, Phoner::Phone.valid?("+17788827175")
   end
