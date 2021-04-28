@@ -3,14 +3,12 @@
 [gem-beta]: https://rubygems.org/gems/phone/versions/1.3.0.beta1
 [beta]: https://github.com/carr/phone/tree/v1.3.0.beta1/
 [travis]: https://travis-ci.org/carr/phone
-[codeclimate]: https://codeclimate.com/github/carr/phone
 
 # phone
 
 [![Beta Gem Version](https://img.shields.io/badge/beta-v1.3.0.beta1-blue.svg)][gem-beta]
 [![Gem Version](https://img.shields.io/gem/v/phone.svg)][gem]
 [![Build Status](https://img.shields.io/travis/carr/phone.svg)][travis]
-[![Code Climate](https://img.shields.io/codeclimate/github/carr/phone.svg)][codeclimate]
 
 Parsing, validating and creating phone numbers
 
@@ -47,7 +45,7 @@ If your country has phone numbers longer that 8 digits - exluding country and ar
 Validating is very relaxed, basically it strips out everything that's not a number or '+' character:
 
 ```ruby
-Phoner::Phone.valid? 'blabla 091/512-5486 blabla'
+Phoner::Phone.valid? 'blabla 091/555-4488 blabla'
 ```
 
 ### Formatting
@@ -59,22 +57,22 @@ When given a string, it interpolates the string with the following fields:
 * %c - country_code (385)
 * %a - area_code (91)
 * %A - area_code with leading zero (091)
-* %n - number (5125486)
-* %f - first @@n1_length characters of number (configured through Phoner::Phone.n1_length), default is 3 (512)
-* %l - last characters of number (5486)
+* %n - number (5554488)
+* %f - first @@n1_length characters of number (configured through Phoner::Phone.n1_length), default is 3 (555)
+* %l - last characters of number (4488)
 * %x - the extension number
 
 ```ruby
-pn = Phoner::Phone.parse('+385915125486')
-pn.to_s # => "+385915125486"
-pn.format("%A/%f-%l") # => "091/512-5486"
-pn.format("+ %c (%a) %n") # => "+ 385 (91) 5125486"
+pn = Phoner::Phone.parse('+385915554488')
+pn.to_s # => "+385915554488"
+pn.format("%A/%f-%l") # => "091/555-4488"
+pn.format("+ %c (%a) %n") # => "+ 385 (91) 5554488"
 ```
 
 When given a symbol it is used as a lookup for the format in the <tt>Phoner::Phone.named_formats</tt> hash.
 
 ```ruby
-pn.format(:europe) # => "+385 (0) 91 512 5486"
+pn.format(:europe) # => "+385 (0) 91 555 4488"
 pn.format(:us) # => "(234) 123-4567"
 pn.format(:default_with_extension) # => "+3851234567x143"
 ```
@@ -83,7 +81,7 @@ You can add your own custom named formats like so:
 
 ```ruby
 Phoner::Phone.named_formats[:short] = '%A/%n1-%n2'
-pn.format(:short) # => 091/512-5486
+pn.format(:short) # => 091/555-4488
 ```
 
 ### Finding countries by their isocode
@@ -107,11 +105,11 @@ require 'phone'
 Initialize a new phone object with the number, area code, country code and extension number:
 
 ```ruby
-Phoner::Phone.new('5125486', '91', '385')
+Phoner::Phone.new('5554488', '91', '385')
 ```
 
 ```ruby
-Phoner::Phone.new(:number => '5125486', :area_code => '91', :country_code => '385', :extension => '143')
+Phoner::Phone.new(:number => '5554488', :area_code => '91', :country_code => '385', :extension => '143')
 ```
 
 ### Parsing
@@ -119,23 +117,23 @@ Phoner::Phone.new(:number => '5125486', :area_code => '91', :country_code => '38
 Create a new phone object by parsing from a string. Phoner::Phone does it's best to detect the country and area codes:
 
 ```ruby
-Phoner::Phone.parse '+385915125486'
-Phoner::Phone.parse '00385915125486'
+Phoner::Phone.parse '+385915554488'
+Phoner::Phone.parse '00385915554488'
 ```
 
 If the country or area code isn't given in the string, you must set it, otherwise it doesn't work:
 
 ```ruby
-Phoner::Phone.parse '091/512-5486', :country_code => '385'
-Phoner::Phone.parse '(091) 512 5486', :country_code => '385'
+Phoner::Phone.parse '091/555-4488', :country_code => '385'
+Phoner::Phone.parse '(091) 555 4488', :country_code => '385'
 ```
 
 If you feel that it's tedious, set the default country code once:
 
 ```ruby
 Phoner::Phone.default_country_code = '385'
-Phoner::Phone.parse '091/512-5486'
-Phoner::Phone.parse '(091) 512 5486'
+Phoner::Phone.parse '091/555-4488'
+Phoner::Phone.parse '(091) 555 4488'
 ```
 
 Same goes for the area code:
