@@ -85,6 +85,15 @@ class PhoneTest < Minitest::Test
     assert_equal "+1 545-545-5454 ext. 4307", number
   end
 
+  def test_parse_with_country_code_but_without_plus_sign
+    Phoner::Phone.default_country_code = '385'
+
+    pn = Phoner::Phone.parse '385915125486'
+    assert pn.number == '5125486'
+    assert pn.area_code == '91'
+    assert pn.country_code == '385'
+  end
+
   def test_parse_short_without_special_characters_without_country
     Phoner::Phone.default_country_code = nil
 
