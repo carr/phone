@@ -2,13 +2,13 @@
 [stable]: https://github.com/carr/phone/tree/v1.2.3
 [gem-beta]: https://rubygems.org/gems/phone/versions/1.3.0.beta1
 [beta]: https://github.com/carr/phone/tree/v1.3.0.beta1/
-[travis]: https://travis-ci.org/carr/phone
+[ci]: https://github.com/carr/phone/actions/workflows/ci.yml
 
 # phone
 
 [![Beta Gem Version](https://img.shields.io/badge/beta-v1.3.0.beta1-blue.svg)][gem-beta]
 [![Gem Version](https://img.shields.io/gem/v/phone.svg)][gem]
-[![Build Status](https://img.shields.io/travis/carr/phone.svg)][travis]
+[![Build Status](https://github.com/carr/phone/actions/workflows/ci.yml/badge.svg)][ci]
 
 Parsing, validating and creating phone numbers
 
