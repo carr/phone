@@ -169,6 +169,7 @@ The following are the available attributes for configuration:
 * [AU] Australia
 * [BA] Bosnia and Herzegovina
 * [BE] Belgium
+* [CA] Canada
 * [DE] Germany
 * [ES] Spain
 * [FR] France
