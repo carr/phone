@@ -283,7 +283,7 @@ module Phoner
 
     # the default format is "+%c%a%n"
     def to_s
-      format(:default)
+      extension.nil? ? format(:default) : format(:default_with_extension)
     end
 
     # does this number belong to the default country code?
